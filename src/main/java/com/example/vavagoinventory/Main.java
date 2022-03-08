@@ -4,6 +4,7 @@ import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
+import javafx.stage.StageStyle;
 
 import java.io.IOException;
 
@@ -14,6 +15,7 @@ public class Main extends Application {
         Scene scene = new Scene(fxmlLoader.load(), 320, 240);
         stage.setTitle("Fading!");
         stage.setScene(scene);
+        stage.initStyle(StageStyle.TRANSPARENT);
         stage.show();
     }
 

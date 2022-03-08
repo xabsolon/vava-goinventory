@@ -14,6 +14,7 @@ public class FunctionsController {
         Scene scene = new Scene(root);
         stage.setScene(scene);
         stage.setTitle(title);
+        stage.centerOnScreen();
         stage.show();
     }
 
