@@ -7,8 +7,10 @@ import javafx.stage.Stage;
 import javafx.stage.StageStyle;
 
 import java.io.IOException;
+import java.util.logging.LogManager;
 
 public class Main extends Application {
+
     @Override
     public void start(Stage stage) throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader(Main.class.getResource("FadingIntro.fxml"));
@@ -20,6 +22,8 @@ public class Main extends Application {
     }
 
     public static void main(String[] args) {
+        // Disable JOOQ annoying logger
+        LogManager.getLogManager().reset();
         launch();
     }
 }

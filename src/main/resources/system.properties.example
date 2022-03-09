@@ -1,0 +1,3 @@
+dbUrl=jdbc:mysql://localhost/goinventory
+dbUser=goinventory
+dbPassword=password
