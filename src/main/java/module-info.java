@@ -9,7 +9,10 @@ module com.example.vavagoinventory {
     requires org.kordamp.ikonli.javafx;
     requires org.kordamp.bootstrapfx.core;
     requires eu.hansolo.tilesfx;
+    requires java.sql;
+    requires org.jooq;
 
     opens com.example.vavagoinventory to javafx.fxml;
     exports com.example.vavagoinventory;
+    exports org.jooq.codegen.maven.goinventory.tables.records;
 }
