@@ -27,6 +27,16 @@ public class DatabaseContextSingleton {
         return DatabaseContextSingleton.getInstance().getDslContext();
     }
 
+    public static void init() {
+        if (single_instance == null) {
+            try {
+                single_instance = new DatabaseContextSingleton();
+            } catch (SQLException e) {
+                e.printStackTrace();
+            }
+        }
+    }
+
     public static DatabaseContextSingleton getInstance()
     {
         if (single_instance == null) {
