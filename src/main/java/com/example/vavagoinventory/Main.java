@@ -19,6 +19,7 @@ public class Main extends Application {
         stage.setScene(scene);
         stage.initStyle(StageStyle.TRANSPARENT);
         stage.show();
+        DatabaseContextSingleton.init();
     }
 
     public static void main(String[] args) {

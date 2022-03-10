@@ -3,26 +3,27 @@ package com.example.vavagoinventory;
 import javafx.event.Event;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
-import javafx.scene.Node;
+import javafx.fxml.Initializable;
 import javafx.scene.control.*;
-import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
-import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.shape.Rectangle;
 import javafx.scene.text.Text;
-
-import javafx.fxml.Initializable;
 import javafx.stage.Stage;
+import net.synedra.validatorfx.Validator;
+import org.jooq.Record;
+import org.jooq.codegen.maven.goinventory.tables.Users;
 
 import java.io.IOException;
 import java.net.URL;
 import java.util.Optional;
 import java.util.ResourceBundle;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 public class LoginController implements Initializable {
     @FXML
-    private BorderPane LoginBorderPane;
+    private BorderPane loginBorderPane;
 
     @FXML
     private Rectangle exitButton;
@@ -51,9 +52,35 @@ public class LoginController implements Initializable {
     @FXML
     private Button signupButton;
 
+    private final Validator validator = new Validator();
+
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
+        setupFormValidators();
+    }
 
+    private void setupFormValidators() {
+        validator.createCheck()
+                .dependsOn("email", emailField.textProperty())
+                .withMethod(c -> {
+                    String email = c.get("email");
+                    String regex = "^[a-zA-Z0-9_!#$%&'*+/=?`{|}~^.-]+@[a-zA-Z0-9.-]+$";
+                    Pattern pattern = Pattern.compile(regex);
+                    Matcher matcher = pattern.matcher(email);
+                    if (!matcher.matches()) {
+                        c.error("Email is not valid.");
+                    }
+                })
+                .decorates(emailField);
+        validator.createCheck()
+                .dependsOn("password", passwordField.textProperty())
+                .withMethod(c -> {
+                    String password = c.get("password");
+                    if (password.length() < 5) {
+                        c.error("Password must be minimum of 5 characters long.");
+                    }
+                })
+                .decorates(passwordField);
     }
 
     @FXML
@@ -72,29 +99,26 @@ public class LoginController implements Initializable {
 
     @FXML
     private void signInButtonClicked(Event event) {
-        //docasny kod, aby sa dalo dostat k employee a owner main pageom ktore som vytvoril (Jozo)
-        //kto bude robit login system a prepojenie s db tak to potom nahradte svojim kodom
-
-        if (String.valueOf(emailField.getCharacters()).equals("employee@example.com")) {
-            try {
-                Stage stage = (Stage) ((Node) event.getTarget()).getScene().getWindow();
-                FXMLLoader loader = new FXMLLoader(EmployeeMainPageController.class.getResource("EmployeeMainPage.fxml"));
-                FunctionsController.changeScene(stage, loader, "Login page");
-
-            } catch (IOException e) {
-                e.printStackTrace();
-            }
+        if(!validator.validate()) {
+            FunctionsController.showErrorAlert(validator.createStringBinding().get());
+            return;
         }
 
-        if (String.valueOf(emailField.getCharacters()).equals("owner@example.com")) {
-            try {
-                Stage stage = (Stage) ((Node) event.getTarget()).getScene().getWindow();
-                FXMLLoader loader = new FXMLLoader(OwnerMainPageController.class.getResource("OwnerMainPage.fxml"));
-                FunctionsController.changeScene(stage, loader, "Login page");
+        Record user = FunctionsController.maybeGetUserFromDatabase(emailField.getText(), passwordField.getText());
 
-            } catch (IOException e) {
-                e.printStackTrace();
-            }
+        if(user == null) {
+            FunctionsController.showErrorAlert("Invalid email or password");
+            return;
+        }
+
+        String position = user.get(Users.USERS.POSSITION);
+        String page = position.equalsIgnoreCase("user") ? "EmployeeMainPage.fxml" : "OwnerMainPage.fxml";
+        Stage stage = FunctionsController.getStageFromEvent(event);
+        FXMLLoader loader = new FXMLLoader(FadingIntroController.class.getResource(page));
+        try {
+            FunctionsController.changeScene(stage, loader, "GoInventory");
+        } catch (IOException e) {
+            e.printStackTrace();
         }
     }
 
