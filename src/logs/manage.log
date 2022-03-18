@@ -1,0 +1,6 @@
+mar 18, 2022 3:57:39 PM com.example.vavagoinventory.Log Exceptions
+SEVERE: Wrong email,Wrong username or password exception
+mar 18, 2022 3:57:54 PM com.example.vavagoinventory.Log login
+INFO: User defaultUserlogged in
+mar 18, 2022 3:57:56 PM com.example.vavagoinventory.Log userLogout
+INFO: User named : ferino logged out
