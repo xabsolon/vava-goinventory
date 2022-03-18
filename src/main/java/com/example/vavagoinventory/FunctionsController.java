@@ -17,7 +17,7 @@ public class FunctionsController {
     public static void showErrorAlert(String text) {
         Alert alert;
         alert = new Alert(Alert.AlertType.ERROR);
-        alert.setTitle("Error");
+        alert.setTitle(I18N.get("error"));
         alert.setContentText(text);
         alert.showAndWait();
     }

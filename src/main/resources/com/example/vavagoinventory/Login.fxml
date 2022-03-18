@@ -28,8 +28,10 @@
                   </Rectangle>
                   <Line endX="410.0" endY="7.0" fill="WHITE" mouseTransparent="true" startX="403.0" stroke="WHITE" strokeWidth="4.0" translateX="381.0" translateY="24.0" />
                   <Line endX="410.0" mouseTransparent="true" startX="403.0" startY="7.0" stroke="WHITE" strokeWidth="4.0" translateX="368.0" translateY="24.0" />
+                  <Button fx:id="langEnButton" alignment="CENTER_RIGHT" minHeight="0.0" mnemonicParsing="false" text="EN" translateX="240.0" translateY="20.0" />
+                  <Button fx:id="langSkButton" alignment="CENTER_RIGHT" minHeight="0.0" mnemonicParsing="false" text="SK" translateX="250.0" translateY="20.0" />
                </children></HBox>
-            <Label fx:id="loginLabel" alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="27.0" prefWidth="63.0" scaleX="1.5" scaleY="1.5" style="-fx-font-weight: bold;" text="Sign In" textFill="#141e30" translateX="65.0" translateY="35.0">
+            <Label fx:id="loginLabel" alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="27.0" scaleX="1.5" scaleY="1.5" style="-fx-font-weight: bold;" text="Sign In" textFill="#141e30" translateX="65.0" translateY="35.0">
                <font>
                   <Font size="18.0" />
                </font></Label>

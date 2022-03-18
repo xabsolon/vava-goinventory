@@ -17,15 +17,15 @@ import org.jooq.codegen.maven.goinventory.tables.Users;
 
 import java.io.IOException;
 import java.net.URL;
+import java.util.Locale;
 import java.util.Optional;
 import java.util.ResourceBundle;
-import java.util.logging.Logger;
-import java.util.logging.Level;
 import java.util.logging.*;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 public class LoginController implements Initializable {
+
     @FXML
     private BorderPane loginBorderPane;
 
@@ -56,6 +56,12 @@ public class LoginController implements Initializable {
     @FXML
     private Button signupButton;
 
+    @FXML
+    public Button langEnButton;
+
+    @FXML
+    public Button langSkButton;
+
     private final Validator validator = new Validator();
 
     public Log log = new Log();
@@ -63,6 +69,23 @@ public class LoginController implements Initializable {
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
+        setupLogger();
+        setupFormValidators();
+        setupTranslation();
+    }
+
+    private void setupTranslation() {
+        loginLabel.textProperty().bind(I18N.createStringBinding("signIn"));
+        passwordField.promptTextProperty().bind(I18N.createStringBinding("passwordPlaceholder"));
+        forgotpassButton.textProperty().bind(I18N.createStringBinding("forgotPassword"));
+        loginButton.textProperty().bind(I18N.createStringBinding("signInButton"));
+        signupButton.textProperty().bind(I18N.createStringBinding("signUpButton"));
+        signupButton.textProperty().bind(I18N.createStringBinding("signUpButton"));
+        langEnButton.setOnAction((evt) -> I18N.setLocale(new Locale("en")));
+        langSkButton.setOnAction((evt) -> I18N.setLocale(new Locale("sk")));
+    }
+
+    private void setupLogger() {
         try {
             FileHandler fh = new FileHandler("src/logs/manage.log", true);
             Log.LOGGER.addHandler(fh);
@@ -71,9 +94,7 @@ public class LoginController implements Initializable {
         } catch (IOException e) {
             e.printStackTrace();
         }
-        setupFormValidators();
     }
-
 
     private void setupFormValidators() { // TODO brute force protection
         validator.createCheck()
@@ -84,7 +105,7 @@ public class LoginController implements Initializable {
                     Pattern pattern = Pattern.compile(regex);
                     Matcher matcher = pattern.matcher(email);
                     if (!matcher.matches()) {
-                        c.error("Email is not valid.");
+                        c.error(I18N.get("emailInvalid"));
                         // neni to nutne tu, tu je len priklad ako to budeme pouzivat
                         try {
                             throw wunpException;
@@ -99,7 +120,7 @@ public class LoginController implements Initializable {
                 .withMethod(c -> {
                     String password = c.get("password");
                     if (password.length() < 5) {
-                        c.error("Password must be minimum of 5 characters long.");
+                        c.error(I18N.get("passwordInvalid"));
                     }
                 })
                 .decorates(passwordField);
@@ -109,8 +130,8 @@ public class LoginController implements Initializable {
     private void exitButtonClicked() {
         Alert alert;
         alert = new Alert(Alert.AlertType.CONFIRMATION);
-        alert.setTitle("Warning");
-        alert.setHeaderText("Are you sure you want to exit ?");
+        alert.setTitle(I18N.get("warning"));
+        alert.setHeaderText(I18N.get("exitMessage"));
         Optional<ButtonType> result = alert.showAndWait();
         if (result.get() == ButtonType.OK) {
             System.exit(0);
@@ -129,7 +150,7 @@ public class LoginController implements Initializable {
         Record user = FunctionsController.maybeGetUserFromDatabase(emailField.getText(), passwordField.getText());
 
         if(user == null) {
-            FunctionsController.showErrorAlert("Invalid email or password");
+            FunctionsController.showErrorAlert(I18N.get("wrongCredentials"));
             return;
         }
 
