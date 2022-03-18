@@ -11,6 +11,7 @@ module com.example.vavagoinventory {
     requires eu.hansolo.tilesfx;
     requires java.sql;
     requires org.jooq;
+    requires mail;
 
     opens com.example.vavagoinventory to javafx.fxml;
     exports com.example.vavagoinventory;

@@ -7,6 +7,7 @@ import java.net.URL;
 import java.util.ResourceBundle;
 
 public class EmployeeMainPageController implements Initializable {
+    public Log log = new Log();
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
@@ -15,6 +16,7 @@ public class EmployeeMainPageController implements Initializable {
 
     @FXML
     private void exitButtonClicked() {
+        log.userLogout("ferino");
         System.exit(0);
     }
 }
