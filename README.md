@@ -12,8 +12,8 @@ Note: If you get an error saying table.records class could not be found, run `ma
 ## Logging while coding
 
 Since we have to log most of the business logic and errors/exceptions
-We should be trying to implement meaningful exceptions as well as log them.
-Behind every catch block should be represented as follows:
+we should be trying to implement meaningful exceptions as well as log some of them.
+Every catch block should be represented like this:
 
 ``` 
 catch (IOException e) {
