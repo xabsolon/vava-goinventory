@@ -1,5 +1,6 @@
 package com.example.vavagoinventory;
 
+import com.example.vavagoinventory.Exceptions.WrongUserNameOrPasswordException;
 import javafx.event.Event;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -18,6 +19,9 @@ import java.io.IOException;
 import java.net.URL;
 import java.util.Optional;
 import java.util.ResourceBundle;
+import java.util.logging.Logger;
+import java.util.logging.Level;
+import java.util.logging.*;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -54,12 +58,24 @@ public class LoginController implements Initializable {
 
     private final Validator validator = new Validator();
 
+    public Log log = new Log();
+    WrongUserNameOrPasswordException wunpException = new WrongUserNameOrPasswordException();
+
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
+        try {
+            FileHandler fh = new FileHandler("src/logs/manage.log", true);
+            Log.LOGGER.addHandler(fh);
+            SimpleFormatter formatter = new SimpleFormatter();
+            fh.setFormatter(formatter);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
         setupFormValidators();
     }
 
-    private void setupFormValidators() {
+
+    private void setupFormValidators() { // TODO brute force protection
         validator.createCheck()
                 .dependsOn("email", emailField.textProperty())
                 .withMethod(c -> {
@@ -69,6 +85,12 @@ public class LoginController implements Initializable {
                     Matcher matcher = pattern.matcher(email);
                     if (!matcher.matches()) {
                         c.error("Email is not valid.");
+                        // neni to nutne tu, tu je len priklad ako to budeme pouzivat
+                        try {
+                            throw wunpException;
+                        } catch (WrongUserNameOrPasswordException e) {
+                            log.Exceptions("Wrong email", e);
+                        }
                     }
                 })
                 .decorates(emailField);
@@ -115,10 +137,12 @@ public class LoginController implements Initializable {
         String page = position.equalsIgnoreCase("user") ? "EmployeeMainPage.fxml" : "OwnerMainPage.fxml";
         Stage stage = FunctionsController.getStageFromEvent(event);
         FXMLLoader loader = new FXMLLoader(FadingIntroController.class.getResource(page));
+        log.login(user.get(Users.USERS.NAME));
+
         try {
             FunctionsController.changeScene(stage, loader, "GoInventory");
         } catch (IOException e) {
-            e.printStackTrace();
+            log.Exceptions("Failed to load login screen",e);
         }
     }
 
