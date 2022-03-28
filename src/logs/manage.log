@@ -156,3 +156,211 @@ mar 25, 2022 12:18:05 PM com.example.vavagoinventory.Log login
 INFO: User defaultUserlogged in
 mar 25, 2022 12:18:43 PM com.example.vavagoinventory.Log userLogout
 INFO: User named : ferino logged out
+Mar 27, 2022 6:46:19 PM com.example.vavagoinventory.Log login
+INFO: User defaultUserlogged in
+Mar 27, 2022 6:56:03 PM com.example.vavagoinventory.Log userLogout
+INFO: User named : ferino logged out
+Mar 27, 2022 7:34:37 PM com.example.vavagoinventory.Log login
+INFO: User defaultUserlogged in
+Mar 27, 2022 11:32:49 PM com.example.vavagoinventory.Log userLogout
+INFO: User named : ferino logged out
+Mar 28, 2022 7:43:04 PM com.example.vavagoinventory.Log login
+INFO: User defaultUserlogged in
+Mar 28, 2022 7:43:04 PM com.example.vavagoinventory.Log Exceptions
+SEVERE: Failed to load login screen, javafx.fxml.LoadException: Error resolving onAction='#onClickCreateOrder', either the event handler is not in the Namespace or there is an error in the script.
+/C:/Users/Jozef/IdeaProjects/vava-goinventory/target/classes/com/example/vavagoinventory/EmployeeMainPage.fxml:42
+
+Mar 28, 2022 7:43:07 PM com.example.vavagoinventory.Log login
+INFO: User defaultUserlogged in
+Mar 28, 2022 7:43:07 PM com.example.vavagoinventory.Log Exceptions
+SEVERE: Failed to load login screen, javafx.fxml.LoadException: Error resolving onAction='#onClickCreateOrder', either the event handler is not in the Namespace or there is an error in the script.
+/C:/Users/Jozef/IdeaProjects/vava-goinventory/target/classes/com/example/vavagoinventory/EmployeeMainPage.fxml:42
+
+mar 28, 2022 7:43:10 PM com.example.vavagoinventory.Log login
+INFO: User defaultUserlogged in
+mar 28, 2022 7:43:10 PM com.example.vavagoinventory.Log Exceptions
+SEVERE: Failed to load login screen, javafx.fxml.LoadException: Error resolving onAction='#onClickCreateOrder', either the event handler is not in the Namespace or there is an error in the script.
+/C:/Users/Jozef/IdeaProjects/vava-goinventory/target/classes/com/example/vavagoinventory/EmployeeMainPage.fxml:42
+
+mar 28, 2022 7:43:10 PM com.example.vavagoinventory.Log login
+INFO: User defaultUserlogged in
+mar 28, 2022 7:43:10 PM com.example.vavagoinventory.Log Exceptions
+SEVERE: Failed to load login screen, javafx.fxml.LoadException: Error resolving onAction='#onClickCreateOrder', either the event handler is not in the Namespace or there is an error in the script.
+/C:/Users/Jozef/IdeaProjects/vava-goinventory/target/classes/com/example/vavagoinventory/EmployeeMainPage.fxml:42
+
+mar 28, 2022 7:43:10 PM com.example.vavagoinventory.Log login
+INFO: User defaultUserlogged in
+mar 28, 2022 7:43:10 PM com.example.vavagoinventory.Log Exceptions
+SEVERE: Failed to load login screen, javafx.fxml.LoadException: Error resolving onAction='#onClickCreateOrder', either the event handler is not in the Namespace or there is an error in the script.
+/C:/Users/Jozef/IdeaProjects/vava-goinventory/target/classes/com/example/vavagoinventory/EmployeeMainPage.fxml:42
+
+mar 28, 2022 7:43:11 PM com.example.vavagoinventory.Log login
+INFO: User defaultUserlogged in
+mar 28, 2022 7:43:11 PM com.example.vavagoinventory.Log Exceptions
+SEVERE: Failed to load login screen, javafx.fxml.LoadException: Error resolving onAction='#onClickCreateOrder', either the event handler is not in the Namespace or there is an error in the script.
+/C:/Users/Jozef/IdeaProjects/vava-goinventory/target/classes/com/example/vavagoinventory/EmployeeMainPage.fxml:42
+
+mar 28, 2022 7:43:11 PM com.example.vavagoinventory.Log login
+INFO: User defaultUserlogged in
+mar 28, 2022 7:43:11 PM com.example.vavagoinventory.Log Exceptions
+SEVERE: Failed to load login screen, javafx.fxml.LoadException: Error resolving onAction='#onClickCreateOrder', either the event handler is not in the Namespace or there is an error in the script.
+/C:/Users/Jozef/IdeaProjects/vava-goinventory/target/classes/com/example/vavagoinventory/EmployeeMainPage.fxml:42
+
+mar 28, 2022 7:43:11 PM com.example.vavagoinventory.Log login
+INFO: User defaultUserlogged in
+mar 28, 2022 7:43:11 PM com.example.vavagoinventory.Log Exceptions
+SEVERE: Failed to load login screen, javafx.fxml.LoadException: Error resolving onAction='#onClickCreateOrder', either the event handler is not in the Namespace or there is an error in the script.
+/C:/Users/Jozef/IdeaProjects/vava-goinventory/target/classes/com/example/vavagoinventory/EmployeeMainPage.fxml:42
+
+mar 28, 2022 7:43:11 PM com.example.vavagoinventory.Log login
+INFO: User defaultUserlogged in
+mar 28, 2022 7:43:11 PM com.example.vavagoinventory.Log Exceptions
+SEVERE: Failed to load login screen, javafx.fxml.LoadException: Error resolving onAction='#onClickCreateOrder', either the event handler is not in the Namespace or there is an error in the script.
+/C:/Users/Jozef/IdeaProjects/vava-goinventory/target/classes/com/example/vavagoinventory/EmployeeMainPage.fxml:42
+
+mar 28, 2022 7:43:11 PM com.example.vavagoinventory.Log login
+INFO: User defaultUserlogged in
+mar 28, 2022 7:43:11 PM com.example.vavagoinventory.Log Exceptions
+SEVERE: Failed to load login screen, javafx.fxml.LoadException: Error resolving onAction='#onClickCreateOrder', either the event handler is not in the Namespace or there is an error in the script.
+/C:/Users/Jozef/IdeaProjects/vava-goinventory/target/classes/com/example/vavagoinventory/EmployeeMainPage.fxml:42
+
+mar 28, 2022 7:43:14 PM com.example.vavagoinventory.Log login
+INFO: User defaultUserlogged in
+mar 28, 2022 7:43:14 PM com.example.vavagoinventory.Log Exceptions
+SEVERE: Failed to load login screen, javafx.fxml.LoadException: Error resolving onAction='#onClickCreateOrder', either the event handler is not in the Namespace or there is an error in the script.
+/C:/Users/Jozef/IdeaProjects/vava-goinventory/target/classes/com/example/vavagoinventory/EmployeeMainPage.fxml:42
+
+mar 28, 2022 7:43:14 PM com.example.vavagoinventory.Log login
+INFO: User defaultUserlogged in
+mar 28, 2022 7:43:14 PM com.example.vavagoinventory.Log Exceptions
+SEVERE: Failed to load login screen, javafx.fxml.LoadException: Error resolving onAction='#onClickCreateOrder', either the event handler is not in the Namespace or there is an error in the script.
+/C:/Users/Jozef/IdeaProjects/vava-goinventory/target/classes/com/example/vavagoinventory/EmployeeMainPage.fxml:42
+
+mar 28, 2022 7:43:14 PM com.example.vavagoinventory.Log login
+INFO: User defaultUserlogged in
+mar 28, 2022 7:43:14 PM com.example.vavagoinventory.Log Exceptions
+SEVERE: Failed to load login screen, javafx.fxml.LoadException: Error resolving onAction='#onClickCreateOrder', either the event handler is not in the Namespace or there is an error in the script.
+/C:/Users/Jozef/IdeaProjects/vava-goinventory/target/classes/com/example/vavagoinventory/EmployeeMainPage.fxml:42
+
+mar 28, 2022 7:43:18 PM com.example.vavagoinventory.Log login
+INFO: User defaultUserlogged in
+mar 28, 2022 7:43:18 PM com.example.vavagoinventory.Log Exceptions
+SEVERE: Failed to load login screen, javafx.fxml.LoadException: Error resolving onAction='#onClickCreateOrder', either the event handler is not in the Namespace or there is an error in the script.
+/C:/Users/Jozef/IdeaProjects/vava-goinventory/target/classes/com/example/vavagoinventory/EmployeeMainPage.fxml:42
+
+mar 28, 2022 7:43:29 PM com.example.vavagoinventory.Log login
+INFO: User defaultUserlogged in
+mar 28, 2022 7:43:29 PM com.example.vavagoinventory.Log Exceptions
+SEVERE: Failed to load login screen, javafx.fxml.LoadException: Error resolving onAction='#onClickCreateOrder', either the event handler is not in the Namespace or there is an error in the script.
+/C:/Users/Jozef/IdeaProjects/vava-goinventory/target/classes/com/example/vavagoinventory/EmployeeMainPage.fxml:42
+
+mar 28, 2022 7:43:30 PM com.example.vavagoinventory.Log login
+INFO: User defaultUserlogged in
+mar 28, 2022 7:43:30 PM com.example.vavagoinventory.Log Exceptions
+SEVERE: Failed to load login screen, javafx.fxml.LoadException: Error resolving onAction='#onClickCreateOrder', either the event handler is not in the Namespace or there is an error in the script.
+/C:/Users/Jozef/IdeaProjects/vava-goinventory/target/classes/com/example/vavagoinventory/EmployeeMainPage.fxml:42
+
+mar 28, 2022 7:43:30 PM com.example.vavagoinventory.Log login
+INFO: User defaultUserlogged in
+mar 28, 2022 7:43:30 PM com.example.vavagoinventory.Log Exceptions
+SEVERE: Failed to load login screen, javafx.fxml.LoadException: Error resolving onAction='#onClickCreateOrder', either the event handler is not in the Namespace or there is an error in the script.
+/C:/Users/Jozef/IdeaProjects/vava-goinventory/target/classes/com/example/vavagoinventory/EmployeeMainPage.fxml:42
+
+mar 28, 2022 7:43:38 PM com.example.vavagoinventory.Log Exceptions
+SEVERE: Wrong email, Wrong username or password exception
+mar 28, 2022 7:43:44 PM com.example.vavagoinventory.Log Exceptions
+SEVERE: Wrong email, Wrong username or password exception
+mar 28, 2022 7:44:03 PM com.example.vavagoinventory.Log login
+INFO: User defaultUserlogged in
+mar 28, 2022 7:44:03 PM com.example.vavagoinventory.Log Exceptions
+SEVERE: Failed to load login screen, javafx.fxml.LoadException: Error resolving onAction='#onClickCreateOrder', either the event handler is not in the Namespace or there is an error in the script.
+/C:/Users/Jozef/IdeaProjects/vava-goinventory/target/classes/com/example/vavagoinventory/EmployeeMainPage.fxml:42
+
+mar 28, 2022 7:44:04 PM com.example.vavagoinventory.Log login
+INFO: User defaultUserlogged in
+mar 28, 2022 7:44:04 PM com.example.vavagoinventory.Log Exceptions
+SEVERE: Failed to load login screen, javafx.fxml.LoadException: Error resolving onAction='#onClickCreateOrder', either the event handler is not in the Namespace or there is an error in the script.
+/C:/Users/Jozef/IdeaProjects/vava-goinventory/target/classes/com/example/vavagoinventory/EmployeeMainPage.fxml:42
+
+mar 28, 2022 7:44:04 PM com.example.vavagoinventory.Log login
+INFO: User defaultUserlogged in
+mar 28, 2022 7:44:04 PM com.example.vavagoinventory.Log Exceptions
+SEVERE: Failed to load login screen, javafx.fxml.LoadException: Error resolving onAction='#onClickCreateOrder', either the event handler is not in the Namespace or there is an error in the script.
+/C:/Users/Jozef/IdeaProjects/vava-goinventory/target/classes/com/example/vavagoinventory/EmployeeMainPage.fxml:42
+
+mar 28, 2022 7:44:15 PM com.example.vavagoinventory.Log login
+INFO: User defaultUserlogged in
+mar 28, 2022 7:44:15 PM com.example.vavagoinventory.Log Exceptions
+SEVERE: Failed to load login screen, javafx.fxml.LoadException: Error resolving onAction='#onClickCreateOrder', either the event handler is not in the Namespace or there is an error in the script.
+/C:/Users/Jozef/IdeaProjects/vava-goinventory/target/classes/com/example/vavagoinventory/EmployeeMainPage.fxml:42
+
+mar 28, 2022 7:44:16 PM com.example.vavagoinventory.Log login
+INFO: User defaultUserlogged in
+mar 28, 2022 7:44:16 PM com.example.vavagoinventory.Log Exceptions
+SEVERE: Failed to load login screen, javafx.fxml.LoadException: Error resolving onAction='#onClickCreateOrder', either the event handler is not in the Namespace or there is an error in the script.
+/C:/Users/Jozef/IdeaProjects/vava-goinventory/target/classes/com/example/vavagoinventory/EmployeeMainPage.fxml:42
+
+mar 28, 2022 7:44:16 PM com.example.vavagoinventory.Log login
+INFO: User defaultUserlogged in
+mar 28, 2022 7:44:16 PM com.example.vavagoinventory.Log Exceptions
+SEVERE: Failed to load login screen, javafx.fxml.LoadException: Error resolving onAction='#onClickCreateOrder', either the event handler is not in the Namespace or there is an error in the script.
+/C:/Users/Jozef/IdeaProjects/vava-goinventory/target/classes/com/example/vavagoinventory/EmployeeMainPage.fxml:42
+
+Mar 28, 2022 7:46:33 PM com.example.vavagoinventory.Log login
+INFO: User defaultUserlogged in
+Mar 28, 2022 7:46:33 PM com.example.vavagoinventory.Log Exceptions
+SEVERE: Failed to load login screen, javafx.fxml.LoadException: Error resolving onAction='#onClickCreateOrder', either the event handler is not in the Namespace or there is an error in the script.
+/C:/Users/Jozef/IdeaProjects/vava-goinventory/target/classes/com/example/vavagoinventory/EmployeeMainPage.fxml:42
+
+Mar 28, 2022 7:46:35 PM com.example.vavagoinventory.Log login
+INFO: User defaultUserlogged in
+Mar 28, 2022 7:46:35 PM com.example.vavagoinventory.Log Exceptions
+SEVERE: Failed to load login screen, javafx.fxml.LoadException: Error resolving onAction='#onClickCreateOrder', either the event handler is not in the Namespace or there is an error in the script.
+/C:/Users/Jozef/IdeaProjects/vava-goinventory/target/classes/com/example/vavagoinventory/EmployeeMainPage.fxml:42
+
+Mar 28, 2022 7:46:36 PM com.example.vavagoinventory.Log login
+INFO: User defaultUserlogged in
+Mar 28, 2022 7:46:36 PM com.example.vavagoinventory.Log Exceptions
+SEVERE: Failed to load login screen, javafx.fxml.LoadException: Error resolving onAction='#onClickCreateOrder', either the event handler is not in the Namespace or there is an error in the script.
+/C:/Users/Jozef/IdeaProjects/vava-goinventory/target/classes/com/example/vavagoinventory/EmployeeMainPage.fxml:42
+
+Mar 28, 2022 7:46:37 PM com.example.vavagoinventory.Log login
+INFO: User defaultUserlogged in
+Mar 28, 2022 7:46:37 PM com.example.vavagoinventory.Log Exceptions
+SEVERE: Failed to load login screen, javafx.fxml.LoadException: Error resolving onAction='#onClickCreateOrder', either the event handler is not in the Namespace or there is an error in the script.
+/C:/Users/Jozef/IdeaProjects/vava-goinventory/target/classes/com/example/vavagoinventory/EmployeeMainPage.fxml:42
+
+Mar 28, 2022 7:46:38 PM com.example.vavagoinventory.Log login
+INFO: User defaultUserlogged in
+Mar 28, 2022 7:46:38 PM com.example.vavagoinventory.Log Exceptions
+SEVERE: Failed to load login screen, javafx.fxml.LoadException: Error resolving onAction='#onClickCreateOrder', either the event handler is not in the Namespace or there is an error in the script.
+/C:/Users/Jozef/IdeaProjects/vava-goinventory/target/classes/com/example/vavagoinventory/EmployeeMainPage.fxml:42
+
+Mar 28, 2022 7:46:40 PM com.example.vavagoinventory.Log login
+INFO: User defaultUserlogged in
+Mar 28, 2022 7:46:40 PM com.example.vavagoinventory.Log Exceptions
+SEVERE: Failed to load login screen, javafx.fxml.LoadException: Error resolving onAction='#onClickCreateOrder', either the event handler is not in the Namespace or there is an error in the script.
+/C:/Users/Jozef/IdeaProjects/vava-goinventory/target/classes/com/example/vavagoinventory/EmployeeMainPage.fxml:42
+
+Mar 28, 2022 7:46:44 PM com.example.vavagoinventory.Log login
+INFO: User defaultUserlogged in
+Mar 28, 2022 7:46:44 PM com.example.vavagoinventory.Log Exceptions
+SEVERE: Failed to load login screen, javafx.fxml.LoadException: Error resolving onAction='#onClickCreateOrder', either the event handler is not in the Namespace or there is an error in the script.
+/C:/Users/Jozef/IdeaProjects/vava-goinventory/target/classes/com/example/vavagoinventory/EmployeeMainPage.fxml:42
+
+Mar 28, 2022 7:49:41 PM com.example.vavagoinventory.Log login
+INFO: User defaultUserlogged in
+Mar 28, 2022 7:50:39 PM com.example.vavagoinventory.Log userLogout
+INFO: User named : ferino logged out
+Mar 28, 2022 8:58:30 PM com.example.vavagoinventory.Log login
+INFO: User defaultUserlogged in
+Mar 28, 2022 9:02:24 PM com.example.vavagoinventory.Log userLogout
+INFO: User named : ferino logged out
+Mar 28, 2022 9:03:21 PM com.example.vavagoinventory.Log login
+INFO: User defaultUserlogged in
+Mar 28, 2022 9:03:29 PM com.example.vavagoinventory.Log userLogout
+INFO: User named : ferino logged out
+Mar 28, 2022 9:04:48 PM com.example.vavagoinventory.Log login
+INFO: User defaultUserlogged in
+Mar 28, 2022 9:06:31 PM com.example.vavagoinventory.Log userLogout
+INFO: User named : ferino logged out

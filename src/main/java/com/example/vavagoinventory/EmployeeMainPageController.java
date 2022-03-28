@@ -11,12 +11,18 @@ import javafx.scene.Scene;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
+import org.jooq.DSLContext;
+import org.jooq.InsertValuesStep2;
+import org.jooq.Record;
+import org.jooq.codegen.maven.goinventory.tables.Users;
+import org.jooq.impl.DSL;
 
 import java.net.URL;
 import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.ResourceBundle;
 
 public class EmployeeMainPageController implements Initializable {
@@ -91,5 +97,20 @@ public class EmployeeMainPageController implements Initializable {
     private void exitButtonClicked() {
         log.userLogout("ferino");
         System.exit(0);
+    }
+
+    @FXML
+    private void onClickCreateOrder() {
+        //temporary test code, will be moved to CreateOrderController
+        InsertValuesStep2<Record, Object, Object> query = DatabaseContextSingleton.getContext()
+                .insertInto(DSL.table("orders"), DSL.field("p_id"), DSL.field("quantity"));
+        query.values(2, 0);
+        query.execute();
+        System.out.println("clicked create order");
+    }
+
+    @FXML
+    private void onClickDeleteOrder() {
+        System.out.println("clicked delete order");
     }
 }
