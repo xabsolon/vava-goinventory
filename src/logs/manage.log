@@ -364,3 +364,65 @@ Mar 28, 2022 9:04:48 PM com.example.vavagoinventory.Log login
 INFO: User defaultUserlogged in
 Mar 28, 2022 9:06:31 PM com.example.vavagoinventory.Log userLogout
 INFO: User named : ferino logged out
+Apr 03, 2022 7:44:44 PM com.example.vavagoinventory.Log login
+INFO: User defaultUserlogged in
+Apr 03, 2022 7:49:45 PM com.example.vavagoinventory.Log login
+INFO: User defaultUserlogged in
+Apr 03, 2022 7:50:06 PM com.example.vavagoinventory.Log userLogout
+INFO: User named : ferino logged out
+Apr 03, 2022 7:51:04 PM com.example.vavagoinventory.Log login
+INFO: User defaultUserlogged in
+Apr 03, 2022 7:58:14 PM com.example.vavagoinventory.Log login
+INFO: User defaultUserlogged in
+Apr 03, 2022 8:01:41 PM com.example.vavagoinventory.Log Exceptions
+SEVERE: Wrong email, Wrong username or password exception
+Apr 03, 2022 8:02:23 PM com.example.vavagoinventory.Log login
+INFO: User defaultUserlogged in
+Apr 03, 2022 8:02:47 PM com.example.vavagoinventory.Log userLogout
+INFO: User named : ferino logged out
+Apr 03, 2022 9:39:12 PM com.example.vavagoinventory.Log login
+INFO: User defaultUserlogged in
+Apr 03, 2022 9:40:52 PM com.example.vavagoinventory.Log userLogout
+INFO: User named : ferino logged out
+Apr 03, 2022 10:23:19 PM com.example.vavagoinventory.Log login
+INFO: User defaultUserlogged in
+Apr 03, 2022 10:26:24 PM com.example.vavagoinventory.Log login
+INFO: User defaultUserlogged in
+Apr 03, 2022 10:26:28 PM com.example.vavagoinventory.Log userLogout
+INFO: User named : ferino logged out
+Apr 03, 2022 10:29:08 PM com.example.vavagoinventory.Log login
+INFO: User defaultUserlogged in
+Apr 03, 2022 10:29:18 PM com.example.vavagoinventory.Log userLogout
+INFO: User named : ferino logged out
+Apr 03, 2022 10:32:25 PM com.example.vavagoinventory.Log login
+INFO: User defaultUserlogged in
+Apr 03, 2022 10:36:49 PM com.example.vavagoinventory.Log login
+INFO: User defaultUserlogged in
+Apr 03, 2022 10:37:01 PM com.example.vavagoinventory.Log userLogout
+INFO: User named : ferino logged out
+Apr 03, 2022 10:43:35 PM com.example.vavagoinventory.Log login
+INFO: User defaultUserlogged in
+Apr 03, 2022 10:43:58 PM com.example.vavagoinventory.Log userLogout
+INFO: User named : ferino logged out
+Apr 03, 2022 11:12:34 PM com.example.vavagoinventory.Log login
+INFO: User defaultUserlogged in
+Apr 03, 2022 11:13:20 PM com.example.vavagoinventory.Log userLogout
+INFO: User named : ferino logged out
+Apr 03, 2022 11:17:42 PM com.example.vavagoinventory.Log login
+INFO: User defaultUserlogged in
+Apr 03, 2022 11:20:36 PM com.example.vavagoinventory.Log login
+INFO: User defaultUserlogged in
+Apr 03, 2022 11:23:46 PM com.example.vavagoinventory.Log userLogout
+INFO: User named : ferino logged out
+Apr 03, 2022 11:24:49 PM com.example.vavagoinventory.Log login
+INFO: User defaultUserlogged in
+Apr 03, 2022 11:28:16 PM com.example.vavagoinventory.Log userLogout
+INFO: User named : ferino logged out
+Apr 04, 2022 1:20:29 AM com.example.vavagoinventory.Log login
+INFO: User defaultUserlogged in
+Apr 04, 2022 1:29:27 AM com.example.vavagoinventory.Log userLogout
+INFO: User named : ferino logged out
+Apr 04, 2022 1:31:32 AM com.example.vavagoinventory.Log login
+INFO: User defaultUserlogged in
+Apr 04, 2022 1:36:20 AM com.example.vavagoinventory.Log userLogout
+INFO: User named : ferino logged out

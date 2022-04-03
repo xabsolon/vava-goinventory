@@ -17,6 +17,7 @@ import org.jooq.Record;
 import org.jooq.codegen.maven.goinventory.tables.Users;
 import org.jooq.impl.DSL;
 
+import java.io.IOException;
 import java.net.URL;
 import java.sql.Connection;
 import java.sql.ResultSet;
@@ -112,5 +113,17 @@ public class EmployeeMainPageController implements Initializable {
     @FXML
     private void onClickDeleteOrder() {
         System.out.println("clicked delete order");
+    }
+
+    @FXML
+    private void onClickOrders() throws IOException {
+        Stage newstage = new Stage();
+        Parent root = FXMLLoader.load(EmployeeMainPageController.class.getResource("Orders.fxml"));
+        Scene scene = new Scene(root);
+        newstage.setScene(scene);
+        newstage.setResizable(false);
+        newstage.initStyle(StageStyle.TRANSPARENT);
+        newstage.initModality(Modality.APPLICATION_MODAL);
+        newstage.showAndWait();
     }
 }

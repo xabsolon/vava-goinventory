@@ -43,6 +43,11 @@
                   <Button mnemonicParsing="false" onAction="#onClickDeleteOrder" text="DeleteOrder" />
                </children>
             </HBox>
+            <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#onClickOrders" text="Orders" />
+               </children>
+            </HBox>
          </children>
       </VBox>
    </right>
