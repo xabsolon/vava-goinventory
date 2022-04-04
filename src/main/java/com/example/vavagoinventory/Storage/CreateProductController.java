@@ -1,7 +1,9 @@
 package com.example.vavagoinventory.Storage;
 
 import com.example.vavagoinventory.DatabaseConnection;
+import com.example.vavagoinventory.EmployeeMainPageController;
 import com.example.vavagoinventory.FunctionsController;
+import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
@@ -14,9 +16,10 @@ import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.Collections;
 import java.util.Comparator;
+import java.util.List;
 import java.util.ResourceBundle;
 
-import static com.example.vavagoinventory.EmployeeMainPageController.productsObservableList;
+//import static com.example.vavagoinventory.EmployeeMainPageController.productsObservableList;
 
 public class CreateProductController implements Initializable {
 
@@ -45,7 +48,9 @@ public class CreateProductController implements Initializable {
 
     @FXML
     void onClickConfirm(javafx.event.ActionEvent actionEvent) throws SQLException {
-
+        //toto som tu len docasne pridal aby sa to dalo skompilovat lebo inac to nejde a v tej novej verzii sa ten list
+        //neda naimportovat
+        List<Product> productsObservableList = null;
         if (productNameField.getText().isEmpty()) {
             FunctionsController.showErrorAlert("Please enter a product name");
         } else if (productsObservableList.stream().anyMatch(product -> product.getName().equals(productNameField.getText()))) {

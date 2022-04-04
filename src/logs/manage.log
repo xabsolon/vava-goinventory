@@ -456,3 +456,19 @@ Apr 04, 2022 5:42:04 PM com.example.vavagoinventory.Log login
 INFO: User defaultUserlogged in
 Apr 04, 2022 5:42:28 PM com.example.vavagoinventory.Log userLogout
 INFO: User named : ferino logged out
+Apr 04, 2022 6:08:45 PM com.example.vavagoinventory.Log login
+INFO: User defaultUserlogged in
+Apr 04, 2022 6:08:54 PM com.example.vavagoinventory.Log userLogout
+INFO: User named : ferino logged out
+Apr 04, 2022 6:08:58 PM com.example.vavagoinventory.Log Exceptions
+SEVERE: Wrong email, Wrong username or password exception
+apr 04, 2022 6:09:03 PM com.example.vavagoinventory.Log Exceptions
+SEVERE: Wrong email, Wrong username or password exception
+apr 04, 2022 6:09:15 PM com.example.vavagoinventory.Log login
+INFO: User defaultUserlogged in
+apr 04, 2022 6:09:31 PM com.example.vavagoinventory.Log userLogout
+INFO: User named : ferino logged out
+Apr 04, 2022 6:19:43 PM com.example.vavagoinventory.Log login
+INFO: User defaultUserlogged in
+Apr 04, 2022 6:21:37 PM com.example.vavagoinventory.Log userLogout
+INFO: User named : ferino logged out

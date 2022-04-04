@@ -1,5 +1,7 @@
 package com.example.vavagoinventory;
 
+import com.example.vavagoinventory.Storage.Product;
+import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -10,6 +12,8 @@ import java.net.URL;
 import java.util.ResourceBundle;
 
 public class EmployeeMainPageController implements Initializable {
+
+    public static ObservableList<Product> productObservableList;
 
     @FXML
     private Button logOutButton;

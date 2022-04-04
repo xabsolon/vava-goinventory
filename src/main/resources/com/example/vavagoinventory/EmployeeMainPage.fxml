@@ -7,7 +7,6 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.vavagoinventory.EmployeeMainPageController">
    <children>
       <TabPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" side="LEFT" stylesheets="@css/TabPane.css" tabClosingPolicy="UNAVAILABLE">
@@ -32,12 +31,12 @@
             <content>
               <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
                      <children>
-                        <Label text="I am employee tab 2" />
+                        <fx:include source="Orders.fxml" />
                      </children>
                   </AnchorPane>
             </content>
                <graphic>
-                  <Label text="Tab2">
+                  <Label text="Orders">
                      <font>
                         <Font size="16.0" />
                      </font>

@@ -27,7 +27,7 @@ import java.net.URL;
 import java.util.ArrayList;
 import java.util.ResourceBundle;
 
-import static com.sun.javafx.scene.control.skin.Utils.getResource;
+//import static com.sun.javafx.scene.control.skin.Utils.getResource;
 import static org.jooq.codegen.maven.goinventory.Tables.ORDERS;
 
 public class OrdersController implements Initializable {
