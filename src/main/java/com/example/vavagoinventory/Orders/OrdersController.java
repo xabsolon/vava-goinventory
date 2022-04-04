@@ -1,29 +1,41 @@
 package com.example.vavagoinventory.Orders;
 
 import com.example.vavagoinventory.DatabaseContextSingleton;
+import com.example.vavagoinventory.EmployeeMainPageController;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.stage.Modality;
 import javafx.stage.Stage;
+import javafx.stage.StageStyle;
 import org.jooq.DSLContext;
 import org.jooq.Record;
 import org.jooq.Result;
 import org.jooq.codegen.maven.goinventory.tables.Orders;
+import org.jooq.impl.QOM;
 
+import java.io.IOException;
 import java.net.URL;
 import java.util.ArrayList;
 import java.util.ResourceBundle;
 
+import static com.sun.javafx.scene.control.skin.Utils.getResource;
 import static org.jooq.codegen.maven.goinventory.Tables.ORDERS;
 
 public class OrdersController implements Initializable {
 
-    ObservableList<Order> orders;
+    private ObservableList<Order> orders;
+
+    @FXML
+    private CreateOrderController createOrderController;
 
     @FXML
     private Button closeButton;
@@ -50,29 +62,21 @@ public class OrdersController implements Initializable {
         tableView.setItems(orders);
     }
 
-    private static class OrderQuery {
-        public static ArrayList<Order> orders = new ArrayList<>();
+    public void addOrder(Order order) {
+        orders.add(order);
+    }
 
-        public static void getQuery() {
-            orders.clear();
-            DSLContext create = DatabaseContextSingleton.getContext();
-            Result<Record> result = create.select().from(Orders.ORDERS).fetch();
-            for (Record r:result) {
-                Order order = new Order.OrderBuilder()
-                        .o_id(r.get(ORDERS.O_ID))
-                        .p_id(r.get(ORDERS.P_ID))
-                        .quantity(r.get(ORDERS.QUANTITY))
-                        .build();
-                orders.add(order);
-            }
-            System.out.println(orders);
-        }
-
-        public static void deleteQuery(int o_id) {
-            Integer id = o_id;
-            DSLContext create = DatabaseContextSingleton.getContext();
-            create.delete(ORDERS).where(ORDERS.O_ID.eq(id)).execute();
-        }
+    @FXML
+    private void onClickCreate() throws IOException {
+        Stage newstage = new Stage();
+        Parent root = FXMLLoader.load(OrdersController.class.getResource("Orders.fxml"));
+        Scene scene = new Scene(root);
+        newstage.setScene(scene);
+        newstage.setResizable(false);
+        newstage.initStyle(StageStyle.TRANSPARENT);
+        newstage.initModality(Modality.APPLICATION_MODAL);
+        newstage.showAndWait();
+        createOrderController.injectOrdersController(this);
     }
 
     @FXML
@@ -87,6 +91,5 @@ public class OrdersController implements Initializable {
         orders.remove(order);
         OrderQuery.deleteQuery(order.getO_id());
     }
-
 
 }

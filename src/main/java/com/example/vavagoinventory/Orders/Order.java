@@ -25,6 +25,18 @@ public class Order {
         return p_id;
     }
 
+    public void setO_id(int o_id) {
+        this.o_id = o_id;
+    }
+
+    public void setP_id(int p_id) {
+        this.p_id = p_id;
+    }
+
+    public void setQuantity(int quantity) {
+        this.quantity = quantity;
+    }
+
     public static class OrderBuilder {
         private int o_id;
         private int p_id;

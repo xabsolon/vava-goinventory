@@ -28,7 +28,7 @@
             <HBox alignment="CENTER" prefHeight="31.0" prefWidth="577.0" spacing="10.0">
                <children>
                   <Button mnemonicParsing="false" text="Button" />
-                  <Button fx:id="confirmCreateButton" mnemonicParsing="false" prefHeight="27.0" prefWidth="78.0" text="Confirm" />
+                  <Button fx:id="createButton" mnemonicParsing="false" onAction="#onClickCreate" prefHeight="27.0" prefWidth="118.0" text="Create new order" />
                   <Button mnemonicParsing="false" onAction="#onClickDelete" prefHeight="27.0" prefWidth="132.0" text="Delete selected order" />
                   <Button fx:id="closeButton" mnemonicParsing="false" onAction="#onClickClose" prefHeight="29.0" prefWidth="55.0" text="Close" />
                </children>
