@@ -16,7 +16,6 @@ import static org.jooq.codegen.maven.goinventory.Tables.ORDERS;
 
 public class CreateOrderController implements Initializable { //work in progress
 
-    @FXML
     private OrdersController ordersController;
 
     @FXML
@@ -55,7 +54,10 @@ public class CreateOrderController implements Initializable { //work in progress
             FunctionsController.showErrorAlert(I18N.get("OrderCreationError"));
             return;
         }
-        OrderQuery.insertQuery(order);
+        OrdersController.OrderQuery.insertQuery(order);
+        System.out.println(ordersController);
         ordersController.addOrder(order);
+        Stage stage = (Stage) cancelCreateButton.getScene().getWindow();
+        stage.close();
     }
 }
