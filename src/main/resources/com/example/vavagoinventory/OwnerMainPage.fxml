@@ -17,6 +17,10 @@
                   <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
                      <children>
                         <Label text="I am owner tab 1" />
+                        <Button fx:id="createProductButton" layoutX="14.0" layoutY="187.0" mnemonicParsing="false" onAction="#onClickCreateProduct" text="Create Product" />
+                        <Button fx:id="deleteProductButton" layoutX="250.0" layoutY="187.0" mnemonicParsing="false" onAction="#onClickDeleteProduct" text="Delete Product" />
+                        <Button fx:id="editProductButton" layoutX="368.0" layoutY="187.0" mnemonicParsing="false" onAction="#onClickEditProduct" text="Edit product" />
+                        <Button fx:id="addProductButton" layoutX="133.0" layoutY="187.0" mnemonicParsing="false" onAction="#onClickAddProduct" text="Add product" />
                      </children>
                   </AnchorPane>
                </content>
