@@ -4,3 +4,455 @@ mar 18, 2022 3:57:54 PM com.example.vavagoinventory.Log login
 INFO: User defaultUserlogged in
 mar 18, 2022 3:57:56 PM com.example.vavagoinventory.Log userLogout
 INFO: User named : ferino logged out
+Mar 21, 2022 12:24:28 PM com.example.vavagoinventory.Log login
+INFO: User Patriklogged in
+mar 21, 2022 12:24:51 PM com.example.vavagoinventory.Log login
+INFO: User defaultUserlogged in
+mar 21, 2022 12:24:53 PM com.example.vavagoinventory.Log userLogout
+INFO: User named : ferino logged out
+mar 21, 2022 12:25:44 PM com.example.vavagoinventory.Log Exceptions
+SEVERE: Wrong email, Wrong username or password exception
+mar 21, 2022 12:25:45 PM com.example.vavagoinventory.Log Exceptions
+SEVERE: Wrong email, Wrong username or password exception
+Mar 21, 2022 5:39:06 PM com.example.vavagoinventory.Log login
+INFO: User Patriklogged in
+mar 24, 2022 11:45:41 AM com.example.vavagoinventory.Log login
+INFO: User Patriklogged in
+mar 24, 2022 11:46:18 AM com.example.vavagoinventory.Log login
+INFO: User defaultUserlogged in
+mar 24, 2022 11:48:29 AM com.example.vavagoinventory.Log login
+INFO: User defaultUserlogged in
+mar 24, 2022 11:49:50 AM com.example.vavagoinventory.Log login
+INFO: User defaultUserlogged in
+mar 24, 2022 5:00:27 PM com.example.vavagoinventory.Log login
+INFO: User defaultUserlogged in
+mar 24, 2022 5:05:18 PM com.example.vavagoinventory.Log login
+INFO: User defaultUserlogged in
+mar 24, 2022 5:07:13 PM com.example.vavagoinventory.Log login
+INFO: User defaultUserlogged in
+mar 24, 2022 5:18:08 PM com.example.vavagoinventory.Log login
+INFO: User defaultUserlogged in
+mar 24, 2022 5:36:52 PM com.example.vavagoinventory.Log login
+INFO: User defaultUserlogged in
+mar 24, 2022 5:38:06 PM com.example.vavagoinventory.Log login
+INFO: User defaultUserlogged in
+mar 24, 2022 6:17:54 PM com.example.vavagoinventory.Log login
+INFO: User defaultUserlogged in
+mar 24, 2022 6:21:30 PM com.example.vavagoinventory.Log login
+INFO: User defaultUserlogged in
+mar 24, 2022 6:25:38 PM com.example.vavagoinventory.Log login
+INFO: User defaultUserlogged in
+mar 24, 2022 6:26:19 PM com.example.vavagoinventory.Log login
+INFO: User defaultUserlogged in
+mar 24, 2022 6:50:34 PM com.example.vavagoinventory.Log login
+INFO: User defaultUserlogged in
+mar 24, 2022 6:53:35 PM com.example.vavagoinventory.Log login
+INFO: User defaultUserlogged in
+mar 24, 2022 6:54:58 PM com.example.vavagoinventory.Log login
+INFO: User defaultUserlogged in
+mar 24, 2022 7:01:02 PM com.example.vavagoinventory.Log login
+INFO: User defaultUserlogged in
+mar 24, 2022 7:16:35 PM com.example.vavagoinventory.Log userLogout
+INFO: User named : ferino logged out
+mar 24, 2022 7:21:55 PM com.example.vavagoinventory.Log login
+INFO: User defaultUserlogged in
+mar 24, 2022 7:28:28 PM com.example.vavagoinventory.Log userLogout
+INFO: User named : ferino logged out
+mar 24, 2022 8:52:08 PM com.example.vavagoinventory.Log login
+INFO: User defaultUserlogged in
+mar 24, 2022 8:52:54 PM com.example.vavagoinventory.Log login
+INFO: User defaultUserlogged in
+mar 24, 2022 8:56:12 PM com.example.vavagoinventory.Log login
+INFO: User defaultUserlogged in
+mar 24, 2022 8:58:59 PM com.example.vavagoinventory.Log login
+INFO: User defaultUserlogged in
+mar 24, 2022 9:02:45 PM com.example.vavagoinventory.Log login
+INFO: User defaultUserlogged in
+mar 24, 2022 9:07:09 PM com.example.vavagoinventory.Log login
+INFO: User defaultUserlogged in
+mar 24, 2022 9:09:59 PM com.example.vavagoinventory.Log login
+INFO: User defaultUserlogged in
+mar 24, 2022 9:10:35 PM com.example.vavagoinventory.Log login
+INFO: User defaultUserlogged in
+mar 24, 2022 9:15:11 PM com.example.vavagoinventory.Log login
+INFO: User defaultUserlogged in
+mar 24, 2022 9:15:44 PM com.example.vavagoinventory.Log userLogout
+INFO: User named : ferino logged out
+mar 25, 2022 11:00:45 AM com.example.vavagoinventory.Log login
+INFO: User defaultUserlogged in
+mar 25, 2022 11:02:49 AM com.example.vavagoinventory.Log userLogout
+INFO: User named : ferino logged out
+mar 25, 2022 11:06:09 AM com.example.vavagoinventory.Log login
+INFO: User defaultUserlogged in
+mar 25, 2022 11:06:34 AM com.example.vavagoinventory.Log userLogout
+INFO: User named : ferino logged out
+mar 25, 2022 11:07:08 AM com.example.vavagoinventory.Log login
+INFO: User defaultUserlogged in
+mar 25, 2022 11:07:36 AM com.example.vavagoinventory.Log userLogout
+INFO: User named : ferino logged out
+mar 25, 2022 11:11:12 AM com.example.vavagoinventory.Log login
+INFO: User defaultUserlogged in
+mar 25, 2022 11:11:40 AM com.example.vavagoinventory.Log userLogout
+INFO: User named : ferino logged out
+mar 25, 2022 11:12:49 AM com.example.vavagoinventory.Log login
+INFO: User defaultUserlogged in
+mar 25, 2022 11:13:23 AM com.example.vavagoinventory.Log userLogout
+INFO: User named : ferino logged out
+mar 25, 2022 11:14:45 AM com.example.vavagoinventory.Log login
+INFO: User defaultUserlogged in
+mar 25, 2022 11:16:31 AM com.example.vavagoinventory.Log userLogout
+INFO: User named : ferino logged out
+mar 25, 2022 11:19:53 AM com.example.vavagoinventory.Log login
+INFO: User defaultUserlogged in
+mar 25, 2022 11:27:04 AM com.example.vavagoinventory.Log login
+INFO: User defaultUserlogged in
+mar 25, 2022 11:27:48 AM com.example.vavagoinventory.Log userLogout
+INFO: User named : ferino logged out
+mar 25, 2022 11:28:13 AM com.example.vavagoinventory.Log login
+INFO: User defaultUserlogged in
+mar 25, 2022 11:29:38 AM com.example.vavagoinventory.Log login
+INFO: User defaultUserlogged in
+mar 25, 2022 11:32:39 AM com.example.vavagoinventory.Log login
+INFO: User defaultUserlogged in
+mar 25, 2022 11:33:13 AM com.example.vavagoinventory.Log userLogout
+INFO: User named : ferino logged out
+mar 25, 2022 11:38:43 AM com.example.vavagoinventory.Log login
+INFO: User defaultUserlogged in
+mar 25, 2022 11:39:12 AM com.example.vavagoinventory.Log userLogout
+INFO: User named : ferino logged out
+mar 25, 2022 11:44:39 AM com.example.vavagoinventory.Log login
+INFO: User defaultUserlogged in
+mar 25, 2022 11:44:45 AM com.example.vavagoinventory.Log userLogout
+INFO: User named : ferino logged out
+mar 25, 2022 11:45:16 AM com.example.vavagoinventory.Log login
+INFO: User defaultUserlogged in
+mar 25, 2022 11:47:16 AM com.example.vavagoinventory.Log login
+INFO: User defaultUserlogged in
+mar 25, 2022 11:48:10 AM com.example.vavagoinventory.Log userLogout
+INFO: User named : ferino logged out
+mar 25, 2022 11:51:34 AM com.example.vavagoinventory.Log login
+INFO: User defaultUserlogged in
+mar 25, 2022 11:57:58 AM com.example.vavagoinventory.Log login
+INFO: User defaultUserlogged in
+mar 25, 2022 11:58:04 AM com.example.vavagoinventory.Log userLogout
+INFO: User named : ferino logged out
+mar 25, 2022 11:58:27 AM com.example.vavagoinventory.Log login
+INFO: User defaultUserlogged in
+mar 25, 2022 12:02:14 PM com.example.vavagoinventory.Log login
+INFO: User defaultUserlogged in
+mar 25, 2022 12:02:21 PM com.example.vavagoinventory.Log userLogout
+INFO: User named : ferino logged out
+mar 25, 2022 12:02:53 PM com.example.vavagoinventory.Log login
+INFO: User defaultUserlogged in
+mar 25, 2022 12:09:33 PM com.example.vavagoinventory.Log login
+INFO: User defaultUserlogged in
+mar 25, 2022 12:09:54 PM com.example.vavagoinventory.Log userLogout
+INFO: User named : ferino logged out
+mar 25, 2022 12:14:12 PM com.example.vavagoinventory.Log login
+INFO: User defaultUserlogged in
+mar 25, 2022 12:14:53 PM com.example.vavagoinventory.Log userLogout
+INFO: User named : ferino logged out
+mar 25, 2022 12:18:05 PM com.example.vavagoinventory.Log login
+INFO: User defaultUserlogged in
+mar 25, 2022 12:18:43 PM com.example.vavagoinventory.Log userLogout
+INFO: User named : ferino logged out
+Mar 27, 2022 6:46:19 PM com.example.vavagoinventory.Log login
+INFO: User defaultUserlogged in
+Mar 27, 2022 6:56:03 PM com.example.vavagoinventory.Log userLogout
+INFO: User named : ferino logged out
+Mar 27, 2022 7:34:37 PM com.example.vavagoinventory.Log login
+INFO: User defaultUserlogged in
+Mar 27, 2022 11:32:49 PM com.example.vavagoinventory.Log userLogout
+INFO: User named : ferino logged out
+Mar 28, 2022 7:43:04 PM com.example.vavagoinventory.Log login
+INFO: User defaultUserlogged in
+Mar 28, 2022 7:43:04 PM com.example.vavagoinventory.Log Exceptions
+SEVERE: Failed to load login screen, javafx.fxml.LoadException: Error resolving onAction='#onClickCreateOrder', either the event handler is not in the Namespace or there is an error in the script.
+/C:/Users/Jozef/IdeaProjects/vava-goinventory/target/classes/com/example/vavagoinventory/EmployeeMainPage.fxml:42
+
+Mar 28, 2022 7:43:07 PM com.example.vavagoinventory.Log login
+INFO: User defaultUserlogged in
+Mar 28, 2022 7:43:07 PM com.example.vavagoinventory.Log Exceptions
+SEVERE: Failed to load login screen, javafx.fxml.LoadException: Error resolving onAction='#onClickCreateOrder', either the event handler is not in the Namespace or there is an error in the script.
+/C:/Users/Jozef/IdeaProjects/vava-goinventory/target/classes/com/example/vavagoinventory/EmployeeMainPage.fxml:42
+
+mar 28, 2022 7:43:10 PM com.example.vavagoinventory.Log login
+INFO: User defaultUserlogged in
+mar 28, 2022 7:43:10 PM com.example.vavagoinventory.Log Exceptions
+SEVERE: Failed to load login screen, javafx.fxml.LoadException: Error resolving onAction='#onClickCreateOrder', either the event handler is not in the Namespace or there is an error in the script.
+/C:/Users/Jozef/IdeaProjects/vava-goinventory/target/classes/com/example/vavagoinventory/EmployeeMainPage.fxml:42
+
+mar 28, 2022 7:43:10 PM com.example.vavagoinventory.Log login
+INFO: User defaultUserlogged in
+mar 28, 2022 7:43:10 PM com.example.vavagoinventory.Log Exceptions
+SEVERE: Failed to load login screen, javafx.fxml.LoadException: Error resolving onAction='#onClickCreateOrder', either the event handler is not in the Namespace or there is an error in the script.
+/C:/Users/Jozef/IdeaProjects/vava-goinventory/target/classes/com/example/vavagoinventory/EmployeeMainPage.fxml:42
+
+mar 28, 2022 7:43:10 PM com.example.vavagoinventory.Log login
+INFO: User defaultUserlogged in
+mar 28, 2022 7:43:10 PM com.example.vavagoinventory.Log Exceptions
+SEVERE: Failed to load login screen, javafx.fxml.LoadException: Error resolving onAction='#onClickCreateOrder', either the event handler is not in the Namespace or there is an error in the script.
+/C:/Users/Jozef/IdeaProjects/vava-goinventory/target/classes/com/example/vavagoinventory/EmployeeMainPage.fxml:42
+
+mar 28, 2022 7:43:11 PM com.example.vavagoinventory.Log login
+INFO: User defaultUserlogged in
+mar 28, 2022 7:43:11 PM com.example.vavagoinventory.Log Exceptions
+SEVERE: Failed to load login screen, javafx.fxml.LoadException: Error resolving onAction='#onClickCreateOrder', either the event handler is not in the Namespace or there is an error in the script.
+/C:/Users/Jozef/IdeaProjects/vava-goinventory/target/classes/com/example/vavagoinventory/EmployeeMainPage.fxml:42
+
+mar 28, 2022 7:43:11 PM com.example.vavagoinventory.Log login
+INFO: User defaultUserlogged in
+mar 28, 2022 7:43:11 PM com.example.vavagoinventory.Log Exceptions
+SEVERE: Failed to load login screen, javafx.fxml.LoadException: Error resolving onAction='#onClickCreateOrder', either the event handler is not in the Namespace or there is an error in the script.
+/C:/Users/Jozef/IdeaProjects/vava-goinventory/target/classes/com/example/vavagoinventory/EmployeeMainPage.fxml:42
+
+mar 28, 2022 7:43:11 PM com.example.vavagoinventory.Log login
+INFO: User defaultUserlogged in
+mar 28, 2022 7:43:11 PM com.example.vavagoinventory.Log Exceptions
+SEVERE: Failed to load login screen, javafx.fxml.LoadException: Error resolving onAction='#onClickCreateOrder', either the event handler is not in the Namespace or there is an error in the script.
+/C:/Users/Jozef/IdeaProjects/vava-goinventory/target/classes/com/example/vavagoinventory/EmployeeMainPage.fxml:42
+
+mar 28, 2022 7:43:11 PM com.example.vavagoinventory.Log login
+INFO: User defaultUserlogged in
+mar 28, 2022 7:43:11 PM com.example.vavagoinventory.Log Exceptions
+SEVERE: Failed to load login screen, javafx.fxml.LoadException: Error resolving onAction='#onClickCreateOrder', either the event handler is not in the Namespace or there is an error in the script.
+/C:/Users/Jozef/IdeaProjects/vava-goinventory/target/classes/com/example/vavagoinventory/EmployeeMainPage.fxml:42
+
+mar 28, 2022 7:43:11 PM com.example.vavagoinventory.Log login
+INFO: User defaultUserlogged in
+mar 28, 2022 7:43:11 PM com.example.vavagoinventory.Log Exceptions
+SEVERE: Failed to load login screen, javafx.fxml.LoadException: Error resolving onAction='#onClickCreateOrder', either the event handler is not in the Namespace or there is an error in the script.
+/C:/Users/Jozef/IdeaProjects/vava-goinventory/target/classes/com/example/vavagoinventory/EmployeeMainPage.fxml:42
+
+mar 28, 2022 7:43:14 PM com.example.vavagoinventory.Log login
+INFO: User defaultUserlogged in
+mar 28, 2022 7:43:14 PM com.example.vavagoinventory.Log Exceptions
+SEVERE: Failed to load login screen, javafx.fxml.LoadException: Error resolving onAction='#onClickCreateOrder', either the event handler is not in the Namespace or there is an error in the script.
+/C:/Users/Jozef/IdeaProjects/vava-goinventory/target/classes/com/example/vavagoinventory/EmployeeMainPage.fxml:42
+
+mar 28, 2022 7:43:14 PM com.example.vavagoinventory.Log login
+INFO: User defaultUserlogged in
+mar 28, 2022 7:43:14 PM com.example.vavagoinventory.Log Exceptions
+SEVERE: Failed to load login screen, javafx.fxml.LoadException: Error resolving onAction='#onClickCreateOrder', either the event handler is not in the Namespace or there is an error in the script.
+/C:/Users/Jozef/IdeaProjects/vava-goinventory/target/classes/com/example/vavagoinventory/EmployeeMainPage.fxml:42
+
+mar 28, 2022 7:43:14 PM com.example.vavagoinventory.Log login
+INFO: User defaultUserlogged in
+mar 28, 2022 7:43:14 PM com.example.vavagoinventory.Log Exceptions
+SEVERE: Failed to load login screen, javafx.fxml.LoadException: Error resolving onAction='#onClickCreateOrder', either the event handler is not in the Namespace or there is an error in the script.
+/C:/Users/Jozef/IdeaProjects/vava-goinventory/target/classes/com/example/vavagoinventory/EmployeeMainPage.fxml:42
+
+mar 28, 2022 7:43:18 PM com.example.vavagoinventory.Log login
+INFO: User defaultUserlogged in
+mar 28, 2022 7:43:18 PM com.example.vavagoinventory.Log Exceptions
+SEVERE: Failed to load login screen, javafx.fxml.LoadException: Error resolving onAction='#onClickCreateOrder', either the event handler is not in the Namespace or there is an error in the script.
+/C:/Users/Jozef/IdeaProjects/vava-goinventory/target/classes/com/example/vavagoinventory/EmployeeMainPage.fxml:42
+
+mar 28, 2022 7:43:29 PM com.example.vavagoinventory.Log login
+INFO: User defaultUserlogged in
+mar 28, 2022 7:43:29 PM com.example.vavagoinventory.Log Exceptions
+SEVERE: Failed to load login screen, javafx.fxml.LoadException: Error resolving onAction='#onClickCreateOrder', either the event handler is not in the Namespace or there is an error in the script.
+/C:/Users/Jozef/IdeaProjects/vava-goinventory/target/classes/com/example/vavagoinventory/EmployeeMainPage.fxml:42
+
+mar 28, 2022 7:43:30 PM com.example.vavagoinventory.Log login
+INFO: User defaultUserlogged in
+mar 28, 2022 7:43:30 PM com.example.vavagoinventory.Log Exceptions
+SEVERE: Failed to load login screen, javafx.fxml.LoadException: Error resolving onAction='#onClickCreateOrder', either the event handler is not in the Namespace or there is an error in the script.
+/C:/Users/Jozef/IdeaProjects/vava-goinventory/target/classes/com/example/vavagoinventory/EmployeeMainPage.fxml:42
+
+mar 28, 2022 7:43:30 PM com.example.vavagoinventory.Log login
+INFO: User defaultUserlogged in
+mar 28, 2022 7:43:30 PM com.example.vavagoinventory.Log Exceptions
+SEVERE: Failed to load login screen, javafx.fxml.LoadException: Error resolving onAction='#onClickCreateOrder', either the event handler is not in the Namespace or there is an error in the script.
+/C:/Users/Jozef/IdeaProjects/vava-goinventory/target/classes/com/example/vavagoinventory/EmployeeMainPage.fxml:42
+
+mar 28, 2022 7:43:38 PM com.example.vavagoinventory.Log Exceptions
+SEVERE: Wrong email, Wrong username or password exception
+mar 28, 2022 7:43:44 PM com.example.vavagoinventory.Log Exceptions
+SEVERE: Wrong email, Wrong username or password exception
+mar 28, 2022 7:44:03 PM com.example.vavagoinventory.Log login
+INFO: User defaultUserlogged in
+mar 28, 2022 7:44:03 PM com.example.vavagoinventory.Log Exceptions
+SEVERE: Failed to load login screen, javafx.fxml.LoadException: Error resolving onAction='#onClickCreateOrder', either the event handler is not in the Namespace or there is an error in the script.
+/C:/Users/Jozef/IdeaProjects/vava-goinventory/target/classes/com/example/vavagoinventory/EmployeeMainPage.fxml:42
+
+mar 28, 2022 7:44:04 PM com.example.vavagoinventory.Log login
+INFO: User defaultUserlogged in
+mar 28, 2022 7:44:04 PM com.example.vavagoinventory.Log Exceptions
+SEVERE: Failed to load login screen, javafx.fxml.LoadException: Error resolving onAction='#onClickCreateOrder', either the event handler is not in the Namespace or there is an error in the script.
+/C:/Users/Jozef/IdeaProjects/vava-goinventory/target/classes/com/example/vavagoinventory/EmployeeMainPage.fxml:42
+
+mar 28, 2022 7:44:04 PM com.example.vavagoinventory.Log login
+INFO: User defaultUserlogged in
+mar 28, 2022 7:44:04 PM com.example.vavagoinventory.Log Exceptions
+SEVERE: Failed to load login screen, javafx.fxml.LoadException: Error resolving onAction='#onClickCreateOrder', either the event handler is not in the Namespace or there is an error in the script.
+/C:/Users/Jozef/IdeaProjects/vava-goinventory/target/classes/com/example/vavagoinventory/EmployeeMainPage.fxml:42
+
+mar 28, 2022 7:44:15 PM com.example.vavagoinventory.Log login
+INFO: User defaultUserlogged in
+mar 28, 2022 7:44:15 PM com.example.vavagoinventory.Log Exceptions
+SEVERE: Failed to load login screen, javafx.fxml.LoadException: Error resolving onAction='#onClickCreateOrder', either the event handler is not in the Namespace or there is an error in the script.
+/C:/Users/Jozef/IdeaProjects/vava-goinventory/target/classes/com/example/vavagoinventory/EmployeeMainPage.fxml:42
+
+mar 28, 2022 7:44:16 PM com.example.vavagoinventory.Log login
+INFO: User defaultUserlogged in
+mar 28, 2022 7:44:16 PM com.example.vavagoinventory.Log Exceptions
+SEVERE: Failed to load login screen, javafx.fxml.LoadException: Error resolving onAction='#onClickCreateOrder', either the event handler is not in the Namespace or there is an error in the script.
+/C:/Users/Jozef/IdeaProjects/vava-goinventory/target/classes/com/example/vavagoinventory/EmployeeMainPage.fxml:42
+
+mar 28, 2022 7:44:16 PM com.example.vavagoinventory.Log login
+INFO: User defaultUserlogged in
+mar 28, 2022 7:44:16 PM com.example.vavagoinventory.Log Exceptions
+SEVERE: Failed to load login screen, javafx.fxml.LoadException: Error resolving onAction='#onClickCreateOrder', either the event handler is not in the Namespace or there is an error in the script.
+/C:/Users/Jozef/IdeaProjects/vava-goinventory/target/classes/com/example/vavagoinventory/EmployeeMainPage.fxml:42
+
+Mar 28, 2022 7:46:33 PM com.example.vavagoinventory.Log login
+INFO: User defaultUserlogged in
+Mar 28, 2022 7:46:33 PM com.example.vavagoinventory.Log Exceptions
+SEVERE: Failed to load login screen, javafx.fxml.LoadException: Error resolving onAction='#onClickCreateOrder', either the event handler is not in the Namespace or there is an error in the script.
+/C:/Users/Jozef/IdeaProjects/vava-goinventory/target/classes/com/example/vavagoinventory/EmployeeMainPage.fxml:42
+
+Mar 28, 2022 7:46:35 PM com.example.vavagoinventory.Log login
+INFO: User defaultUserlogged in
+Mar 28, 2022 7:46:35 PM com.example.vavagoinventory.Log Exceptions
+SEVERE: Failed to load login screen, javafx.fxml.LoadException: Error resolving onAction='#onClickCreateOrder', either the event handler is not in the Namespace or there is an error in the script.
+/C:/Users/Jozef/IdeaProjects/vava-goinventory/target/classes/com/example/vavagoinventory/EmployeeMainPage.fxml:42
+
+Mar 28, 2022 7:46:36 PM com.example.vavagoinventory.Log login
+INFO: User defaultUserlogged in
+Mar 28, 2022 7:46:36 PM com.example.vavagoinventory.Log Exceptions
+SEVERE: Failed to load login screen, javafx.fxml.LoadException: Error resolving onAction='#onClickCreateOrder', either the event handler is not in the Namespace or there is an error in the script.
+/C:/Users/Jozef/IdeaProjects/vava-goinventory/target/classes/com/example/vavagoinventory/EmployeeMainPage.fxml:42
+
+Mar 28, 2022 7:46:37 PM com.example.vavagoinventory.Log login
+INFO: User defaultUserlogged in
+Mar 28, 2022 7:46:37 PM com.example.vavagoinventory.Log Exceptions
+SEVERE: Failed to load login screen, javafx.fxml.LoadException: Error resolving onAction='#onClickCreateOrder', either the event handler is not in the Namespace or there is an error in the script.
+/C:/Users/Jozef/IdeaProjects/vava-goinventory/target/classes/com/example/vavagoinventory/EmployeeMainPage.fxml:42
+
+Mar 28, 2022 7:46:38 PM com.example.vavagoinventory.Log login
+INFO: User defaultUserlogged in
+Mar 28, 2022 7:46:38 PM com.example.vavagoinventory.Log Exceptions
+SEVERE: Failed to load login screen, javafx.fxml.LoadException: Error resolving onAction='#onClickCreateOrder', either the event handler is not in the Namespace or there is an error in the script.
+/C:/Users/Jozef/IdeaProjects/vava-goinventory/target/classes/com/example/vavagoinventory/EmployeeMainPage.fxml:42
+
+Mar 28, 2022 7:46:40 PM com.example.vavagoinventory.Log login
+INFO: User defaultUserlogged in
+Mar 28, 2022 7:46:40 PM com.example.vavagoinventory.Log Exceptions
+SEVERE: Failed to load login screen, javafx.fxml.LoadException: Error resolving onAction='#onClickCreateOrder', either the event handler is not in the Namespace or there is an error in the script.
+/C:/Users/Jozef/IdeaProjects/vava-goinventory/target/classes/com/example/vavagoinventory/EmployeeMainPage.fxml:42
+
+Mar 28, 2022 7:46:44 PM com.example.vavagoinventory.Log login
+INFO: User defaultUserlogged in
+Mar 28, 2022 7:46:44 PM com.example.vavagoinventory.Log Exceptions
+SEVERE: Failed to load login screen, javafx.fxml.LoadException: Error resolving onAction='#onClickCreateOrder', either the event handler is not in the Namespace or there is an error in the script.
+/C:/Users/Jozef/IdeaProjects/vava-goinventory/target/classes/com/example/vavagoinventory/EmployeeMainPage.fxml:42
+
+Mar 28, 2022 7:49:41 PM com.example.vavagoinventory.Log login
+INFO: User defaultUserlogged in
+Mar 28, 2022 7:50:39 PM com.example.vavagoinventory.Log userLogout
+INFO: User named : ferino logged out
+Mar 28, 2022 8:58:30 PM com.example.vavagoinventory.Log login
+INFO: User defaultUserlogged in
+Mar 28, 2022 9:02:24 PM com.example.vavagoinventory.Log userLogout
+INFO: User named : ferino logged out
+Mar 28, 2022 9:03:21 PM com.example.vavagoinventory.Log login
+INFO: User defaultUserlogged in
+Mar 28, 2022 9:03:29 PM com.example.vavagoinventory.Log userLogout
+INFO: User named : ferino logged out
+Mar 28, 2022 9:04:48 PM com.example.vavagoinventory.Log login
+INFO: User defaultUserlogged in
+Mar 28, 2022 9:06:31 PM com.example.vavagoinventory.Log userLogout
+INFO: User named : ferino logged out
+Apr 03, 2022 7:44:44 PM com.example.vavagoinventory.Log login
+INFO: User defaultUserlogged in
+Apr 03, 2022 7:49:45 PM com.example.vavagoinventory.Log login
+INFO: User defaultUserlogged in
+Apr 03, 2022 7:50:06 PM com.example.vavagoinventory.Log userLogout
+INFO: User named : ferino logged out
+Apr 03, 2022 7:51:04 PM com.example.vavagoinventory.Log login
+INFO: User defaultUserlogged in
+Apr 03, 2022 7:58:14 PM com.example.vavagoinventory.Log login
+INFO: User defaultUserlogged in
+Apr 03, 2022 8:01:41 PM com.example.vavagoinventory.Log Exceptions
+SEVERE: Wrong email, Wrong username or password exception
+Apr 03, 2022 8:02:23 PM com.example.vavagoinventory.Log login
+INFO: User defaultUserlogged in
+Apr 03, 2022 8:02:47 PM com.example.vavagoinventory.Log userLogout
+INFO: User named : ferino logged out
+Apr 03, 2022 9:39:12 PM com.example.vavagoinventory.Log login
+INFO: User defaultUserlogged in
+Apr 03, 2022 9:40:52 PM com.example.vavagoinventory.Log userLogout
+INFO: User named : ferino logged out
+Apr 03, 2022 10:23:19 PM com.example.vavagoinventory.Log login
+INFO: User defaultUserlogged in
+Apr 03, 2022 10:26:24 PM com.example.vavagoinventory.Log login
+INFO: User defaultUserlogged in
+Apr 03, 2022 10:26:28 PM com.example.vavagoinventory.Log userLogout
+INFO: User named : ferino logged out
+Apr 03, 2022 10:29:08 PM com.example.vavagoinventory.Log login
+INFO: User defaultUserlogged in
+Apr 03, 2022 10:29:18 PM com.example.vavagoinventory.Log userLogout
+INFO: User named : ferino logged out
+Apr 03, 2022 10:32:25 PM com.example.vavagoinventory.Log login
+INFO: User defaultUserlogged in
+Apr 03, 2022 10:36:49 PM com.example.vavagoinventory.Log login
+INFO: User defaultUserlogged in
+Apr 03, 2022 10:37:01 PM com.example.vavagoinventory.Log userLogout
+INFO: User named : ferino logged out
+Apr 03, 2022 10:43:35 PM com.example.vavagoinventory.Log login
+INFO: User defaultUserlogged in
+Apr 03, 2022 10:43:58 PM com.example.vavagoinventory.Log userLogout
+INFO: User named : ferino logged out
+Apr 03, 2022 11:12:34 PM com.example.vavagoinventory.Log login
+INFO: User defaultUserlogged in
+Apr 03, 2022 11:13:20 PM com.example.vavagoinventory.Log userLogout
+INFO: User named : ferino logged out
+Apr 03, 2022 11:17:42 PM com.example.vavagoinventory.Log login
+INFO: User defaultUserlogged in
+Apr 03, 2022 11:20:36 PM com.example.vavagoinventory.Log login
+INFO: User defaultUserlogged in
+Apr 03, 2022 11:23:46 PM com.example.vavagoinventory.Log userLogout
+INFO: User named : ferino logged out
+Apr 03, 2022 11:24:49 PM com.example.vavagoinventory.Log login
+INFO: User defaultUserlogged in
+Apr 03, 2022 11:28:16 PM com.example.vavagoinventory.Log userLogout
+INFO: User named : ferino logged out
+Apr 04, 2022 1:20:29 AM com.example.vavagoinventory.Log login
+INFO: User defaultUserlogged in
+Apr 04, 2022 1:29:27 AM com.example.vavagoinventory.Log userLogout
+INFO: User named : ferino logged out
+Apr 04, 2022 1:31:32 AM com.example.vavagoinventory.Log login
+INFO: User defaultUserlogged in
+Apr 04, 2022 1:36:20 AM com.example.vavagoinventory.Log userLogout
+INFO: User named : ferino logged out
+Apr 04, 2022 3:36:22 PM com.example.vavagoinventory.Log login
+INFO: User defaultUserlogged in
+Apr 04, 2022 5:12:00 PM com.example.vavagoinventory.Log login
+INFO: User defaultUserlogged in
+Apr 04, 2022 5:12:11 PM com.example.vavagoinventory.Log userLogout
+INFO: User named : ferino logged out
+Apr 04, 2022 5:13:40 PM com.example.vavagoinventory.Log login
+INFO: User defaultUserlogged in
+Apr 04, 2022 5:14:42 PM com.example.vavagoinventory.Log userLogout
+INFO: User named : ferino logged out
+Apr 04, 2022 5:16:26 PM com.example.vavagoinventory.Log login
+INFO: User defaultUserlogged in
+Apr 04, 2022 5:20:16 PM com.example.vavagoinventory.Log userLogout
+INFO: User named : ferino logged out
+Apr 04, 2022 5:23:10 PM com.example.vavagoinventory.Log login
+INFO: User defaultUserlogged in
+Apr 04, 2022 5:24:39 PM com.example.vavagoinventory.Log login
+INFO: User defaultUserlogged in
+Apr 04, 2022 5:27:01 PM com.example.vavagoinventory.Log Exceptions
+SEVERE: Wrong email, Wrong username or password exception
+Apr 04, 2022 5:27:13 PM com.example.vavagoinventory.Log login
+INFO: User defaultUserlogged in
+Apr 04, 2022 5:38:08 PM com.example.vavagoinventory.Log login
+INFO: User defaultUserlogged in
+Apr 04, 2022 5:38:20 PM com.example.vavagoinventory.Log userLogout
+INFO: User named : ferino logged out
+Apr 04, 2022 5:42:04 PM com.example.vavagoinventory.Log login
+INFO: User defaultUserlogged in
+Apr 04, 2022 5:42:28 PM com.example.vavagoinventory.Log userLogout
+INFO: User named : ferino logged out

@@ -10,6 +10,8 @@ import javafx.stage.Stage;
 import org.jooq.Record;
 import org.jooq.codegen.maven.goinventory.tables.Users;
 
+import javafx.collections.ObservableList;
+
 import java.io.IOException;
 
 public class FunctionsController {
@@ -18,6 +20,14 @@ public class FunctionsController {
         Alert alert;
         alert = new Alert(Alert.AlertType.ERROR);
         alert.setTitle(I18N.get("error"));
+        alert.setContentText(text);
+        alert.showAndWait();
+    }
+
+    public static void showConfirmationAlert(String text) {
+        Alert alert;
+        alert = new Alert(Alert.AlertType.INFORMATION);
+        alert.setTitle("Success");
         alert.setContentText(text);
         alert.showAndWait();
     }
