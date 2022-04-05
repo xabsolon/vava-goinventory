@@ -10,6 +10,8 @@ import javafx.stage.Stage;
 import org.jooq.Record;
 import org.jooq.codegen.maven.goinventory.tables.Users;
 
+import javafx.collections.ObservableList;
+
 import java.io.IOException;
 
 public class FunctionsController {
@@ -29,7 +31,6 @@ public class FunctionsController {
         alert.setContentText(text);
         alert.showAndWait();
     }
-
     public static boolean isNumeric(String str) {
         try {
             Double.parseDouble(str);
@@ -37,6 +38,7 @@ public class FunctionsController {
         } catch(NumberFormatException e){
             return false;
         }
+
     }
 
     public static Record maybeGetUserFromDatabase(String email, String password) {
