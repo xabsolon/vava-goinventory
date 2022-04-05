@@ -1,5 +1,6 @@
 package com.example.vavagoinventory;
 
+import com.example.vavagoinventory.DBconnector.DatabaseContextSingleton;
 import javafx.event.Event;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
@@ -9,8 +10,6 @@ import javafx.scene.control.Alert;
 import javafx.stage.Stage;
 import org.jooq.Record;
 import org.jooq.codegen.maven.goinventory.tables.Users;
-
-import javafx.collections.ObservableList;
 
 import java.io.IOException;
 

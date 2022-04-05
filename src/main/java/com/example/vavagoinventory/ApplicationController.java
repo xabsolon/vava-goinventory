@@ -1,7 +1,8 @@
 package com.example.vavagoinventory;
 
-import com.example.vavagoinventory.Storage.DatabaseConnection;
-import com.example.vavagoinventory.Storage.Product;
+import com.example.vavagoinventory.Employee.EmployeeMainPageController;
+import com.example.vavagoinventory.Employee.Storage.DatabaseConnection;
+import com.example.vavagoinventory.Employee.Storage.Product;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXMLLoader;

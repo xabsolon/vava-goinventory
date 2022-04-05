@@ -1,5 +1,6 @@
 package com.example.vavagoinventory;
 
+import com.example.vavagoinventory.DBconnector.DatabaseContextSingleton;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
@@ -13,7 +14,7 @@ public class Main extends Application {
 
     @Override
     public void start(Stage stage) throws IOException {
-        FXMLLoader fxmlLoader = new FXMLLoader(Main.class.getResource("FadingIntro.fxml"));
+        FXMLLoader fxmlLoader = new FXMLLoader(Main.class.getResource("Login/FadingIntro.fxml"));
         Scene scene = new Scene(fxmlLoader.load(), 320, 240);
         stage.setTitle("Fading!");
         stage.setScene(scene);

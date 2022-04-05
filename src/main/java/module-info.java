@@ -15,9 +15,17 @@ module com.example.vavagoinventory {
     requires jdk.scripting.nashorn;
 
     opens com.example.vavagoinventory to javafx.fxml;
-    opens com.example.vavagoinventory.Storage to javafx.fxml;
+    opens com.example.vavagoinventory.Employee.Storage to javafx.fxml;
     exports com.example.vavagoinventory;
-    exports com.example.vavagoinventory.Storage;
+    exports com.example.vavagoinventory.Employee.Storage;
     exports org.jooq.codegen.maven.goinventory.tables.records;
-    opens com.example.vavagoinventory.Orders to javafx.fxml;
+    opens com.example.vavagoinventory.Employee.Orders to javafx.fxml;
+    exports com.example.vavagoinventory.Owner;
+    opens com.example.vavagoinventory.Owner to javafx.fxml;
+    exports com.example.vavagoinventory.Login;
+    opens com.example.vavagoinventory.Login to javafx.fxml;
+    exports com.example.vavagoinventory.DBconnector;
+    opens com.example.vavagoinventory.DBconnector to javafx.fxml;
+    exports com.example.vavagoinventory.Employee;
+    opens com.example.vavagoinventory.Employee to javafx.fxml;
 }

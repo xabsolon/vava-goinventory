@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="CreateProductPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="166.0" prefWidth="370.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.vavagoinventory.Employee.Storage.CreateProductController">
+   <children>
+      <Button fx:id="confirmCreateButton" layoutX="277.0" layoutY="123.0" mnemonicParsing="false" onAction="#onClickConfirm" prefHeight="27.0" prefWidth="78.0" text="Confirm" />
+      <Button fx:id="cancelCreateButton" layoutX="10.0" layoutY="123.0" mnemonicParsing="false" onAction="#onClickCancel" prefHeight="27.0" prefWidth="78.0" text="Cancel" />
+      <Label layoutX="120.0" layoutY="6.0" prefHeight="42.0" prefWidth="131.0" text="Create Product" textAlignment="CENTER" textFill="#141e30">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="13.0" layoutY="74.0" prefHeight="18.0" prefWidth="71.0" text="Name :" />
+      <TextField fx:id="productNameField" layoutX="105.0" layoutY="69.0" prefHeight="27.0" prefWidth="160.0" />
+      <Label fx:id="errorLabel" layoutX="171.0" layoutY="106.0" />
+   </children>
+</AnchorPane>
