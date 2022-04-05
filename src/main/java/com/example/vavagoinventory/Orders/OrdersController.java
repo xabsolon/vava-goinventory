@@ -21,12 +21,10 @@ import org.jooq.DSLContext;
 import org.jooq.Record;
 import org.jooq.Result;
 import org.jooq.codegen.maven.goinventory.tables.Orders;
-import org.jooq.impl.QOM;
 
 import java.io.IOException;
 import java.net.URL;
 import java.util.ArrayList;
-import java.util.Objects;
 import java.util.ResourceBundle;
 
 //import static com.sun.javafx.scene.control.skin.Utils.getResource;

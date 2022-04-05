@@ -1,8 +1,5 @@
 package com.example.vavagoinventory.Storage;
 
-public class EditProductController {
-}
-
 import com.example.vavagoinventory.ApplicationController;
 import com.example.vavagoinventory.FunctionsController;
 import javafx.application.Platform;

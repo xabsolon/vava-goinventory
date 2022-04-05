@@ -65,7 +65,7 @@ public class CreateProductController implements Initializable {
                     .build();
             productsObservableList.add(product);
 
-            FunctionsController.showConfirmationAlert("Product created successfully");
+            //FunctionsController.showConfirmationAlert("Product created successfully");
 
             Comparator<Product> productComparator = Comparator.comparing(Product::getQuantity);
             Collections.sort(productsObservableList, productComparator);

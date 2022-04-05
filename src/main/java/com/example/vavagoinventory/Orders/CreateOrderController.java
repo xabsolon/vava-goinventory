@@ -1,6 +1,5 @@
 package com.example.vavagoinventory.Orders;
 
-import com.example.vavagoinventory.DatabaseContextSingleton;
 import com.example.vavagoinventory.FunctionsController;
 import com.example.vavagoinventory.I18N;
 import javafx.fxml.FXML;
@@ -11,8 +10,6 @@ import javafx.stage.Stage;
 
 import java.net.URL;
 import java.util.ResourceBundle;
-
-import static org.jooq.codegen.maven.goinventory.Tables.ORDERS;
 
 public class CreateOrderController implements Initializable { //work in progress
 

@@ -31,14 +31,6 @@ public class FunctionsController {
         alert.setContentText(text);
         alert.showAndWait();
     }
-
-    public static void showConfirmationAlert(String text) {
-        Alert alert;
-        alert = new Alert(Alert.AlertType.INFORMATION);
-        alert.setTitle("Success");
-        alert.setContentText(text);
-        alert.showAndWait();
-    }
     public static boolean isNumeric(String str) {
         try {
             Double.parseDouble(str);
