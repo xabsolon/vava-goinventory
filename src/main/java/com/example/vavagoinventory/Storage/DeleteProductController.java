@@ -1,7 +1,6 @@
 package com.example.vavagoinventory.Storage;
 
 import com.example.vavagoinventory.DatabaseConnection;
-
 import com.example.vavagoinventory.FunctionsController;
 //import com.sun.javafx.scene.control.ReadOnlyUnbackedObservableList;
 import javafx.collections.ObservableList;
@@ -11,6 +10,7 @@ import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.AnchorPane;
+
 import javafx.stage.Stage;
 
 import java.net.URL;
@@ -20,7 +20,8 @@ import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.ResourceBundle;
 
-//import static com.example.vavagoinventory.EmployeeMainPageController.productsObservableList;
+
+import static com.example.vavagoinventory.ApplicationController.productsObservableList;
 
 public class DeleteProductController implements Initializable {
 
@@ -53,7 +54,9 @@ public class DeleteProductController implements Initializable {
 
                 connection.close();
 
+
                 ObservableList<Product> productsObservableList = null;
+
                 productsObservableList.forEach(product -> {
                     String product_name = product.getName();
                     if (product_name.equals(productNameField.getText())) {

@@ -16,6 +16,14 @@ import java.io.IOException;
 
 public class FunctionsController {
 
+    public static void showConfirmationAlert(String content) {
+        Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
+        alert.setTitle("Success");
+        alert.setHeaderText("Success");
+        alert.setContentText(content);
+        alert.showAndWait();
+    }
+
     public static void showErrorAlert(String text) {
         Alert alert;
         alert = new Alert(Alert.AlertType.ERROR);
@@ -30,6 +38,15 @@ public class FunctionsController {
         alert.setTitle("Success");
         alert.setContentText(text);
         alert.showAndWait();
+    }
+    public static boolean isNumeric(String str) {
+        try {
+            Double.parseDouble(str);
+            return true;
+        } catch(NumberFormatException e){
+            return false;
+        }
+
     }
 
     public static Record maybeGetUserFromDatabase(String email, String password) {

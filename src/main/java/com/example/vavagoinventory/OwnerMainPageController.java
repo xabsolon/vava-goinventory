@@ -10,7 +10,7 @@ import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 
-public class OwnerMainPageController implements Initializable {
+public class OwnerMainPageController extends ApplicationController implements Initializable {
 
     @FXML
     private Button logOutButton;
