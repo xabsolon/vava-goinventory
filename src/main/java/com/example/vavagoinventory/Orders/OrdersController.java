@@ -3,6 +3,7 @@ package com.example.vavagoinventory.Orders;
 import com.example.vavagoinventory.DatabaseContextSingleton;
 import com.example.vavagoinventory.EmployeeMainPageController;
 import com.example.vavagoinventory.FadingIntroController;
+import javafx.beans.property.SimpleIntegerProperty;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
@@ -21,6 +22,7 @@ import org.jooq.DSLContext;
 import org.jooq.Record;
 import org.jooq.Result;
 import org.jooq.codegen.maven.goinventory.tables.Orders;
+import org.jooq.conf.ParamType;
 
 import java.io.IOException;
 import java.net.URL;
@@ -29,6 +31,8 @@ import java.util.ResourceBundle;
 
 //import static com.sun.javafx.scene.control.skin.Utils.getResource;
 import static org.jooq.codegen.maven.goinventory.Tables.ORDERS;
+import static org.jooq.impl.DSL.inline;
+import static org.jooq.impl.DSL.val;
 
 public class OrdersController implements Initializable {
 
@@ -73,9 +77,11 @@ public class OrdersController implements Initializable {
         public static void insertQuery(Order order) {
             Integer p_id = order.getP_id();
             Integer quantity = order.getQuantity();
+            System.out.println(p_id + " " + quantity);
             DSLContext create = DatabaseContextSingleton.getContext();
-            Record record = create.insertInto(ORDERS, ORDERS.P_ID, ORDERS.QUANTITY)
-                    .values(p_id, quantity)
+            Record record = create.insertInto(ORDERS)
+                    .set(ORDERS.P_ID, inline(p_id))
+                    .set(ORDERS.QUANTITY, inline(quantity))
                     .returningResult(ORDERS.O_ID)
                     .fetchOne();
             order.setO_id(record.get(ORDERS.O_ID));
@@ -94,10 +100,11 @@ public class OrdersController implements Initializable {
     public void initialize(URL location, ResourceBundle resources) {
         OrderQuery.getQuery();
         orders = FXCollections.observableArrayList(OrderQuery.orders);
-        colID.setCellValueFactory(new PropertyValueFactory<Order, Integer>("o_id"));
-        colProduct.setCellValueFactory(new PropertyValueFactory<Order, Integer>("p_id"));
-        colQuantity.setCellValueFactory(new PropertyValueFactory<Order, Integer>("quantity"));
+        colID.setCellValueFactory(orders -> new SimpleIntegerProperty(orders.getValue().getO_id()).asObject());
+        colProduct.setCellValueFactory(orders -> new SimpleIntegerProperty(orders.getValue().getP_id()).asObject());
+        colQuantity.setCellValueFactory(orders -> new SimpleIntegerProperty(orders.getValue().getQuantity()).asObject());
         tableView.setItems(orders);
+        System.out.println(orders);
     }
 
     public void addOrder(Order order) {
