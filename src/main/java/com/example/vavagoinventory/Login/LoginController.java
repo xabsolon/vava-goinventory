@@ -1,9 +1,11 @@
 package com.example.vavagoinventory.Login;
 
+import com.example.vavagoinventory.Employee.EmployeeMainPageController;
 import com.example.vavagoinventory.Exceptions.WrongUserNameOrPasswordException;
 import com.example.vavagoinventory.FunctionsController;
 import com.example.vavagoinventory.I18N;
 import com.example.vavagoinventory.Log;
+import com.example.vavagoinventory.Owner.OwnerMainPageController;
 import javafx.event.Event;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -158,15 +160,14 @@ public class LoginController implements Initializable {
         }
 
         String position = user.get(Users.USERS.POSSITION);
-        String page = "";
+        URL page = null;
         if(position.equalsIgnoreCase("employee")) {
-            page = "../Employee/EmployeeMainPage.fxml";
+            page = EmployeeMainPageController.class.getResource("EmployeeMainPage.fxml");
         }else if(position.equalsIgnoreCase("owner")) {
-            page = "../Owner/OwnerMainPage.fxml";
+            page = OwnerMainPageController.class.getResource("OwnerMainPage.fxml");
         }
-        System.out.println(page);
         Stage stage = FunctionsController.getStageFromEvent(event);
-        FXMLLoader loader = new FXMLLoader(FadingIntroController.class.getResource(page));
+        FXMLLoader loader = new FXMLLoader(page);
         log.login(user.get(Users.USERS.NAME));
 
         try {

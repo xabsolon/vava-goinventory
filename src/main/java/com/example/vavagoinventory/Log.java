@@ -22,6 +22,7 @@ public class Log { //nezabudnut pridavat ako public metody - {"public Xxxxx()"}
         LOGGER.log(Level.WARNING, "User " + username + "created:" + nameOfProduct);
     }
     public void Exceptions(String type, Exception e){
+        e.printStackTrace();
         LOGGER.log(Level.SEVERE, type + ", " + e);
     }
 }
