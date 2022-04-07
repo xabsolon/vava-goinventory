@@ -1,12 +1,15 @@
 package com.example.vavagoinventory.Employee;
 
 import com.example.vavagoinventory.ApplicationController;
+import com.example.vavagoinventory.Employee.Orders.Order;
+import com.example.vavagoinventory.Employee.Storage.AddProductController;
 import com.example.vavagoinventory.FunctionsController;
 import com.example.vavagoinventory.Log;
 import com.example.vavagoinventory.Login.FadingIntroController;
 import com.example.vavagoinventory.Employee.Storage.Product;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
+import javafx.event.Event;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
@@ -18,7 +21,11 @@ import javafx.scene.layout.Pane;
 
 import java.io.IOException;
 import java.net.URL;
+import java.util.Comparator;
+import java.util.Objects;
 import java.util.ResourceBundle;
+
+import static com.example.vavagoinventory.FunctionsController.openWindow;
 
 public class EmployeeMainPageController extends ApplicationController implements Initializable {
     @FXML
@@ -61,7 +68,9 @@ public class EmployeeMainPageController extends ApplicationController implements
     public Log log = new Log();
 
     public static ObservableList<Product> productObservableList;
+    public static ObservableList<Order> orderObservableList;
 
+    private FunctionsController functionsController = new FunctionsController();
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
@@ -69,14 +78,16 @@ public class EmployeeMainPageController extends ApplicationController implements
     }
 
     @FXML
-    private void onClickAddOrder(ActionEvent actionEvent) {
-
+    private void onClickAddOrder(ActionEvent actionEvent) throws Exception {
+    // add order
     }
 
     @FXML
-    private void onClickAddProductToStorage(ActionEvent actionEvent){
-
+    private void onClickAddProductToStorage(Event event) throws Exception {
+        openWindow(AddProductController.class.getResource("AddProduct.fxml"));
+        productsObservableList.sort(Comparator.comparing(Product::getQuantity));
     }
+
     private void onLogOutButtonClick(ActionEvent actionEvent) {
         FXMLLoader loader = new FXMLLoader(FadingIntroController.class.getResource("Login.fxml"));
         try {

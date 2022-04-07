@@ -7,11 +7,16 @@ import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Alert;
+import javafx.stage.Modality;
 import javafx.stage.Stage;
+import javafx.stage.StageStyle;
 import org.jooq.Record;
+import org.jooq.User;
 import org.jooq.codegen.maven.goinventory.tables.Users;
 
 import java.io.IOException;
+import java.net.URL;
+import java.util.Objects;
 
 public class FunctionsController {
 
@@ -41,11 +46,10 @@ public class FunctionsController {
     }
 
     public static Record maybeGetUserFromDatabase(String email, String password) {
-        Record user = DatabaseContextSingleton.getContext().select()
+        return DatabaseContextSingleton.getContext().select()
                 .from(Users.USERS)
                 .where(Users.USERS.EMAIL.eq(email).and(Users.USERS.PASSWORD.eq(password)))
                 .fetchOne();
-        return user;
     }
 
     public static Stage getStageFromEvent(Event event) {
@@ -59,6 +63,16 @@ public class FunctionsController {
         stage.setTitle(title);
         stage.centerOnScreen();
         stage.show();
+    }
+    public static void openWindow(URL page) throws Exception {
+        Stage newstage = new Stage();
+        Parent root = FXMLLoader.load(page);
+        Scene scene = new Scene(root);
+        newstage.setScene(scene);
+        newstage.setResizable(false);
+        newstage.initStyle(StageStyle.TRANSPARENT);
+        newstage.initModality(Modality.APPLICATION_MODAL);
+        newstage.showAndWait();
     }
 
 }

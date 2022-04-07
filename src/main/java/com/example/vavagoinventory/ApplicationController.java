@@ -62,8 +62,7 @@ public class ApplicationController {
     }
 
     public void onClickCreateProduct() throws Exception {
-        ApplicationController.StorageQuery query = new ApplicationController.StorageQuery();
-        query.getQuery();
+        StorageQuery.getQuery();
         Stage newstage = new Stage();
         Parent root = FXMLLoader.load(Objects.requireNonNull(EmployeeMainPageController.class.getResource("CreateProduct.fxml")));
         Scene scene = new Scene(root);
@@ -75,8 +74,7 @@ public class ApplicationController {
     }
 
     public void onClickDeleteProduct() throws Exception {
-        ApplicationController.StorageQuery query = new ApplicationController.StorageQuery();
-        query.getQuery();
+        StorageQuery.getQuery();
         Stage newstage = new Stage();
         Parent root = FXMLLoader.load(Objects.requireNonNull(ApplicationController.class.getResource("DeleteProduct.fxml")));
         Scene scene = new Scene(root);
@@ -88,8 +86,7 @@ public class ApplicationController {
     }
 
     public void onClickAddProduct() throws Exception {
-        ApplicationController.StorageQuery query = new ApplicationController.StorageQuery();
-        query.getQuery();
+        StorageQuery.getQuery();
         Stage newstage = new Stage();
         Parent root = FXMLLoader.load(Objects.requireNonNull(ApplicationController.class.getResource("AddProduct.fxml")));
         Scene scene = new Scene(root);
@@ -112,5 +109,4 @@ public class ApplicationController {
         newstage.initModality(Modality.APPLICATION_MODAL);
         newstage.showAndWait();
     }
-
 }
