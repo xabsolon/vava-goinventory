@@ -24,6 +24,7 @@ public class CreateProductController implements Initializable {
     @FXML
     private Button confirmCreateButton;
 
+    @FXML
     private Button cancelCreateButton;
 
     @FXML
@@ -45,9 +46,6 @@ public class CreateProductController implements Initializable {
 
     @FXML
     void onClickConfirm(javafx.event.ActionEvent actionEvent) throws SQLException {
-        //toto som tu len docasne pridal aby sa to dalo skompilovat lebo inac to nejde a v tej novej verzii sa ten list
-        //neda naimportovat
-        List<Product> productsObservableList = null;
 
         if (productNameField.getText().isEmpty()) {
             FunctionsController.showErrorAlert("Please enter a product name");
@@ -65,7 +63,7 @@ public class CreateProductController implements Initializable {
                     .build();
             productsObservableList.add(product);
 
-            //FunctionsController.showConfirmationAlert("Product created successfully");
+            FunctionsController.showConfirmationAlert("Product created successfully");
 
             Comparator<Product> productComparator = Comparator.comparing(Product::getQuantity);
             Collections.sort(productsObservableList, productComparator);

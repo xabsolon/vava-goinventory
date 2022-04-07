@@ -1,6 +1,5 @@
 package com.example.vavagoinventory.Orders;
 
-import com.example.vavagoinventory.DatabaseContextSingleton;
 import com.example.vavagoinventory.FunctionsController;
 import com.example.vavagoinventory.I18N;
 import javafx.fxml.FXML;
@@ -8,64 +7,73 @@ import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
-import org.jooq.DSLContext;
-import org.jooq.Record;
 import org.jooq.exception.DataAccessException;
 
 import java.net.URL;
-import java.sql.SQLException;
 import java.util.ResourceBundle;
 
-import static org.jooq.codegen.maven.goinventory.Tables.ORDERS;
-
-public class CreateOrderController implements Initializable { //work in progress
+public class EditOrderController implements Initializable {
 
     private OrdersController ordersController;
 
-    @FXML
-    private TextField productNameField;
+    private Order selectedOrder;
 
     @FXML
     private TextField quantityField;
 
     @FXML
-    private Button cancelCreateButton;
+    private TextField productNameField;
+
+    @FXML
+    private Button cancelButton;
+
+    @FXML
+    private Button confirmButton;
 
     @Override
-    public void initialize(URL location, ResourceBundle resources) {
+    public void initialize(URL url, ResourceBundle resourceBundle) {
+
     }
 
     public void injectOrdersController(OrdersController ordersController) {
         this.ordersController = ordersController;
+        selectedOrder = ordersController.getLastSelectedOrder();
+        System.out.println(selectedOrder);
+        quantityField.setText(String.valueOf(selectedOrder.getQuantity()));
+        productNameField.setText(selectedOrder.getProductName());
     }
 
     @FXML
-    public void onClickCancel() {
-        Stage stage = (Stage) cancelCreateButton.getScene().getWindow();
+    private void onClickCancel() {
+        Stage stage = (Stage) cancelButton.getScene().getWindow();
         stage.close();
     }
 
     @FXML
-    public void onClickCreate() {
+    private void onClickConfirm() {
         Order order;
         try {
             order = new Order.OrderBuilder()
                     .productName(productNameField.getText())
                     .quantity(Integer.parseInt(quantityField.getText()))
+                    .o_id(selectedOrder.getO_id())
                     .build();
         } catch (NumberFormatException e) {
             FunctionsController.showErrorAlert(I18N.get("OrderCreationError"));
             return;
         }
         try {
-            OrdersController.OrderQuery.insertQuery(order);
+            OrdersController.OrderQuery.editQuery(order);
         }
         catch (DataAccessException e) {
             FunctionsController.showErrorAlert(I18N.get("OrderCreationErrorSQL"));
             return;
         }
-        ordersController.addOrder(order);
-        Stage stage = (Stage) cancelCreateButton.getScene().getWindow();
+        selectedOrder.setProductName(order.getProductName());
+        selectedOrder.setP_id(order.getP_id());
+        selectedOrder.setQuantity(order.getQuantity());
+        ordersController.updateTable();
+        Stage stage = (Stage) confirmButton.getScene().getWindow();
         stage.close();
     }
 
