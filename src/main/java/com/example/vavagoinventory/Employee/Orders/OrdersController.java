@@ -7,9 +7,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.control.Button;
-import javafx.scene.control.TableColumn;
-import javafx.scene.control.TableView;
+import javafx.scene.layout.Pane;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
@@ -28,25 +26,8 @@ import static org.jooq.codegen.maven.goinventory.Tables.ORDERS;
 
 public class OrdersController implements Initializable {
 
-    //private ObservableList<Order> orders;
-
     @FXML
     private CreateOrderController createOrderController;
-
-    @FXML
-    private Button closeButton;
-
-    @FXML
-    private TableView<Order> tableView;
-
-    @FXML
-    private TableColumn<Order, Integer> colID;
-
-    @FXML
-    private TableColumn<Order, Integer> colProduct;
-
-    @FXML
-    private TableColumn<Order, Integer> colQuantity;
 
     public static class OrderQuery {
         public static ArrayList<Order> orders = new ArrayList<>();

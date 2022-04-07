@@ -11,25 +11,72 @@ import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
+import javafx.scene.control.ListView;
+import javafx.scene.control.TextField;
+import javafx.scene.layout.HBox;
+import javafx.scene.layout.Pane;
 
 import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 
 public class EmployeeMainPageController extends ApplicationController implements Initializable {
+    @FXML
+    private Button switchToHistoryButton;
+    @FXML
+    private Button addOrdersButton;
+    @FXML
+    private Pane ordersHistoryPane;
+    @FXML
+    private HBox orderHistoryTableHeader;
+    @FXML
+    private ListView ordersHistoryListView;
+    @FXML
+    private TextField searchOrderHistoryTextfield;
+    @FXML
+    private Button switchToOrdersButton;
+    @FXML
+    private Pane storagePane;
+    @FXML
+    private HBox storageTableHeader;
+    @FXML
+    private TextField searchStorageTextfield;
+    @FXML
+    private ListView storageListView;
+    @FXML
+    private Button addProductToStorage;
+    @FXML
+    private Button createProductButton;
+    @FXML
+    private TextField searchOrderTextfield;
+    @FXML
+    private ListView ordersListView;
+    @FXML
+    private Button logOutButton;
+    @FXML
+    private Pane ordersPane;
+    @FXML
+    private HBox orderTableHeader;
 
     public Log log = new Log();
 
     public static ObservableList<Product> productObservableList;
 
-    @FXML
-    private Button logOutButton;
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         logOutButton.setOnAction(this::onLogOutButtonClick);
     }
 
+    @FXML
+    private void onClickAddOrder(ActionEvent actionEvent) {
+
+    }
+
+    @FXML
+    private void onClickAddProductToStorage(ActionEvent actionEvent){
+
+    }
     private void onLogOutButtonClick(ActionEvent actionEvent) {
         FXMLLoader loader = new FXMLLoader(FadingIntroController.class.getResource("Login.fxml"));
         try {

@@ -5,12 +5,9 @@
 <?import javafx.scene.layout.AnchorPane?>
 
 
-<AnchorPane fx:id="IntroAnchorPane" prefHeight="240.0" prefWidth="320.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.vavagoinventory.Login.FadingIntroController">
-   <children>
-      <ImageView fitHeight="240.0" fitWidth="320.0" pickOnBounds="true" preserveRatio="true">
-         <image>
-            <Image url="@../img/introBackground.png" />
-         </image>
-      </ImageView>
-   </children>
+<AnchorPane fx:id="IntroAnchorPane" prefHeight="240.0" prefWidth="320.0" xmlns="http://javafx.com/javafx/17"
+            xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.vavagoinventory.Login.FadingIntroController">
+   <ImageView fitHeight="240.0" fitWidth="320.0" pickOnBounds="true" preserveRatio="true">
+      <Image url="@../img/introBackground.png"/>
+   </ImageView>
 </AnchorPane>
