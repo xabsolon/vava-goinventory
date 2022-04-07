@@ -166,5 +166,4 @@ public class LoginController implements Initializable {
             log.Exceptions("Failed to load login screen",e);
         }
     }
-
 }

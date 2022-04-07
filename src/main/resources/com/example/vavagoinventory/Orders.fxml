@@ -9,31 +9,32 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane fx:id="CreateProductPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="271.0" prefWidth="485.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.vavagoinventory.Orders.OrdersController">
+<AnchorPane fx:id="CreateProductPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="287.0" prefWidth="485.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.vavagoinventory.Orders.OrdersController">
    <children>
-      <VBox alignment="TOP_CENTER" layoutY="-3.0" prefHeight="274.0" prefWidth="485.0">
+      <VBox alignment="TOP_CENTER" layoutY="50.0" prefHeight="236.0" prefWidth="486.0">
          <children>
-            <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="42.0" prefWidth="131.0" text="Orders" textAlignment="CENTER" textFill="#141e30">
-               <font>
-                  <Font name="System Bold" size="18.0" />
-               </font>
-            </Label>
-            <TableView fx:id="tableView" prefHeight="200.0" prefWidth="462.0">
+            <TableView fx:id="tableView" prefHeight="198.0" prefWidth="486.0">
               <columns>
                 <TableColumn fx:id="colID" prefWidth="79.0" text="ID" />
                 <TableColumn fx:id="colProduct" prefWidth="92.79998779296875" text="Product" />
                   <TableColumn fx:id="colQuantity" prefWidth="99.19993591308594" text="Quantity" />
               </columns>
             </TableView>
-            <HBox alignment="CENTER" prefHeight="31.0" prefWidth="577.0" spacing="10.0">
+            <HBox alignment="CENTER" prefHeight="31.0" prefWidth="577.0" spacing="5.0">
                <children>
-                  <Button mnemonicParsing="false" text="Button" />
                   <Button fx:id="createButton" mnemonicParsing="false" onAction="#onClickCreate" prefHeight="27.0" prefWidth="118.0" text="Create new order" />
+                  <Button mnemonicParsing="false" onAction="#onClickEdit" prefHeight="28.0" prefWidth="115.0" text="Edit selected order" />
                   <Button mnemonicParsing="false" onAction="#onClickDelete" prefHeight="27.0" prefWidth="132.0" text="Delete selected order" />
-                  <Button fx:id="closeButton" mnemonicParsing="false" onAction="#onClickClose" prefHeight="29.0" prefWidth="55.0" text="Close" />
+                  <Button fx:id="completeButton" mnemonicParsing="false" onAction="#onClickComplete" prefHeight="28.0" prefWidth="106.0" text="Complete order" />
                </children>
             </HBox>
          </children>
       </VBox>
+      <Label alignment="CENTER" contentDisplay="CENTER" layoutX="176.0" layoutY="3.0" prefHeight="42.0" prefWidth="131.0" text="Orders" textAlignment="CENTER" textFill="#141e30">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <Button fx:id="refreshButton" layoutX="419.0" layoutY="12.0" mnemonicParsing="false" onAction="#onClickRefresh" text="Refresh" />
    </children>
 </AnchorPane>

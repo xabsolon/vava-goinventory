@@ -6,11 +6,17 @@ public class Order {
     private int o_id;
     private int p_id;
     private int quantity;
+    private String productName;
 
     public Order(OrderBuilder builder) {
         o_id = builder.o_id;
         p_id = builder.p_id;
         quantity = builder.quantity;
+        productName = builder.productName;
+    }
+
+    public String getProductName() {
+        return productName;
     }
 
     public int getQuantity() {
@@ -23,6 +29,10 @@ public class Order {
 
     public int getP_id() {
         return p_id;
+    }
+
+    public void setProductName(String productName) {
+        this.productName = productName;
     }
 
     public void setO_id(int o_id) {
@@ -41,6 +51,7 @@ public class Order {
         private int o_id;
         private int p_id;
         private int quantity;
+        private String productName;
 
         public OrderBuilder() {
         }
@@ -59,6 +70,12 @@ public class Order {
             this.quantity = quantity;
             return this;
         }
+
+        public Order.OrderBuilder productName(String productName) {
+            this.productName = productName;
+            return this;
+        }
+
 
         public Order build() {
             return new Order(this);
