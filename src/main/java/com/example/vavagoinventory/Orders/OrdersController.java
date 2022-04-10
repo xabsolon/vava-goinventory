@@ -1,10 +1,16 @@
 package com.example.vavagoinventory.Orders;
 
-import com.example.vavagoinventory.*;
+import com.example.vavagoinventory.DatabaseContextSingleton;
+import com.example.vavagoinventory.FadingIntroController;
+import com.example.vavagoinventory.FunctionsController;
+import com.example.vavagoinventory.I18N;
+import com.fasterxml.jackson.core.JsonProcessingException;
+import com.fasterxml.jackson.datatype.guava.GuavaModule;
 import javafx.beans.property.SimpleIntegerProperty;
 import javafx.beans.property.SimpleStringProperty;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
@@ -13,25 +19,29 @@ import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
-import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.stage.FileChooser;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
 import org.jooq.*;
 import org.jooq.codegen.maven.goinventory.tables.Orders;
-import org.jooq.conf.ParamType;
-import org.jooq.exception.DataAccessException;
 
+import java.io.File;
 import java.io.IOException;
 import java.net.URL;
-import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.ResourceBundle;
 
-//import static com.sun.javafx.scene.control.skin.Utils.getResource;
+import com.fasterxml.jackson.dataformat.xml.XmlMapper;
+import org.jooq.codegen.maven.goinventory.tables.Users;
+import org.jooq.codegen.maven.goinventory.tables.records.OrdersRecord;
+import org.jooq.codegen.maven.goinventory.tables.records.UsersRecord;
+import org.jooq.exception.DataAccessException;
+
 import static org.jooq.codegen.maven.goinventory.Tables.ORDERS;
 import static org.jooq.codegen.maven.goinventory.Tables.PRODUCTS;
-import static org.jooq.impl.DSL.*;
+import static org.jooq.impl.DSL.inline;
+import static org.jooq.impl.DSL.select;
 
 public class OrdersController implements Initializable {
 
@@ -94,6 +104,15 @@ public class OrdersController implements Initializable {
                     .fetchOne();
             order.setO_id(record.get(ORDERS.O_ID));
             order.setP_id(record.get(ORDERS.P_ID));
+        }
+
+        public static void insertQueryWithId(Order order) {
+            DSLContext create = DatabaseContextSingleton.getContext();
+            OrdersRecord orderRecord = create.newRecord(Orders.ORDERS);
+            orderRecord.setOId(order.getO_id());
+            orderRecord.setPId(order.getP_id());
+            orderRecord.setQuantity(order.getQuantity());
+            orderRecord.store();
         }
 
         public static void deleteQuery(int o_id) {
@@ -229,5 +248,18 @@ public class OrdersController implements Initializable {
         orders = FXCollections.observableArrayList(OrderQuery.orders);
         tableView.setItems(orders);
         updateTable();
+    }
+
+    @FXML
+    private void onClickImportFromXml(ActionEvent actionEvent) {
+        Stage stage = FunctionsController.getStageFromEvent(actionEvent);
+        OrdersXmlSerializer.importFromXmlFile(stage);
+        onClickRefresh();
+    }
+
+    @FXML
+    private void onClickExportToXml(ActionEvent actionEvent) {
+        Stage stage = FunctionsController.getStageFromEvent(actionEvent);
+        OrdersXmlSerializer.exportToXmlFile(orders, stage);
     }
 }
