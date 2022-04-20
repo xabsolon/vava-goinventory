@@ -13,6 +13,9 @@ module com.example.vavagoinventory {
     requires org.jooq;
     requires mail;
     requires jdk.scripting.nashorn;
+    requires com.fasterxml.jackson.dataformat.xml;
+    requires com.fasterxml.jackson.datatype.guava;
+    requires com.fasterxml.jackson.core;
 
     opens com.example.vavagoinventory to javafx.fxml;
     opens com.example.vavagoinventory.Storage to javafx.fxml;
@@ -20,4 +23,5 @@ module com.example.vavagoinventory {
     exports com.example.vavagoinventory.Storage;
     exports org.jooq.codegen.maven.goinventory.tables.records;
     opens com.example.vavagoinventory.Orders to javafx.fxml;
+    exports com.example.vavagoinventory.Orders to com.fasterxml.jackson.databind;
 }

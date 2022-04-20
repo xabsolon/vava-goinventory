@@ -1,12 +1,14 @@
 package com.example.vavagoinventory.Orders;
 
-import com.example.vavagoinventory.Storage.Product;
-
 public class Order {
     private int o_id;
     private int p_id;
     private int quantity;
     private String productName;
+
+    public Order() {
+        super();
+    }
 
     public Order(OrderBuilder builder) {
         o_id = builder.o_id;
