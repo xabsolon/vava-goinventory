@@ -219,7 +219,7 @@
                         </database>
                         <target>
                             <packageName>org.jooq.codegen.maven.goinventory</packageName>
-                            <directory>target/generated-sources/jooq</directory>
+                            <directory>target/generated-sources</directory>
                         </target>
                     </generator>
                 </configuration>
