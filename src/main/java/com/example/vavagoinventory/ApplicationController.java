@@ -1,6 +1,5 @@
 package com.example.vavagoinventory;
 
-import com.example.vavagoinventory.Storage.DatabaseConnection;
 import com.example.vavagoinventory.Storage.Product;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
@@ -10,17 +9,15 @@ import javafx.scene.Scene;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
+import org.jooq.DSLContext;
+import org.jooq.Result;
+import org.jooq.codegen.maven.goinventory.tables.Products;
+import org.jooq.codegen.maven.goinventory.tables.records.ProductsRecord;
 
-import java.sql.Connection;
-import java.sql.ResultSet;
-import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.Objects;
 
 public class ApplicationController {
-
-    public static DatabaseConnection connectivity = new DatabaseConnection();
-    public static Connection connection = connectivity.getConnection();
 
     public static ObservableList<Product> productsObservableList;
 
@@ -37,26 +34,20 @@ public class ApplicationController {
         public static ArrayList<Product> products = new ArrayList<>();
 
         public static void getQuery() {
-            String select = "SELECT p_id,name,quantity,sellingPrice FROM products GROUP BY name ORDER BY quantity";
-            ResultSet result;
-            try {
-                result = DatabaseConnection.connection.prepareStatement(select).executeQuery();
+            DSLContext create = DatabaseContextSingleton.getContext();
+            Result<ProductsRecord> result1 = create.selectFrom(Products.PRODUCTS).groupBy(Products.PRODUCTS.NAME).orderBy(Products.PRODUCTS.QUANTITY).fetch();
+            result1.forEach(p -> {
+                Product product = new Product.ProductBuilder()
+                        .id(p.getPId())
+                        .name(p.getName())
+                        .quantity(p.getQuantity())
+                        .sellingPrice(p.getSellingprice())
+                        .build();
+                products.add(product);
+            });
 
-                while (result.next()) {
-                    Product product = new Product.ProductBuilder()
-                            .id(result.getInt(1))
-                            .name(result.getString(2))
-                            .quantity(result.getInt(3))
-                            .sellingPrice(result.getDouble(4))
-                            .build();
-                    products.add(product);
-                }
-
-                productsObservableList = FXCollections.observableArrayList();
-                productsObservableList.addAll(products);
-            } catch (SQLException e) {
-                e.printStackTrace();
-            }
+            productsObservableList = FXCollections.observableArrayList();
+            productsObservableList.addAll(products);
         }
     }
 

@@ -1,26 +1,27 @@
 package com.example.vavagoinventory.Storage;
 
 import com.example.vavagoinventory.ApplicationController;
+import com.example.vavagoinventory.DatabaseContextSingleton;
 import com.example.vavagoinventory.FunctionsController;
 import javafx.application.Platform;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
-import javafx.event.ActionEvent;
-import javafx.fxml.Initializable;
 import javafx.fxml.FXML;
+import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
+import org.jooq.DSLContext;
+import org.jooq.Result;
+import org.jooq.codegen.maven.goinventory.tables.Products;
+import org.jooq.codegen.maven.goinventory.tables.records.ProductsRecord;
 
 import java.net.URL;
-import java.sql.Connection;
-import java.sql.ResultSet;
-import java.sql.SQLException;
-import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.ResourceBundle;
+import java.util.concurrent.atomic.AtomicInteger;
 
 public class AddProductController extends ApplicationController implements Initializable {
 
@@ -38,41 +39,32 @@ public class AddProductController extends ApplicationController implements Initi
 
     ArrayList<Product> products = new ArrayList<>();
 
-    DatabaseConnection connectivity = new DatabaseConnection();
-    Connection connection = connectivity.getConnection();
-
     @Override
     public void initialize(URL location, ResourceBundle resources) {
         ObservableList data = FXCollections.observableArrayList();
         Platform.runLater(() -> {
-            String select = "SELECT p_id, name FROM products GROUP BY name";
-            try {
-                ResultSet result = connection.prepareStatement(select).executeQuery();
-                while (result.next()) {
-                    Product product = new Product.ProductBuilder()
-                            .id(result.getInt(1))
-                            .name(result.getString(2))
-                            .build();
-                    products.add(product);
-                    data.add(product.getName());
-                }
-            } catch (SQLException e) {
-                e.printStackTrace();
-            }
+            DSLContext create = DatabaseContextSingleton.getContext();
+            Result<ProductsRecord> result = create.selectFrom(Products.PRODUCTS).groupBy(Products.PRODUCTS.NAME).fetch();
+            result.forEach(p -> {
+                Product product = new Product.ProductBuilder()
+                        .id(p.getPId())
+                        .name(p.getName())
+                        .build();
+                products.add(product);
+                data.add(product.getName());
+            });
         });
         choiceBox.setItems(data);
     }
 
     @FXML
-    void onClickCancel(ActionEvent event) {
+    void onClickCancel() {
         Stage stage = (Stage) cancelButton.getScene().getWindow();
         stage.close();
     }
 
     @FXML
-    void onClickConfirm(ActionEvent event) throws SQLException {
-        Double pricePerUnit = null;
-
+    void onClickConfirm() {
         if (choiceBox.getSelectionModel().isEmpty()) {
             FunctionsController.showErrorAlert("Please select a product");
         } else if (quantityField.getText().isEmpty()) {
@@ -80,28 +72,18 @@ public class AddProductController extends ApplicationController implements Initi
         } else if (!FunctionsController.isNumeric(quantityField.getText())) {
             FunctionsController.showErrorAlert("Please enter a valid quantity");
         } else {
-            //updating products quantity
-            Statement statement = connection.createStatement();
-            String select = "SELECT * FROM products";
-            ResultSet resultSet = connection.prepareStatement(select).executeQuery();
+            DSLContext create = DatabaseContextSingleton.getContext();
+            Result<ProductsRecord> result = create.selectFrom(Products.PRODUCTS).fetch();
 
-            int quantityTemp = 0;
-            while (resultSet.next()) {
-                Product product = new Product.ProductBuilder()
-                        .id(resultSet.getInt(1))
-                        .name(resultSet.getString(2))
-                        .quantity(resultSet.getInt(3))
-                        .sellingPrice(resultSet.getDouble(4))
-                        .build();
-
-                if (product.getName().equals(choiceBox.getValue())) {
-                    quantityTemp = product.getQuantity();
-                    break;
+            AtomicInteger quantityTemp = new AtomicInteger();
+            result.forEach(p -> {
+                if (p.getName().equals(choiceBox.getValue())) {
+                    quantityTemp.set(p.getQuantity());
                 }
-            }
-            quantityTemp += Integer.parseInt(quantityField.getText());
-            String update = "UPDATE products SET quantity = " + quantityTemp + " WHERE name = '" + choiceBox.getValue() + "'";
-            statement.executeLargeUpdate(update);
+            });
+
+            quantityTemp.addAndGet(Integer.parseInt(quantityField.getText()));
+            create.update(Products.PRODUCTS).set(Products.PRODUCTS.QUANTITY, quantityTemp.get()).where(Products.PRODUCTS.NAME.eq((String) choiceBox.getValue())).execute();
             Stage stage = (Stage) addProductPane.getScene().getWindow();
             stage.close();
         }
