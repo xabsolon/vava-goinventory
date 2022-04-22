@@ -1154,3 +1154,113 @@ Apr 07, 2022 11:50:13 PM com.example.vavagoinventory.Log login
 INFO: User defaultUserlogged in
 Apr 07, 2022 11:54:13 PM com.example.vavagoinventory.Log userLogout
 INFO: User named : ferino logged out
+apr 21, 2022 11:43:33 PM com.example.vavagoinventory.Log login
+INFO: User Patriklogged in
+apr 21, 2022 11:43:39 PM com.example.vavagoinventory.Log userLogout
+INFO: User named : ferino logged out
+apr 21, 2022 11:47:07 PM com.example.vavagoinventory.Log login
+INFO: User Patriklogged in
+apr 21, 2022 11:47:11 PM com.example.vavagoinventory.Log userLogout
+INFO: User named : ferino logged out
+apr 21, 2022 11:54:12 PM com.example.vavagoinventory.Log login
+INFO: User defaultUserlogged in
+apr 21, 2022 11:54:13 PM com.example.vavagoinventory.Log Exceptions
+SEVERE: Failed to load login screen, javafx.fxml.LoadException: Error resolving onMouseClicked='#exitButtonClicked', either the event handler is not in the Namespace or there is an error in the script.
+/C:/Users/serzo/Desktop/VAVA/vava-goinventory/target/classes/com/example/vavagoinventory/EmployeeMainPage.fxml:33
+
+apr 21, 2022 11:54:18 PM com.example.vavagoinventory.Log login
+INFO: User defaultUserlogged in
+apr 21, 2022 11:54:18 PM com.example.vavagoinventory.Log Exceptions
+SEVERE: Failed to load login screen, javafx.fxml.LoadException: Error resolving onMouseClicked='#exitButtonClicked', either the event handler is not in the Namespace or there is an error in the script.
+/C:/Users/serzo/Desktop/VAVA/vava-goinventory/target/classes/com/example/vavagoinventory/EmployeeMainPage.fxml:33
+
+Apr 21, 2022 11:54:22 PM com.example.vavagoinventory.Log login
+INFO: User defaultUserlogged in
+Apr 21, 2022 11:54:22 PM com.example.vavagoinventory.Log Exceptions
+SEVERE: Failed to load login screen, javafx.fxml.LoadException: Error resolving onMouseClicked='#exitButtonClicked', either the event handler is not in the Namespace or there is an error in the script.
+/C:/Users/serzo/Desktop/VAVA/vava-goinventory/target/classes/com/example/vavagoinventory/EmployeeMainPage.fxml:33
+
+Apr 21, 2022 11:54:37 PM com.example.vavagoinventory.Log login
+INFO: User defaultUserlogged in
+Apr 21, 2022 11:54:37 PM com.example.vavagoinventory.Log Exceptions
+SEVERE: Failed to load login screen, javafx.fxml.LoadException: Error resolving onMouseClicked='#exitButtonClicked', either the event handler is not in the Namespace or there is an error in the script.
+/C:/Users/serzo/Desktop/VAVA/vava-goinventory/target/classes/com/example/vavagoinventory/EmployeeMainPage.fxml:33
+
+Apr 21, 2022 11:54:38 PM com.example.vavagoinventory.Log login
+INFO: User defaultUserlogged in
+Apr 21, 2022 11:54:38 PM com.example.vavagoinventory.Log Exceptions
+SEVERE: Failed to load login screen, javafx.fxml.LoadException: Error resolving onMouseClicked='#exitButtonClicked', either the event handler is not in the Namespace or there is an error in the script.
+/C:/Users/serzo/Desktop/VAVA/vava-goinventory/target/classes/com/example/vavagoinventory/EmployeeMainPage.fxml:33
+
+Apr 21, 2022 11:54:38 PM com.example.vavagoinventory.Log login
+INFO: User defaultUserlogged in
+Apr 21, 2022 11:54:38 PM com.example.vavagoinventory.Log Exceptions
+SEVERE: Failed to load login screen, javafx.fxml.LoadException: Error resolving onMouseClicked='#exitButtonClicked', either the event handler is not in the Namespace or there is an error in the script.
+/C:/Users/serzo/Desktop/VAVA/vava-goinventory/target/classes/com/example/vavagoinventory/EmployeeMainPage.fxml:33
+
+apr 21, 2022 11:54:54 PM com.example.vavagoinventory.Log login
+INFO: User defaultUserlogged in
+apr 21, 2022 11:54:54 PM com.example.vavagoinventory.Log Exceptions
+SEVERE: Failed to load login screen, javafx.fxml.LoadException: Error resolving onMouseClicked='#exitButtonClicked', either the event handler is not in the Namespace or there is an error in the script.
+/C:/Users/serzo/Desktop/VAVA/vava-goinventory/target/classes/com/example/vavagoinventory/EmployeeMainPage.fxml:33
+
+apr 21, 2022 11:54:55 PM com.example.vavagoinventory.Log login
+INFO: User defaultUserlogged in
+apr 21, 2022 11:54:55 PM com.example.vavagoinventory.Log Exceptions
+SEVERE: Failed to load login screen, javafx.fxml.LoadException: Error resolving onMouseClicked='#exitButtonClicked', either the event handler is not in the Namespace or there is an error in the script.
+/C:/Users/serzo/Desktop/VAVA/vava-goinventory/target/classes/com/example/vavagoinventory/EmployeeMainPage.fxml:33
+
+apr 21, 2022 11:54:55 PM com.example.vavagoinventory.Log login
+INFO: User defaultUserlogged in
+apr 21, 2022 11:54:55 PM com.example.vavagoinventory.Log Exceptions
+SEVERE: Failed to load login screen, javafx.fxml.LoadException: Error resolving onMouseClicked='#exitButtonClicked', either the event handler is not in the Namespace or there is an error in the script.
+/C:/Users/serzo/Desktop/VAVA/vava-goinventory/target/classes/com/example/vavagoinventory/EmployeeMainPage.fxml:33
+
+apr 21, 2022 11:54:55 PM com.example.vavagoinventory.Log login
+INFO: User defaultUserlogged in
+apr 21, 2022 11:54:55 PM com.example.vavagoinventory.Log Exceptions
+SEVERE: Failed to load login screen, javafx.fxml.LoadException: Error resolving onMouseClicked='#exitButtonClicked', either the event handler is not in the Namespace or there is an error in the script.
+/C:/Users/serzo/Desktop/VAVA/vava-goinventory/target/classes/com/example/vavagoinventory/EmployeeMainPage.fxml:33
+
+apr 21, 2022 11:54:56 PM com.example.vavagoinventory.Log login
+INFO: User defaultUserlogged in
+apr 21, 2022 11:54:56 PM com.example.vavagoinventory.Log Exceptions
+SEVERE: Failed to load login screen, javafx.fxml.LoadException: Error resolving onMouseClicked='#exitButtonClicked', either the event handler is not in the Namespace or there is an error in the script.
+/C:/Users/serzo/Desktop/VAVA/vava-goinventory/target/classes/com/example/vavagoinventory/EmployeeMainPage.fxml:33
+
+apr 21, 2022 11:54:58 PM com.example.vavagoinventory.Log login
+INFO: User defaultUserlogged in
+apr 21, 2022 11:54:58 PM com.example.vavagoinventory.Log Exceptions
+SEVERE: Failed to load login screen, javafx.fxml.LoadException: Error resolving onMouseClicked='#exitButtonClicked', either the event handler is not in the Namespace or there is an error in the script.
+/C:/Users/serzo/Desktop/VAVA/vava-goinventory/target/classes/com/example/vavagoinventory/EmployeeMainPage.fxml:33
+
+apr 21, 2022 11:54:58 PM com.example.vavagoinventory.Log login
+INFO: User defaultUserlogged in
+apr 21, 2022 11:54:58 PM com.example.vavagoinventory.Log Exceptions
+SEVERE: Failed to load login screen, javafx.fxml.LoadException: Error resolving onMouseClicked='#exitButtonClicked', either the event handler is not in the Namespace or there is an error in the script.
+/C:/Users/serzo/Desktop/VAVA/vava-goinventory/target/classes/com/example/vavagoinventory/EmployeeMainPage.fxml:33
+
+apr 21, 2022 11:54:58 PM com.example.vavagoinventory.Log login
+INFO: User defaultUserlogged in
+apr 21, 2022 11:54:58 PM com.example.vavagoinventory.Log Exceptions
+SEVERE: Failed to load login screen, javafx.fxml.LoadException: Error resolving onMouseClicked='#exitButtonClicked', either the event handler is not in the Namespace or there is an error in the script.
+/C:/Users/serzo/Desktop/VAVA/vava-goinventory/target/classes/com/example/vavagoinventory/EmployeeMainPage.fxml:33
+
+Apr 21, 2022 11:55:10 PM com.example.vavagoinventory.Log login
+INFO: User defaultUserlogged in
+Apr 21, 2022 11:55:10 PM com.example.vavagoinventory.Log Exceptions
+SEVERE: Failed to load login screen, javafx.fxml.LoadException: Error resolving onMouseClicked='#exitButtonClicked', either the event handler is not in the Namespace or there is an error in the script.
+/C:/Users/serzo/Desktop/VAVA/vava-goinventory/target/classes/com/example/vavagoinventory/EmployeeMainPage.fxml:33
+
+Apr 21, 2022 11:55:11 PM com.example.vavagoinventory.Log login
+INFO: User defaultUserlogged in
+Apr 21, 2022 11:55:11 PM com.example.vavagoinventory.Log Exceptions
+SEVERE: Failed to load login screen, javafx.fxml.LoadException: Error resolving onMouseClicked='#exitButtonClicked', either the event handler is not in the Namespace or there is an error in the script.
+/C:/Users/serzo/Desktop/VAVA/vava-goinventory/target/classes/com/example/vavagoinventory/EmployeeMainPage.fxml:33
+
+Apr 21, 2022 11:55:11 PM com.example.vavagoinventory.Log login
+INFO: User defaultUserlogged in
+Apr 21, 2022 11:55:11 PM com.example.vavagoinventory.Log Exceptions
+SEVERE: Failed to load login screen, javafx.fxml.LoadException: Error resolving onMouseClicked='#exitButtonClicked', either the event handler is not in the Namespace or there is an error in the script.
+/C:/Users/serzo/Desktop/VAVA/vava-goinventory/target/classes/com/example/vavagoinventory/EmployeeMainPage.fxml:33
+
