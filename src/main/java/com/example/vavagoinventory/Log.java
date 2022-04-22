@@ -21,6 +21,27 @@ public class Log { //nezabudnut pridavat ako public metody - {"public Xxxxx()"}
     public void ProductCreated(String username, String nameOfProduct){
         LOGGER.log(Level.WARNING, "User " + username + "created:" + nameOfProduct);
     }
+    public void ProductDeleted(String username, String nameOfProduct){
+        LOGGER.log(Level.WARNING, "User " + username + "deleted:" + nameOfProduct);
+    }
+    public void ProductEdited(String username, String nameOfProduct){
+        LOGGER.log(Level.WARNING, "User " + username + "edited:" + nameOfProduct);
+    }
+    public void ProductAdded(String username, String nameOfProduct){
+        LOGGER.log(Level.WARNING, "User " + username + "added:" + nameOfProduct);
+    }
+    public void ProductRemoved(String username, String nameOfProduct){
+        LOGGER.log(Level.WARNING, "User " + username + "removed:" + nameOfProduct);
+    }
+    public void OrderCreated(String username, String nameOfOrder){
+        LOGGER.log(Level.WARNING, "User " + username + "created:" + nameOfOrder);
+    }
+    public void OrderDeleted(String username, String nameOfOrder){
+        LOGGER.log(Level.WARNING, "User " + username + "deleted:" + nameOfOrder);
+    }
+    public void OrderEdited(String username, String nameOfOrder){
+        LOGGER.log(Level.WARNING, "User " + username + "edited:" + nameOfOrder);
+    }
     public void Exceptions(String type, Exception e){
         LOGGER.log(Level.SEVERE, type + ", " + e);
     }
