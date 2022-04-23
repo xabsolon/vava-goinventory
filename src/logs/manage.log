@@ -1323,4 +1323,3 @@ INFO: User defaultUserlogged in
 Apr 23, 2022 11:22:36 AM com.example.vavagoinventory.Log Exceptions
 SEVERE: Failed to load login screen, javafx.fxml.LoadException: Error resolving onMouseClicked='#exitButtonClicked', either the event handler is not in the Namespace or there is an error in the script.
 /C:/Users/serzo/Desktop/VAVA/vava-goinventory/target/classes/com/example/vavagoinventory/EmployeeMainPage.fxml:33
-

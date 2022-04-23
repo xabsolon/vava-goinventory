@@ -163,6 +163,7 @@ public class LoginController implements Initializable {
         try {
             FunctionsController.changeScene(stage, loader, "GoInventory");
         } catch (IOException e) {
+            e.printStackTrace();
             log.Exceptions("Failed to load login screen",e);
         }
     }

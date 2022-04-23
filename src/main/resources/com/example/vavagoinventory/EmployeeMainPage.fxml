@@ -114,6 +114,10 @@
                                  </image>
                               </ImageView>
                            </graphic></Button>
+                        <Button fx:id="createProductButton" layoutX="61.0" layoutY="227.0" mnemonicParsing="false" onAction="#onClickCreateProduct" style="-fx-background-color: #141e30;" text="Create Product" textFill="WHITE" />
+                        <Button fx:id="deleteProductButton" layoutX="434.0" layoutY="227.0" mnemonicParsing="false" onAction="#onClickDeleteProduct" style="-fx-background-color: #141e30;" text="Delete Product" textFill="WHITE" />
+                        <Button fx:id="editProductButton" layoutX="312.0" layoutY="227.0" mnemonicParsing="false" onAction="#onClickEditProduct" style="-fx-background-color: #141e30;" text="Edit product" textFill="WHITE" />
+                        <Button fx:id="addProductButton" layoutX="194.0" layoutY="227.0" mnemonicParsing="false" onAction="#onClickAddProduct" style="-fx-background-color: #141e30;" text="Add product" textFill="WHITE" />
                         <Label layoutX="240.0" layoutY="15.0" text="Storage" textFill="#141e30">
                            <font>
                               <Font name="System Bold" size="30.0" />
@@ -187,6 +191,21 @@
                         <Line endX="17.0" endY="3.1999969482421875" layoutX="531.0" layoutY="38.0" startX="9.0" startY="-4.8000030517578125" stroke="WHITE" strokeWidth="4.0" />
                         <Line endX="90.79998779296875" endY="-41.80000305175781" layoutX="457.0" layoutY="75.0" startX="82.60003662109375" startY="-34.0" stroke="WHITE" strokeWidth="4.0" />
                         <fx:include maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" source="Orders.fxml" />
+                        <TableView fx:id="tableView" layoutX="50.0" layoutY="132.0" prefHeight="250.0" prefWidth="508.0">
+                          <columns>
+                            <TableColumn fx:id="colID" prefWidth="75.0" text="ID" />
+                            <TableColumn fx:id="colProduct" prefWidth="75.0" text="Product" />
+                              <TableColumn fx:id="colQuantity" prefWidth="75.0" text="Quantity" />
+                          </columns>
+                        </TableView>
+                        <Button fx:id="refreshButton" layoutX="502.0" layoutY="91.0" mnemonicParsing="false" style="-fx-background-color: #141e30;" text="Refresh" textFill="WHITE" />
+                        <Button fx:id="createButton" layoutX="50.0" layoutY="402.0" mnemonicParsing="false" onAction="#onClickCreate" style="-fx-background-color: #141e30;" text="Create new order" textFill="WHITE" />
+                        <Button fx:id="editButton" layoutX="176.0" layoutY="402.0" mnemonicParsing="false" onAction="#onClickEdit" style="-fx-background-color: #141e30;" text="Edit selected order" textFill="WHITE" />
+                        <Button fx:id="deleteButton" layoutX="310.0" layoutY="402.0" mnemonicParsing="false" onAction="#onClickDelete" style="-fx-background-color: #141e30;" text="Delete selected order" textFill="WHITE" />
+                        <Button fx:id="completeButton" layoutX="458.0" layoutY="402.0" mnemonicParsing="false" onAction="#onClickComplete" style="-fx-background-color: #141e30;" text="Complete order" textFill="WHITE" />
+                        <Rectangle fx:id="exitButton1" arcHeight="5.0" arcWidth="5.0" fill="#141e30" height="21.0" layoutX="531.0" layoutY="27.0" onMouseClicked="#exitButtonClicked" stroke="BLACK" strokeType="INSIDE" width="26.0" />
+                        <Line endX="17.0" endY="3.1999969482421875" layoutX="531.0" layoutY="38.0" startX="9.0" startY="-4.8000030517578125" stroke="WHITE" strokeWidth="4.0" />
+                        <Line endX="90.79998779296875" endY="-41.80000305175781" layoutX="457.0" layoutY="75.0" startX="82.60003662109375" startY="-34.0" stroke="WHITE" strokeWidth="4.0" />
                      </children>
                   </AnchorPane>
             </content>

@@ -1,83 +1,41 @@
 package com.example.vavagoinventory.Storage;
 
-import com.example.vavagoinventory.DatabaseConnection;
+import com.example.vavagoinventory.DatabaseContextSingleton;
 import com.example.vavagoinventory.FunctionsController;
-//import com.sun.javafx.scene.control.ReadOnlyUnbackedObservableList;
-import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
-import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
-import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
-import javafx.scene.layout.AnchorPane;
-
 import javafx.stage.Stage;
+import org.jooq.DSLContext;
+import org.jooq.codegen.maven.goinventory.tables.Products;
 
-import java.net.URL;
-import java.sql.Connection;
-import java.sql.ResultSet;
-import java.sql.SQLException;
-import java.sql.Statement;
-import java.util.ResourceBundle;
-
-
-import static com.example.vavagoinventory.ApplicationController.productsObservableList;
-
-public class DeleteProductController implements Initializable {
+public class DeleteProductController {
 
     @FXML
-    private Button cancelDeleteButton, confirmDeleteButton;
+    private Button cancelDeleteButton;
     @FXML
     private TextField productNameField;
 
-    static boolean isProductDeleted = true;
-
-    DatabaseConnection connectivity = new DatabaseConnection();
-    Connection connection = connectivity.getConnection();
-
-    @Override
-    public void initialize(URL location, ResourceBundle resources) {
-
-    }
-
-    public void onClickDelete(javafx.event.ActionEvent event) throws SQLException {
+    public void onClickDelete() {
         if (productNameField.getText().isEmpty()) {
             FunctionsController.showErrorAlert("Please enter a product name");
-        }else {
-            Statement statement = connection.createStatement();
-            String select = "SELECT p_id,name,quantity,sellingPrice FROM products ";
-            ResultSet result = connection.prepareStatement(select).executeQuery();
-            isProductDeleted = true;
-            if (isProductDeleted) {
-                String delete = "DELETE FROM products WHERE name = '" + productNameField.getText() + "'";
-                statement.executeLargeUpdate(delete);
+        } else {
+            DSLContext create = DatabaseContextSingleton.getContext();
+            int success = create.deleteFrom(Products.PRODUCTS).where(Products.PRODUCTS.NAME.eq(productNameField.getText())).execute();
 
-                connection.close();
-
-
-                ObservableList<Product> productsObservableList = null;
-
-                productsObservableList.forEach(product -> {
-                    String product_name = product.getName();
-                    if (product_name.equals(productNameField.getText())) {
-                        productsObservableList.remove(product);
-                        FunctionsController.showConfirmationAlert("Product Deleted Successfully");
-                        Stage stage = (Stage) cancelDeleteButton.getScene().getWindow();
-                        stage.close();
-                    }
-                });
+            if(success == 0) {
+                FunctionsController.showErrorAlert("Product with name " + productNameField.getText() + " does not exist.");
             } else {
-            Stage stage = (Stage) cancelDeleteButton.getScene().getWindow();
-            stage.close();
+                FunctionsController.showConfirmationAlert("Product Deleted Successfully");
             }
 
+            Stage stage = (Stage) cancelDeleteButton.getScene().getWindow();
+            stage.close();
         }
     }
 
-    public void onClickCancel(javafx.event.ActionEvent event) {
-        isProductDeleted = false;
+    public void onClickCancel() {
         Stage stage = (Stage) cancelDeleteButton.getScene().getWindow();
         stage.close();
-
     }
 }
