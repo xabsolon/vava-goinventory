@@ -1265,3 +1265,5 @@ SEVERE: Failed to load login screen, javafx.fxml.LoadException: Error resolving 
 /C:/Users/serzo/Desktop/VAVA/vava-goinventory/target/classes/com/example/vavagoinventory/EmployeeMainPage.fxml:33
 
 
+apr 23, 2022 10:12:38 PM com.example.vavagoinventory.Log login
+INFO: User defaultUserlogged in
