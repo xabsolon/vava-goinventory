@@ -1,0 +1,299 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TableColumn?>
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="480.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.vavagoinventory.EmployeeMainPageController">
+
+
+   <children>
+      <TabPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minWidth="-Infinity" prefHeight="480.0" prefWidth="800.0" side="LEFT" stylesheets="@css/TabPane.css" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+            <Tab text="Home">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="480.0" prefWidth="702.0">
+                     <children>
+                        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#dfdfdf" height="81.0" layoutX="-6.0" layoutY="-5.0" stroke="BLACK" strokeType="INSIDE" width="617.0" />
+                        <Label layoutX="255.0" layoutY="15.0" text="Home" textFill="#141e30">
+                           <font>
+                              <Font name="System Bold" size="30.0" />
+                           </font>
+                        </Label>
+                        <Rectangle fx:id="exitButton2" arcHeight="5.0" arcWidth="5.0" fill="#141e30" height="21.0" layoutX="531.0" layoutY="27.0" onMouseClicked="#exitButtonClicked" stroke="BLACK" strokeType="INSIDE" width="26.0" />
+                        <Line endX="17.0" endY="3.1999969482421875" layoutX="531.0" layoutY="38.0" startX="9.0" startY="-4.8000030517578125" stroke="WHITE" strokeWidth="4.0" />
+                        <Line endX="90.79998779296875" endY="-41.80000305175781" layoutX="457.0" layoutY="75.0" startX="82.60003662109375" startY="-34.0" stroke="WHITE" strokeWidth="4.0" />
+                        <ImageView fitHeight="542.0" fitWidth="727.0" layoutY="76.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@img/Portrait.jpg" />
+                           </image>
+                        </ImageView>
+                        <ImageView fitHeight="263.0" fitWidth="278.0" layoutX="165.0" layoutY="149.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@img/logo.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </AnchorPane>
+               </content>
+               <graphic>
+                  <Label style="-fx-text-fill: white;" text="Home" translateY="-26.0">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fitHeight="27.0" fitWidth="27.0" pickOnBounds="true" preserveRatio="true" translateX="-15.0">
+                           <image>
+                              <Image url="@img/home.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Label>
+               </graphic>
+            </Tab>
+          <Tab text="Storage">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="480.0" prefWidth="702.0">
+                     <children>
+                        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#dfdfdf" height="80.0" layoutX="-20.0" layoutY="-5.0" stroke="BLACK" strokeType="INSIDE" width="631.0" />
+                        <Button fx:id="createProductButton" layoutX="51.0" layoutY="108.0" mnemonicParsing="false" onAction="#onClickCreateProduct" text="Create product" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                           <graphic>
+                              <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@img/icons8-create-100.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic></Button>
+                        <Button fx:id="deleteProductButton" layoutX="239.0" layoutY="382.0" mnemonicParsing="false" onAction="#onClickDeleteProduct" text="Delete selected product" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                           <graphic>
+                              <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@img/icons8-remove-96.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic></Button>
+                        <Button fx:id="editProductButton" layoutX="51.0" layoutY="382.0" mnemonicParsing="false" onAction="#onClickEditProduct" text="Edit selected product" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                           <graphic>
+                              <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@img/icons8-edit-100.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic></Button>
+                        <Button fx:id="addProductButton" layoutX="439.0" layoutY="382.0" mnemonicParsing="false" onAction="#onClickAddProduct" text="Add product" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                           <graphic>
+                              <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@img/icons8-add-96.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic></Button>
+                        <Label layoutX="240.0" layoutY="15.0" text="Storage" textFill="#141e30">
+                           <font>
+                              <Font name="System Bold" size="30.0" />
+                           </font>
+                        </Label>
+                        <Rectangle fx:id="exitButton" arcHeight="5.0" arcWidth="5.0" fill="#141e30" height="21.0" layoutX="531.0" layoutY="27.0" onMouseClicked="#exitButtonClicked" stroke="BLACK" strokeType="INSIDE" width="26.0" />
+                        <Line endX="17.0" endY="3.1999969482421875" layoutX="531.0" layoutY="38.0" startX="9.0" startY="-4.8000030517578125" stroke="WHITE" strokeWidth="4.0" />
+                        <Line endX="90.79998779296875" endY="-41.80000305175781" layoutX="457.0" layoutY="75.0" startX="82.60003662109375" startY="-34.0" stroke="WHITE" strokeWidth="4.0" />
+                        <TableView fx:id="productsTable" layoutX="51.0" layoutY="159.0" prefHeight="198.0" prefWidth="498.0">
+                           <columns>
+                              <TableColumn fx:id="idColumn" prefWidth="75.0" text="ID" />
+                              <TableColumn fx:id="productCulomn" prefWidth="75.0" text="Product" />
+                              <TableColumn fx:id="quantityCulomn" prefWidth="75.0" text="Quantity" />
+                              <TableColumn fx:id="priceCulomn" prefWidth="75.0" text="Price" />
+                           </columns>
+                        </TableView>
+                        <Button fx:id="refreshButton" layoutX="467.0" layoutY="108.0" mnemonicParsing="false" text="Refresh" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                           <graphic>
+                              <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@img/icons8-refresh-90.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                        <TextField fx:id="searchField" layoutX="219.0" layoutY="109.0" maxHeight="1.7976931348623157E308" prefHeight="28.0" prefWidth="214.0">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </TextField>
+                        <ImageView fitHeight="20.0" fitWidth="20.0" layoutX="408.0" layoutY="112.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@img/icons8-search-90.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </AnchorPane>
+            </content>
+               <graphic>
+                  <Label style="-fx-text-fill: white;" text="Storage" translateX="-10.0" translateY="-20.0">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fitHeight="27.0" fitWidth="27.0" pickOnBounds="true" preserveRatio="true" translateX="-15.0">
+                           <image>
+                              <Image url="@img/warehouse.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Label>
+               </graphic>
+          </Tab>
+          <Tab text="Orders">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                  </AnchorPane>
+            </content>
+               <graphic>
+                  <Label style="-fx-text-fill: white;" text="Orders" translateX="-6.0" translateY="-22.0">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fitHeight="30.0" fitWidth="28.0" pickOnBounds="true" preserveRatio="true" translateX="-15.0">
+                           <image>
+                              <Image url="@img/order-delivery.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Label>
+               </graphic>
+          </Tab>
+            <Tab style="-fx-translate-x: 0;" text="Orders history">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#dfdfdf" height="81.0" layoutX="-13.0" layoutY="-5.0" stroke="BLACK" strokeType="INSIDE" width="625.0" />
+                        <Label layoutX="194.0" layoutY="15.0" text="Orders History" textFill="#141e30">
+                           <font>
+                              <Font name="System Bold" size="30.0" />
+                           </font>
+                        </Label>
+                        <Rectangle fx:id="exitButton11" arcHeight="5.0" arcWidth="5.0" fill="#141e30" height="21.0" layoutX="531.0" layoutY="27.0" onMouseClicked="#exitButtonClicked" stroke="BLACK" strokeType="INSIDE" width="26.0" />
+                        <Line endX="17.0" endY="3.1999969482421875" layoutX="531.0" layoutY="38.0" startX="9.0" startY="-4.8000030517578125" stroke="WHITE" strokeWidth="4.0" />
+                        <Line endX="90.79998779296875" endY="-41.80000305175781" layoutX="457.0" layoutY="75.0" startX="82.60003662109375" startY="-34.0" stroke="WHITE" strokeWidth="4.0" />
+                     </children></AnchorPane>
+              </content>
+               <graphic>
+                  <Label style="-fx-text-fill: white;" text="Orders history" translateX="-28.0" translateY="2.0">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fitHeight="28.0" fitWidth="28.0" pickOnBounds="true" preserveRatio="true" translateX="-12.0">
+                           <image>
+                              <Image url="@img/history.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Label>
+               </graphic>
+            </Tab>
+            <Tab style="-fx-translate-x: 0;" text="Logistics">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#dfdfdf" height="81.0" layoutX="-7.0" layoutY="-6.0" stroke="BLACK" strokeType="INSIDE" width="617.0" />
+                        <Label layoutX="236.0" layoutY="14.0" text="Logistics" textFill="#141e30">
+                           <font>
+                              <Font name="System Bold" size="30.0" />
+                           </font>
+                        </Label>
+                        <Rectangle fx:id="exitButton111" arcHeight="5.0" arcWidth="5.0" fill="#141e30" height="21.0" layoutX="531.0" layoutY="27.0" onMouseClicked="#exitButtonClicked" stroke="BLACK" strokeType="INSIDE" width="26.0" />
+                        <Line endX="17.0" endY="3.1999969482421875" layoutX="531.0" layoutY="38.0" startX="9.0" startY="-4.8000030517578125" stroke="WHITE" strokeWidth="4.0" />
+                        <Line endX="90.79998779296875" endY="-41.80000305175781" layoutX="457.0" layoutY="75.0" startX="82.60003662109375" startY="-34.0" stroke="WHITE" strokeWidth="4.0" />
+                     </children>
+                  </AnchorPane>
+               </content>
+               <graphic>
+                  <Label style="-fx-text-fill: white;" text="Logistics" translateX="-12.0" translateY="-20.0">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fitHeight="34.0" fitWidth="34.0" pickOnBounds="true" preserveRatio="true" translateX="-10.0" translateY="-2.0">
+                           <image>
+                              <Image url="@img/delivery-truck.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Label>
+               </graphic>
+            </Tab>
+        </tabs>
+      </TabPane>
+      <Button fx:id="logOutButton" layoutX="41.0" layoutY="424.4" mnemonicParsing="false" onAction="#onLogOutButtonClick" style="-fx-background-color: #141e30;" text="Log out" textFill="WHITE" AnchorPane.bottomAnchor="22.0" AnchorPane.leftAnchor="41.0">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+         <graphic>
+            <ImageView fitHeight="26.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true" translateX="-20.0">
+               <image>
+                  <Image url="@img/logout.png" />
+               </image>
+            </ImageView>
+         </graphic>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></Button>
+      <Button fx:id="settingsButton" layoutX="40.0" layoutY="379.0" mnemonicParsing="false" onAction="#settingsButtonClicked" style="-fx-background-color: #141e30;" text="Settings" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+         <graphic>
+            <ImageView fitHeight="30.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true" translateX="-20.0">
+               <image>
+                  <Image url="@img/settings.png" />
+               </image>
+            </ImageView>
+         </graphic>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></Button>
+      <Line endX="103.40000915527344" layoutX="100.0" layoutY="356.0" startX="-98.0999984741211" stroke="WHITE" />
+   </children>
+</AnchorPane>
