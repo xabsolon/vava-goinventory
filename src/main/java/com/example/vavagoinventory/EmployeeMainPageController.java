@@ -1,6 +1,7 @@
 package com.example.vavagoinventory;
 
 import com.example.vavagoinventory.Storage.Product;
+import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -12,20 +13,19 @@ import javafx.scene.input.KeyCode;
 import javafx.scene.input.KeyEvent;
 import javafx.scene.input.MouseEvent;
 import org.jooq.DSLContext;
+import org.jooq.Result;
+import org.jooq.codegen.maven.goinventory.tables.Products;
+import org.jooq.codegen.maven.goinventory.tables.records.ProductsRecord;
 
 import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 
-import org.jooq.Result;
-import org.jooq.codegen.maven.goinventory.tables.Products;
-import org.jooq.codegen.maven.goinventory.tables.records.ProductsRecord;
-
 public class EmployeeMainPageController extends ApplicationController implements Initializable {
 
     public Log log = new Log();
 
-    public static ObservableList<Product> productObservableList;
+    public static ObservableList<Product> productObservableList = FXCollections.observableArrayList();
 
     @FXML
     private Button logOutButton;
@@ -62,21 +62,29 @@ public class EmployeeMainPageController extends ApplicationController implements
             log.Exceptions("Failed to load settings screen", e);
         }
     }
+    //TODO make this function work for all search fields to prevent repeated code
 
-    //TODO fix this, make this function work for all search fields to prevent repeated code
-/*
     public void searchStorage(KeyEvent event) {
+        String searchQuery = storageSearchField.getText();
         if (event.getCode() == KeyCode.ENTER) {
             productObservableList.clear();
             DSLContext dslContext = DatabaseContextSingleton.getContext();
-            dslContext.selectFrom(Products.PRODUCTS).fetch().stream().filter(p -> p.getName().toLowerCase().contains(storageSearchField.getText().toLowerCase())).
-                    forEach(p -> productObservableList.add(Product product = new Product.ProductBuilder()
-                            .name(p.getName())
-                            .quantity(p.getQuantity())
-                            .sellingPrice(p.getSellingprice())
-                            .build()));
+            Result<ProductsRecord> result = dslContext
+                .selectFrom(Products.PRODUCTS)
+                .where(Products.PRODUCTS.NAME.likeIgnoreCase("%" + searchQuery + "%"))
+                .fetch();
+
+            result.forEach(p -> {
+                Product product = new Product.ProductBuilder()
+                        .name(p.getName())
+                        .quantity(p.getQuantity())
+                        .sellingPrice(p.getSellingprice())
+                        .build();
+                productObservableList.add(product);
+            });
+            System.out.println(productObservableList);
         }
     }
 
- */
+
 }
