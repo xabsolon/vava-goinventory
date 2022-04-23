@@ -23,3 +23,17 @@
 {
     -fx-background-color: -fx-outer-border, -fx-text-box-border, #141E30;
 }
+
+.button{
+    -fx-background-color:  #141e30;
+    -fx-text-fill: white;
+}
+
+.table-view{
+    -fx-border-color: #141e30;
+}
+
+.text-field{
+    -fx-background-color: #141e30;
+    -fx-text-fill: white;
+}

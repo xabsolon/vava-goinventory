@@ -33,6 +33,16 @@
                         <Rectangle fx:id="exitButton2" arcHeight="5.0" arcWidth="5.0" fill="#141e30" height="21.0" layoutX="531.0" layoutY="27.0" onMouseClicked="#exitButtonClicked" stroke="BLACK" strokeType="INSIDE" width="26.0" />
                         <Line endX="17.0" endY="3.1999969482421875" layoutX="531.0" layoutY="38.0" startX="9.0" startY="-4.8000030517578125" stroke="WHITE" strokeWidth="4.0" />
                         <Line endX="90.79998779296875" endY="-41.80000305175781" layoutX="457.0" layoutY="75.0" startX="82.60003662109375" startY="-34.0" stroke="WHITE" strokeWidth="4.0" />
+                        <ImageView fitHeight="542.0" fitWidth="727.0" layoutY="76.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@img/Portrait.jpg" />
+                           </image>
+                        </ImageView>
+                        <ImageView fitHeight="263.0" fitWidth="278.0" layoutX="165.0" layoutY="149.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@img/logo.png" />
+                           </image>
+                        </ImageView>
                      </children>
                   </AnchorPane>
                </content>
@@ -59,6 +69,50 @@
               <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="480.0" prefWidth="702.0">
                      <children>
                         <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#dfdfdf" height="80.0" layoutX="-20.0" layoutY="-5.0" stroke="BLACK" strokeType="INSIDE" width="631.0" />
+                        <Button fx:id="createProductButton" layoutX="51.0" layoutY="108.0" mnemonicParsing="false" onAction="#onClickCreateProduct" text="Create product" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                           <graphic>
+                              <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@img/icons8-create-100.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic></Button>
+                        <Button fx:id="deleteProductButton" layoutX="239.0" layoutY="382.0" mnemonicParsing="false" onAction="#onClickDeleteProduct" text="Delete selected product" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                           <graphic>
+                              <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@img/icons8-remove-96.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic></Button>
+                        <Button fx:id="editProductButton" layoutX="51.0" layoutY="382.0" mnemonicParsing="false" onAction="#onClickEditProduct" text="Edit selected product" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                           <graphic>
+                              <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@img/icons8-edit-100.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic></Button>
+                        <Button fx:id="addProductButton" layoutX="439.0" layoutY="382.0" mnemonicParsing="false" onAction="#onClickAddProduct" text="Add product" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                           <graphic>
+                              <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@img/icons8-add-96.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic></Button>
                         <Button fx:id="createProductButton" layoutX="61.0" layoutY="227.0" mnemonicParsing="false" onAction="#onClickCreateProduct" style="-fx-background-color: #141e30;" text="Create Product" textFill="WHITE" />
                         <Button fx:id="deleteProductButton" layoutX="434.0" layoutY="227.0" mnemonicParsing="false" onAction="#onClickDeleteProduct" style="-fx-background-color: #141e30;" text="Delete Product" textFill="WHITE" />
                         <Button fx:id="editProductButton" layoutX="312.0" layoutY="227.0" mnemonicParsing="false" onAction="#onClickEditProduct" style="-fx-background-color: #141e30;" text="Edit product" textFill="WHITE" />
@@ -71,7 +125,6 @@
                         <Rectangle fx:id="exitButton" arcHeight="5.0" arcWidth="5.0" fill="#141e30" height="21.0" layoutX="531.0" layoutY="27.0" onMouseClicked="#exitButtonClicked" stroke="BLACK" strokeType="INSIDE" width="26.0" />
                         <Line endX="17.0" endY="3.1999969482421875" layoutX="531.0" layoutY="38.0" startX="9.0" startY="-4.8000030517578125" stroke="WHITE" strokeWidth="4.0" />
                         <Line endX="90.79998779296875" endY="-41.80000305175781" layoutX="457.0" layoutY="75.0" startX="82.60003662109375" startY="-34.0" stroke="WHITE" strokeWidth="4.0" />
-                        <TextField fx:id="storageSearchField" layoutX="61.0" layoutY="288.0" onKeyPressed="#searchStorage" />
                      </children>
                   </AnchorPane>
             </content>
