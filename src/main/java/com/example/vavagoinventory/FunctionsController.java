@@ -38,7 +38,6 @@ public class FunctionsController {
         } catch(NumberFormatException e){
             return false;
         }
-
     }
 
     public static Record maybeGetUserFromDatabase(String email, String password) {
