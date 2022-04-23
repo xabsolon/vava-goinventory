@@ -176,8 +176,20 @@
           </Tab>
           <Tab text="Orders">
             <content>
-              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
-                  </AnchorPane>
+               <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                  <children>
+                     <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#dfdfdf" height="81.0" layoutX="-12.0" layoutY="-5.0" stroke="BLACK" strokeType="INSIDE" width="628.0" />
+                     <Label layoutX="243.0" layoutY="15.0" text="Orders" textFill="#141e30">
+                        <font>
+                           <Font name="System Bold" size="30.0" />
+                        </font>
+                     </Label>
+                     <Rectangle fx:id="exitButton1" arcHeight="5.0" arcWidth="5.0" fill="#141e30" height="21.0" layoutX="531.0" layoutY="27.0" onMouseClicked="#exitButtonClicked" stroke="BLACK" strokeType="INSIDE" width="26.0" />
+                     <Line endX="17.0" endY="3.1999969482421875" layoutX="531.0" layoutY="38.0" startX="9.0" startY="-4.8000030517578125" stroke="WHITE" strokeWidth="4.0" />
+                     <Line endX="90.79998779296875" endY="-41.80000305175781" layoutX="457.0" layoutY="75.0" startX="82.60003662109375" startY="-34.0" stroke="WHITE" strokeWidth="4.0" />
+                     <fx:include maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" source="Orders.fxml" />
+                  </children>
+               </AnchorPane>
             </content>
                <graphic>
                   <Label style="-fx-text-fill: white;" text="Orders" translateX="-6.0" translateY="-22.0">

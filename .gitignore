@@ -43,3 +43,4 @@ hs_err_pid*
 *.iml
 
 system.properties
+src/logs/manage.log
