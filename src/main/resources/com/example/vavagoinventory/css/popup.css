@@ -1,0 +1,24 @@
+.button{
+    -fx-background-color:  #141e30;
+    -fx-text-fill: white;
+}
+
+.button:hover{
+    -fx-background-color:  rgba(36, 59, 85, 0.7);
+    -fx-text-fill: white;
+}
+
+.text-field{
+    -fx-background-color:  #141e30;
+    -fx-text-fill: white;
+}
+
+.combo-box{
+    -fx-background-color:  #141e30;
+    -fx-text-fill: white;
+}
+
+.anchor-pane{
+    -fx-border-color:  #141e30;
+    -fx-border-width: 2px;
+}

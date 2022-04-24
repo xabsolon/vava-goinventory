@@ -1,0 +1,41 @@
+.button{
+    -fx-background-color:  #141e30;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-text-fill: white;
+    -fx-font-size: 14px;
+    -fx-background-radius: 10px;
+    -fx-effect:  dropshadow(three-pass-box, rgba(0,0,0,0.8), 7, 0, 0, 0);
+}
+
+.button:hover{
+    -fx-background-color:  rgba(36, 59, 85, 0.7);
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-text-fill: white;
+    -fx-font-size: 14px;
+    -fx-background-radius: 10px;
+    -fx-effect:  dropshadow(three-pass-box, rgba(0,0,0,0.8), 7, 0, 0, 0);
+}
+
+.button2{
+    -fx-background-color: rgba(36, 59, 85, 0.7);
+    -fx-border-color: #141e30;
+    -fx-border-radius: 10px;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-text-fill: white;
+    -fx-font-size: 14px;
+    -fx-background-radius: 10px;
+    -fx-effect:  dropshadow(three-pass-box, rgba(0,0,0,0.8), 7, 0, 0, 0);
+}
+
+.button2:hover{
+    -fx-background-color:  #141e30;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-text-fill: white;
+    -fx-font-size: 14px;
+    -fx-background-radius: 10px;
+    -fx-effect:  dropshadow(three-pass-box, rgba(0,0,0,0.8), 7, 0, 0, 0);
+}
