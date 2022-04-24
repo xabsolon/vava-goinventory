@@ -12,15 +12,15 @@ import javafx.scene.shape.Rectangle;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
 import net.synedra.validatorfx.Validator;
-import org.jooq.Record;
-import org.jooq.codegen.maven.goinventory.tables.Users;
+import org.jooq.codegen.maven.goinventory.tables.records.UsersRecord;
 
 import java.io.IOException;
 import java.net.URL;
 import java.util.Locale;
 import java.util.Optional;
 import java.util.ResourceBundle;
-import java.util.logging.*;
+import java.util.logging.FileHandler;
+import java.util.logging.SimpleFormatter;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -149,18 +149,20 @@ public class LoginController implements Initializable {
             return;
         }
 
-        Record user = FunctionsController.maybeGetUserFromDatabase(emailField.getText(), passwordField.getText());
+        UsersRecord user = FunctionsController.maybeGetUserFromDatabase(emailField.getText(), passwordField.getText());
 
         if(user == null) {
             FunctionsController.showErrorAlert(I18N.get("wrongCredentials"));
             return;
         }
 
-        String position = user.get(Users.USERS.POSSITION);
+        String position = user.getPossition();
         String page = position.equalsIgnoreCase("user") ? "EmployeeMainPage.fxml" : "OwnerMainPage.fxml";
         Stage stage = FunctionsController.getStageFromEvent(event);
         FXMLLoader loader = new FXMLLoader(FadingIntroController.class.getResource(page));
-        log.login(user.get(Users.USERS.NAME));
+        log.login(user.getName());
+
+        UserSingleton.getInstance().setUser(user);
 
         try {
             FunctionsController.changeScene(stage, loader, "GoInventory");

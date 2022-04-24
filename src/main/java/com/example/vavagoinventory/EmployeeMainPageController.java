@@ -36,6 +36,7 @@ public class EmployeeMainPageController extends ApplicationController implements
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         logOutButton.setOnAction(this::onLogOutButtonClick);
+        System.out.println(UserSingleton.getInstance().getUser().getName());
     }
 
     @FXML
@@ -47,6 +48,7 @@ public class EmployeeMainPageController extends ApplicationController implements
         } catch (IOException e) {
             log.Exceptions("Failed to load login screen", e);
         }
+        UserSingleton.getInstance().setUser(null);
         log.userLogout("ferino");
     }
 

@@ -9,10 +9,8 @@ import javafx.scene.control.Alert;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
-import org.jooq.Record;
 import org.jooq.codegen.maven.goinventory.tables.Users;
-
-import javafx.collections.ObservableList;
+import org.jooq.codegen.maven.goinventory.tables.records.UsersRecord;
 
 import java.io.IOException;
 
@@ -43,12 +41,10 @@ public class FunctionsController {
         }
     }
 
-    public static Record maybeGetUserFromDatabase(String email, String password) {
-        Record user = DatabaseContextSingleton.getContext().select()
-                .from(Users.USERS)
+    public static UsersRecord maybeGetUserFromDatabase(String email, String password) {
+        return DatabaseContextSingleton.getContext().selectFrom(Users.USERS)
                 .where(Users.USERS.EMAIL.eq(email).and(Users.USERS.PASSWORD.eq(password)))
                 .fetchOne();
-        return user;
     }
 
     public static Stage getStageFromEvent(Event event) {
