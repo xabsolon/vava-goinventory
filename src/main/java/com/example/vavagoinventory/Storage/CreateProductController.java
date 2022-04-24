@@ -50,7 +50,7 @@ public class CreateProductController {
             productsObservableList.add(product);
 
             FunctionsController.showConfirmationAlert("Product created successfully");
-
+            FunctionsController.log.ProductCreated(product.getName());
             Comparator<Product> productComparator = Comparator.comparing(Product::getQuantity);
             productsObservableList.sort(productComparator);
 

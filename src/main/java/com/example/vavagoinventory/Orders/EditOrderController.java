@@ -69,6 +69,7 @@ public class EditOrderController implements Initializable {
             FunctionsController.showErrorAlert(I18N.get("OrderCreationErrorSQL"));
             return;
         }
+        FunctionsController.log.OrderEdited(order.getProductName(), order.getQuantity());
         selectedOrder.setProductName(order.getProductName());
         selectedOrder.setP_id(order.getP_id());
         selectedOrder.setQuantity(order.getQuantity());
