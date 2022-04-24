@@ -59,6 +59,7 @@ public class EmployeeMainPageController extends ApplicationController implements
             FunctionsController.changeScene(
                     FunctionsController.getStageFromEvent(actionEvent), loader, "GoInventory");
         } catch (IOException e) {
+            e.printStackTrace();
             log.Exceptions("Failed to load settings screen", e);
         }
     }
