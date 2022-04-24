@@ -84,6 +84,7 @@ public class AddProductController extends ApplicationController implements Initi
 
             quantityTemp.addAndGet(Integer.parseInt(quantityField.getText()));
             create.update(Products.PRODUCTS).set(Products.PRODUCTS.QUANTITY, quantityTemp.get()).where(Products.PRODUCTS.NAME.eq((String) choiceBox.getValue())).execute();
+            FunctionsController.log.ProductAdded((String) choiceBox.getValue(), Integer.parseInt(quantityField.getText()));
             Stage stage = (Stage) addProductPane.getScene().getWindow();
             stage.close();
         }

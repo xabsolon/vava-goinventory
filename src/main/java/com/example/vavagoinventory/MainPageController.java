@@ -21,7 +21,7 @@ import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 
-public class EmployeeMainPageController extends ApplicationController implements Initializable { //TODO get user to this stage from login page
+public class MainPageController extends ApplicationController implements Initializable { //TODO get user to this stage from login page
 
     public Log log = new Log();
 
@@ -48,8 +48,8 @@ public class EmployeeMainPageController extends ApplicationController implements
         } catch (IOException e) {
             log.Exceptions("Failed to load login screen", e);
         }
+        log.userLogout();
         UserSingleton.getInstance().setUser(null);
-        log.userLogout("ferino");
     }
 
     public void exitButtonClicked(MouseEvent mouseEvent) {

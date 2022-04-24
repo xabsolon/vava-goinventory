@@ -3,6 +3,7 @@ package com.example.vavagoinventory.Orders;
 import com.example.vavagoinventory.DatabaseContextSingleton;
 import com.example.vavagoinventory.FunctionsController;
 import com.example.vavagoinventory.I18N;
+import com.example.vavagoinventory.UserSingleton;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
@@ -60,7 +61,7 @@ public class CreateOrderController implements Initializable { //work in progress
         }
         try {
             OrdersController.OrderQuery.insertQuery(order);
-            //FunctionsController.log.OrderCreated(user.getName(),order.getProductName()); //TODO get user here
+            FunctionsController.log.OrderCreated(order.getProductName(),order.getQuantity());
         }
         catch (DataAccessException e) {
             FunctionsController.showErrorAlert(I18N.get("OrderCreationErrorSQL"));

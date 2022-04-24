@@ -27,6 +27,7 @@ public class DeleteProductController {
                 FunctionsController.showErrorAlert("Product with name " + productNameField.getText() + " does not exist.");
             } else {
                 FunctionsController.showConfirmationAlert("Product Deleted Successfully");
+                FunctionsController.log.ProductDeleted(productNameField.getText());
             }
 
             Stage stage = (Stage) cancelDeleteButton.getScene().getWindow();
