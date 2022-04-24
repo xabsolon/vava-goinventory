@@ -24,6 +24,8 @@ import java.util.logging.*;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
+import static com.example.vavagoinventory.FunctionsController.log;
+
 public class LoginController implements Initializable {
 
     @FXML
@@ -64,7 +66,7 @@ public class LoginController implements Initializable {
 
     private final Validator validator = new Validator();
 
-    public Log log = new Log();
+
     WrongUserNameOrPasswordException wunpException = new WrongUserNameOrPasswordException();
 
     @Override
@@ -96,7 +98,7 @@ public class LoginController implements Initializable {
         }
     }
 
-    private void setupFormValidators() { // TODO brute force protection
+    private void setupFormValidators() {
         validator.createCheck()
                 .dependsOn("email", emailField.textProperty())
                 .withMethod(c -> {

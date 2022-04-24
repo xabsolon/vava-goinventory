@@ -17,6 +17,7 @@ import java.sql.SQLException;
 import java.util.ResourceBundle;
 
 import static org.jooq.codegen.maven.goinventory.Tables.ORDERS;
+import static org.jooq.codegen.maven.goinventory.Tables.USERS;
 
 public class CreateOrderController implements Initializable { //work in progress
 
@@ -59,6 +60,7 @@ public class CreateOrderController implements Initializable { //work in progress
         }
         try {
             OrdersController.OrderQuery.insertQuery(order);
+            //FunctionsController.log.OrderCreated(user.getName(),order.getProductName()); //TODO get user here
         }
         catch (DataAccessException e) {
             FunctionsController.showErrorAlert(I18N.get("OrderCreationErrorSQL"));

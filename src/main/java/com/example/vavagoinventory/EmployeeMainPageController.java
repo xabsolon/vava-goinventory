@@ -21,7 +21,7 @@ import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 
-public class EmployeeMainPageController extends ApplicationController implements Initializable {
+public class EmployeeMainPageController extends ApplicationController implements Initializable { //TODO get user to this stage from login page
 
     public Log log = new Log();
 
@@ -56,14 +56,12 @@ public class EmployeeMainPageController extends ApplicationController implements
     public void settingsButtonClicked(ActionEvent actionEvent) {
         FXMLLoader loader = new FXMLLoader(FadingIntroController.class.getResource("Settings.fxml"));
         try {
-            FunctionsController.changeScene(
-                    FunctionsController.getStageFromEvent(actionEvent), loader, "GoInventory");
-        } catch (IOException e) {
+            FunctionsController.openWindow("Settings.fxml");
+        } catch (Exception e) {
             e.printStackTrace();
             log.Exceptions("Failed to load settings screen", e);
         }
     }
-    //TODO make this function work for all search fields to prevent repeated code
 
     public void searchStorage(KeyEvent event) {
         String searchQuery = storageSearchField.getText();
