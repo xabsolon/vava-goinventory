@@ -6,7 +6,9 @@ import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Alert;
+import javafx.stage.Modality;
 import javafx.stage.Stage;
+import javafx.stage.StageStyle;
 import org.jooq.Record;
 import org.jooq.codegen.maven.goinventory.tables.Users;
 
@@ -16,6 +18,7 @@ import java.io.IOException;
 
 public class FunctionsController {
 
+    public static Log log = new Log();
     public static void showConfirmationAlert(String content) {
         Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
         alert.setTitle("Success");
@@ -59,6 +62,16 @@ public class FunctionsController {
         stage.setTitle(title);
         stage.centerOnScreen();
         stage.show();
+    }
+    public static void openWindow(String stage) throws Exception {
+        Stage newstage = new Stage();
+        Parent root = FXMLLoader.load(FunctionsController.class.getResource(stage));
+        Scene scene = new Scene(root);
+        newstage.setScene(scene);
+        newstage.setResizable(false);
+        newstage.initStyle(StageStyle.TRANSPARENT);
+        newstage.initModality(Modality.APPLICATION_MODAL);
+        newstage.showAndWait();
     }
 
 }
