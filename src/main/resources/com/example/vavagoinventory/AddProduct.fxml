@@ -7,7 +7,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane fx:id="addProductPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="195.0" prefWidth="330.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.vavagoinventory.Storage.AddProductController">
+<AnchorPane fx:id="addProductPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="195.0" prefWidth="330.0" styleClass="anchor-pane" stylesheets="@css/popup.css" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.vavagoinventory.Storage.AddProductController">
    <children>
       <Button fx:id="confirmButton" layoutX="220.0" layoutY="153.0" mnemonicParsing="false" onAction="#onClickConfirm" prefHeight="27.0" prefWidth="78.0" text="Confirm" />
       <Button fx:id="cancelButton" layoutX="34.0" layoutY="153.0" mnemonicParsing="false" onAction="#onClickCancel" prefHeight="27.0" prefWidth="78.0" text="Cancel" />

@@ -1,11 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-
 <?import javafx.scene.Cursor?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.Tab?>
 <?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
@@ -13,9 +15,6 @@
 <?import javafx.scene.shape.Rectangle?>
 <?import javafx.scene.text.Font?>
 
-<?import javafx.scene.control.TextField?>
-<?import javafx.scene.control.TableColumn?>
-<?import javafx.scene.control.TableView?>
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="480.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.vavagoinventory.EmployeeMainPageController">
 
 
@@ -57,6 +56,40 @@
                         <ImageView fitHeight="27.0" fitWidth="27.0" pickOnBounds="true" preserveRatio="true" translateX="-15.0">
                            <image>
                               <Image url="@img/home.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Label>
+               </graphic>
+            </Tab>
+            <Tab style="-fx-translate-x: 0;" text="Employees">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#dfdfdf" height="81.0" layoutX="-7.0" layoutY="-6.0" stroke="BLACK" strokeType="INSIDE" width="617.0" />
+                        <Label layoutX="222.0" layoutY="14.0" text="Employees" textFill="#141e30">
+                           <font>
+                              <Font name="System Bold" size="30.0" />
+                           </font>
+                        </Label>
+                        <Rectangle fx:id="exitButton111" arcHeight="5.0" arcWidth="5.0" fill="#141e30" height="21.0" layoutX="531.0" layoutY="27.0" onMouseClicked="#exitButtonClicked" stroke="BLACK" strokeType="INSIDE" width="26.0" />
+                        <Line endX="17.0" endY="3.1999969482421875" layoutX="531.0" layoutY="38.0" startX="9.0" startY="-4.8000030517578125" stroke="WHITE" strokeWidth="4.0" />
+                        <Line endX="90.79998779296875" endY="-41.80000305175781" layoutX="457.0" layoutY="75.0" startX="82.60003662109375" startY="-34.0" stroke="WHITE" strokeWidth="4.0" />
+                     </children>
+                  </AnchorPane>
+               </content>
+               <graphic>
+                  <Label style="-fx-text-fill: white;" text="Employees" translateX="-18.0" translateY="-14.0">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fitHeight="34.0" fitWidth="34.0" pickOnBounds="true" preserveRatio="true" translateX="-10.0" translateY="-2.0">
+                           <image>
+                              <Image url="@img/group.png" />
                            </image>
                         </ImageView>
                      </graphic>
@@ -233,40 +266,6 @@
                         <ImageView fitHeight="28.0" fitWidth="28.0" pickOnBounds="true" preserveRatio="true" translateX="-12.0">
                            <image>
                               <Image url="@img/history.png" />
-                           </image>
-                        </ImageView>
-                     </graphic>
-                     <cursor>
-                        <Cursor fx:constant="HAND" />
-                     </cursor>
-                  </Label>
-               </graphic>
-            </Tab>
-            <Tab style="-fx-translate-x: 0;" text="Logistics">
-               <content>
-                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
-                     <children>
-                        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#dfdfdf" height="81.0" layoutX="-7.0" layoutY="-6.0" stroke="BLACK" strokeType="INSIDE" width="617.0" />
-                        <Label layoutX="236.0" layoutY="14.0" text="Logistics" textFill="#141e30">
-                           <font>
-                              <Font name="System Bold" size="30.0" />
-                           </font>
-                        </Label>
-                        <Rectangle fx:id="exitButton111" arcHeight="5.0" arcWidth="5.0" fill="#141e30" height="21.0" layoutX="531.0" layoutY="27.0" onMouseClicked="#exitButtonClicked" stroke="BLACK" strokeType="INSIDE" width="26.0" />
-                        <Line endX="17.0" endY="3.1999969482421875" layoutX="531.0" layoutY="38.0" startX="9.0" startY="-4.8000030517578125" stroke="WHITE" strokeWidth="4.0" />
-                        <Line endX="90.79998779296875" endY="-41.80000305175781" layoutX="457.0" layoutY="75.0" startX="82.60003662109375" startY="-34.0" stroke="WHITE" strokeWidth="4.0" />
-                     </children>
-                  </AnchorPane>
-               </content>
-               <graphic>
-                  <Label style="-fx-text-fill: white;" text="Logistics" translateX="-12.0" translateY="-20.0">
-                     <font>
-                        <Font name="System Bold" size="14.0" />
-                     </font>
-                     <graphic>
-                        <ImageView fitHeight="34.0" fitWidth="34.0" pickOnBounds="true" preserveRatio="true" translateX="-10.0" translateY="-2.0">
-                           <image>
-                              <Image url="@img/delivery-truck.png" />
                            </image>
                         </ImageView>
                      </graphic>

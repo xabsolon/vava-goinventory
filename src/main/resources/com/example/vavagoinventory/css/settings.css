@@ -1,0 +1,29 @@
+.button{
+    -fx-background-color:  #141e30;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+}
+
+.button:hover{
+    -fx-background-color:  rgba(36, 59, 85, 0.7);
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+}
+
+.anchor-pane{
+    -fx-border-color:  #141e30;
+    -fx-border-width: 2px;
+}
+
+.toggle-button{
+    -fx-background-color:  none;
+    -fx-border-color: #141e30;
+}
+
+.toggle-button:hover{
+    -fx-background-color:  #141e30;
+}
+
+.toggle-button:selected{
+    -fx-background-color:  #141e30;
+}

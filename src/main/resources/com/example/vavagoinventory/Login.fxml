@@ -15,7 +15,7 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<BorderPane id="LoginBorderPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="480.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.vavagoinventory.LoginController">
+<BorderPane id="LoginBorderPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="480.0" prefWidth="800.0" stylesheets="@css/login.css" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.vavagoinventory.LoginController">
    <right>
       <VBox prefHeight="480.0" prefWidth="450.0" BorderPane.alignment="CENTER">
          <children>
@@ -28,7 +28,7 @@
                   </Rectangle>
                   <Line endX="410.0" endY="7.0" fill="WHITE" mouseTransparent="true" startX="403.0" stroke="WHITE" strokeWidth="4.0" translateX="381.0" translateY="24.0" />
                   <Line endX="410.0" mouseTransparent="true" startX="403.0" startY="7.0" stroke="WHITE" strokeWidth="4.0" translateX="368.0" translateY="24.0" />
-                  <Button fx:id="langEnButton" alignment="CENTER_RIGHT" minHeight="0.0" mnemonicParsing="false" prefWidth="31.0" translateX="240.0" translateY="20.0">
+                  <Button fx:id="langEnButton" alignment="CENTER_RIGHT" minHeight="0.0" mnemonicParsing="false" prefWidth="31.0" translateX="225.0" translateY="20.0">
                      <graphic>
                         <ImageView fitHeight="31.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
                            <image>
@@ -36,7 +36,7 @@
                            </image>
                         </ImageView>
                      </graphic></Button>
-                  <Button fx:id="langSkButton" alignment="CENTER_RIGHT" minHeight="0.0" mnemonicParsing="false" translateX="250.0" translateY="20.0">
+                  <Button fx:id="langSkButton" alignment="CENTER_RIGHT" minHeight="0.0" mnemonicParsing="false" translateX="235.0" translateY="20.0">
                      <graphic>
                         <ImageView fitHeight="31.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
                            <image>
@@ -65,7 +65,7 @@
                   <Cursor fx:constant="HAND" />
                </cursor>
             </Text>
-            <Button fx:id="loginButton" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onMouseClicked="#signInButtonClicked" prefHeight="38.0" prefWidth="150.0" style="-fx-background-color: #141E30; -fx-font-weight: bold; -fx-text-fill: white; -fx-font-size: 14; -fx-background-radius: 10; -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.8), 7, 0, 0, 0);" text="Sign In" textAlignment="CENTER" textFill="WHITE" translateX="220.0" translateY="145.0">
+            <Button fx:id="loginButton" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onMouseClicked="#signInButtonClicked" prefHeight="38.0" prefWidth="150.0" text="Sign In" textAlignment="CENTER" textFill="WHITE" translateX="220.0" translateY="145.0">
                <font>
                   <Font size="14.0" />
                </font>
@@ -73,7 +73,7 @@
                   <Cursor fx:constant="HAND" />
                </cursor></Button>
             <Label fx:id="loginMessageLabel" style="-fx-text-fill: #ff0000;" translateX="50.0" translateY="-30.0" />
-            <Button fx:id="signupButton" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="50.0" prefWidth="325.0" style="-fx-text-fill: WHITE; -fx-background-color: rgba(36, 59, 85, 0.7); -fx-font-weight: bold; -fx-border-color: #141E30; -fx-border-radius: 10; -fx-font-size: 14; -fx-background-radius: 10; -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.8), 7, 0, 0, 0);" text="Don't an have account? Sign up" textAlignment="CENTER" textFill="#141e30" translateX="50.0" translateY="180.0">
+            <Button fx:id="signupButton" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="50.0" prefWidth="325.0" styleClass="button2" text="Don't an have account? Sign up" textAlignment="CENTER" textFill="#141e30" translateX="50.0" translateY="180.0">
                <font>
                   <Font size="14.0" />
                </font>
