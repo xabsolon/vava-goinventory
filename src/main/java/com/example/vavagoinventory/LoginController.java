@@ -117,16 +117,7 @@ public class LoginController implements Initializable {
 
     @FXML
     private void exitButtonClicked() {
-        Alert alert;
-        alert = new Alert(Alert.AlertType.CONFIRMATION);
-        alert.setTitle(I18N.get("warning"));
-        alert.setHeaderText(I18N.get("exitMessage"));
-        Optional<ButtonType> result = alert.showAndWait();
-        if (result.get() == ButtonType.OK) {
-            System.exit(0);
-        } else if (result.get() == ButtonType.CANCEL) {
-            alert.close();
-        }
+        FunctionsController.showExitAlert("Are you sure you want to exit?", "Exit");
     }
 
     @FXML

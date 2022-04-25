@@ -15,7 +15,7 @@
 <?import javafx.scene.shape.Rectangle?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="480.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.vavagoinventory.MainPageController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="480.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.vavagoinventory.MainPageController">
 
 
    <children>
@@ -31,9 +31,6 @@
                               <Font name="System Bold" size="30.0" />
                            </font>
                         </Label>
-                        <Rectangle fx:id="exitButton2" arcHeight="5.0" arcWidth="5.0" fill="#141e30" height="21.0" layoutX="531.0" layoutY="27.0" onMouseClicked="#exitButtonClicked" stroke="BLACK" strokeType="INSIDE" width="26.0" />
-                        <Line endX="17.0" endY="3.1999969482421875" layoutX="531.0" layoutY="38.0" startX="9.0" startY="-4.8000030517578125" stroke="WHITE" strokeWidth="4.0" />
-                        <Line endX="90.79998779296875" endY="-41.80000305175781" layoutX="457.0" layoutY="75.0" startX="82.60003662109375" startY="-34.0" stroke="WHITE" strokeWidth="4.0" />
                         <ImageView fitHeight="542.0" fitWidth="727.0" layoutY="76.0" pickOnBounds="true" preserveRatio="true">
                            <image>
                               <Image url="@img/Portrait.jpg" />
@@ -44,6 +41,18 @@
                               <Image url="@img/logo.png" />
                            </image>
                         </ImageView>
+                        <Rectangle fx:id="exitButton2" arcHeight="5.0" arcWidth="5.0" fill="#141e30" height="21.0" layoutX="531.0" layoutY="27.0" onMouseClicked="#exitButtonClicked" stroke="BLACK" strokeType="INSIDE" styleClass="rectangle" width="26.0">
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor></Rectangle>
+                        <Line endX="17.0" endY="3.1999969482421875" layoutX="531.0" layoutY="38.0" onMouseClicked="#exitButtonClicked" startX="9.0" startY="-4.8000030517578125" stroke="WHITE" strokeWidth="4.0">
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor></Line>
+                        <Line endX="90.79998779296875" endY="-41.80000305175781" layoutX="457.0" layoutY="75.0" onMouseClicked="#exitButtonClicked" startX="82.60003662109375" startY="-34.0" stroke="WHITE" strokeWidth="4.0">
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor></Line>
                      </children>
                   </AnchorPane>
                </content>
@@ -75,9 +84,18 @@
                               <Font name="System Bold" size="30.0" />
                            </font>
                         </Label>
-                        <Rectangle fx:id="exitButton111" arcHeight="5.0" arcWidth="5.0" fill="#141e30" height="21.0" layoutX="531.0" layoutY="27.0" onMouseClicked="#exitButtonClicked" stroke="BLACK" strokeType="INSIDE" width="26.0" />
-                        <Line endX="17.0" endY="3.1999969482421875" layoutX="531.0" layoutY="38.0" startX="9.0" startY="-4.8000030517578125" stroke="WHITE" strokeWidth="4.0" />
-                        <Line endX="90.79998779296875" endY="-41.80000305175781" layoutX="457.0" layoutY="75.0" startX="82.60003662109375" startY="-34.0" stroke="WHITE" strokeWidth="4.0" />
+                        <Rectangle fx:id="exitButton111" arcHeight="5.0" arcWidth="5.0" fill="#141e30" height="21.0" layoutX="531.0" layoutY="27.0" onMouseClicked="#exitButtonClicked" stroke="BLACK" strokeType="INSIDE" width="26.0">
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor></Rectangle>
+                        <Line endX="17.0" endY="3.1999969482421875" layoutX="531.0" layoutY="38.0" onMouseClicked="#exitButtonClicked" startX="9.0" startY="-4.8000030517578125" stroke="WHITE" strokeWidth="4.0">
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor></Line>
+                        <Line endX="90.79998779296875" endY="-41.80000305175781" layoutX="457.0" layoutY="75.0" onMouseClicked="#exitButtonClicked" startX="82.60003662109375" startY="-34.0" stroke="WHITE" strokeWidth="4.0">
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor></Line>
                      </children>
                   </AnchorPane>
                </content>
@@ -153,9 +171,6 @@
                               <Font name="System Bold" size="30.0" />
                            </font>
                         </Label>
-                        <Rectangle fx:id="exitButton" arcHeight="5.0" arcWidth="5.0" fill="#141e30" height="21.0" layoutX="531.0" layoutY="27.0" onMouseClicked="#exitButtonClicked" stroke="BLACK" strokeType="INSIDE" width="26.0" />
-                        <Line endX="17.0" endY="3.1999969482421875" layoutX="531.0" layoutY="38.0" startX="9.0" startY="-4.8000030517578125" stroke="WHITE" strokeWidth="4.0" />
-                        <Line endX="90.79998779296875" endY="-41.80000305175781" layoutX="457.0" layoutY="75.0" startX="82.60003662109375" startY="-34.0" stroke="WHITE" strokeWidth="4.0" />
                         <TableView fx:id="productsTable" layoutX="51.0" layoutY="159.0" prefHeight="198.0" prefWidth="498.0">
                            <columns>
                               <TableColumn fx:id="idColumn" prefWidth="75.0" text="ID" />
@@ -186,6 +201,18 @@
                               <Image url="@img/icons8-search-90.png" />
                            </image>
                         </ImageView>
+                        <Rectangle fx:id="exitButton" arcHeight="5.0" arcWidth="5.0" fill="#141e30" height="21.0" layoutX="531.0" layoutY="27.0" onMouseClicked="#exitButtonClicked" stroke="BLACK" strokeType="INSIDE" width="26.0">
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor></Rectangle>
+                        <Line endX="17.0" endY="3.1999969482421875" layoutX="531.0" layoutY="38.0" onMouseClicked="#exitButtonClicked" startX="9.0" startY="-4.8000030517578125" stroke="WHITE" strokeWidth="4.0">
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor></Line>
+                        <Line endX="90.79998779296875" endY="-41.80000305175781" layoutX="457.0" layoutY="75.0" onMouseClicked="#exitButtonClicked" startX="82.60003662109375" startY="-34.0" stroke="WHITE" strokeWidth="4.0">
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor></Line>
                      </children>
                   </AnchorPane>
             </content>
@@ -217,10 +244,19 @@
                            <Font name="System Bold" size="30.0" />
                         </font>
                      </Label>
-                     <Rectangle fx:id="exitButton1" arcHeight="5.0" arcWidth="5.0" fill="#141e30" height="21.0" layoutX="531.0" layoutY="27.0" onMouseClicked="#exitButtonClicked" stroke="BLACK" strokeType="INSIDE" width="26.0" />
-                     <Line endX="17.0" endY="3.1999969482421875" layoutX="531.0" layoutY="38.0" startX="9.0" startY="-4.8000030517578125" stroke="WHITE" strokeWidth="4.0" />
-                     <Line endX="90.79998779296875" endY="-41.80000305175781" layoutX="457.0" layoutY="75.0" startX="82.60003662109375" startY="-34.0" stroke="WHITE" strokeWidth="4.0" />
                      <fx:include maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" source="Orders.fxml" />
+                     <Rectangle fx:id="exitButton1" arcHeight="5.0" arcWidth="5.0" fill="#141e30" height="21.0" layoutX="531.0" layoutY="27.0" onMouseClicked="#exitButtonClicked" stroke="BLACK" strokeType="INSIDE" width="26.0">
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor></Rectangle>
+                     <Line endX="17.0" endY="3.1999969482421875" layoutX="531.0" layoutY="38.0" onMouseClicked="#exitButtonClicked" startX="9.0" startY="-4.8000030517578125" stroke="WHITE" strokeWidth="4.0">
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor></Line>
+                     <Line endX="90.79998779296875" endY="-41.80000305175781" layoutX="457.0" layoutY="75.0" onMouseClicked="#exitButtonClicked" startX="82.60003662109375" startY="-34.0" stroke="WHITE" strokeWidth="4.0">
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor></Line>
                   </children>
                </AnchorPane>
             </content>
@@ -252,9 +288,18 @@
                               <Font name="System Bold" size="30.0" />
                            </font>
                         </Label>
-                        <Rectangle fx:id="exitButton11" arcHeight="5.0" arcWidth="5.0" fill="#141e30" height="21.0" layoutX="531.0" layoutY="27.0" onMouseClicked="#exitButtonClicked" stroke="BLACK" strokeType="INSIDE" width="26.0" />
-                        <Line endX="17.0" endY="3.1999969482421875" layoutX="531.0" layoutY="38.0" startX="9.0" startY="-4.8000030517578125" stroke="WHITE" strokeWidth="4.0" />
-                        <Line endX="90.79998779296875" endY="-41.80000305175781" layoutX="457.0" layoutY="75.0" startX="82.60003662109375" startY="-34.0" stroke="WHITE" strokeWidth="4.0" />
+                        <Rectangle fx:id="exitButton11" arcHeight="5.0" arcWidth="5.0" fill="#141e30" height="21.0" layoutX="531.0" layoutY="27.0" onMouseClicked="#exitButtonClicked" stroke="BLACK" strokeType="INSIDE" width="26.0">
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor></Rectangle>
+                        <Line endX="17.0" endY="3.1999969482421875" layoutX="531.0" layoutY="38.0" onMouseClicked="#exitButtonClicked" startX="9.0" startY="-4.8000030517578125" stroke="WHITE" strokeWidth="4.0">
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor></Line>
+                        <Line endX="90.79998779296875" endY="-41.80000305175781" layoutX="457.0" layoutY="75.0" onMouseClicked="#exitButtonClicked" startX="82.60003662109375" startY="-34.0" stroke="WHITE" strokeWidth="4.0">
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor></Line>
                      </children></AnchorPane>
               </content>
                <graphic>

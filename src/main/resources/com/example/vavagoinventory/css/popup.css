@@ -18,6 +18,15 @@
     -fx-text-fill: white;
 }
 
+.combo-box .cell:selected {
+    -fx-text-fill: white;
+    -fx-arrow-color: white;
+}
+
+.combo-box .arrow{
+    -fx-background-color: white;
+}
+
 .anchor-pane{
     -fx-border-color:  #141e30;
     -fx-border-width: 2px;
