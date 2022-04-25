@@ -71,6 +71,9 @@ public class LoginController implements Initializable {
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
+        if (I18N.getLocale().getLanguage().equals("en")) {
+            Locale.setDefault(new Locale("en"));
+        }
         setupFormValidators();
         setupTranslation();
     }
@@ -82,8 +85,14 @@ public class LoginController implements Initializable {
         loginButton.textProperty().bind(I18N.createStringBinding("signInButton"));
         signupButton.textProperty().bind(I18N.createStringBinding("signUpButton"));
         signupButton.textProperty().bind(I18N.createStringBinding("signUpButton"));
-        langEnButton.setOnAction((evt) -> I18N.setLocale(new Locale("en")));
-        langSkButton.setOnAction((evt) -> I18N.setLocale(new Locale("sk")));
+        langEnButton.setOnAction((evt) -> {
+            I18N.setLocale(new Locale("en"));
+            Locale.setDefault(new Locale("en"));
+        });
+        langSkButton.setOnAction((evt) -> {
+            I18N.setLocale(new Locale("sk"));
+            Locale.setDefault(new Locale("sk"));
+        });
     }
     private void setupFormValidators() {
         validator.createCheck()

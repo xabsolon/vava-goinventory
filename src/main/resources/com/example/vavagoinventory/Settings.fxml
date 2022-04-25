@@ -42,16 +42,16 @@
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="380.0" prefWidth="330.0" styleClass="anchor-pane" stylesheets="@css/settings.css" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.vavagoinventory.SettingsController">
    <children>
-      <Label layoutX="119.0" layoutY="34.0" text="Settings" textFill="#141e30">
+      <Label fx:id="settingsLabel" layoutX="119.0" layoutY="34.0" text="Settings" textFill="#141e30">
          <font>
             <Font name="System Bold" size="24.0" />
          </font>
       </Label>
-      <Button fx:id="closeButton" layoutX="138.0" layoutY="288.0" mnemonicParsing="false" onAction="#closeButtonClicked" text="Close">
+      <Button fx:id="closeButton" layoutX="124.0" layoutY="288.0" mnemonicParsing="false" onAction="#closeButtonClicked" prefHeight="30.0" prefWidth="82.0" text="Close">
          <font>
             <Font name="System Bold" size="12.0" />
          </font></Button>
-      <Button fx:id="changePassword" layoutX="104.0" layoutY="232.0" mnemonicParsing="false" onAction="#changePasswordClicked" text="Change password">
+      <Button fx:id="changePassword" layoutX="89.0" layoutY="232.0" mnemonicParsing="false" onAction="#changePasswordClicked" prefHeight="30.0" prefWidth="152.0" text="Change password">
          <font>
             <Font name="System Bold" size="12.0" />
          </font></Button>
@@ -71,7 +71,7 @@
                </image>
             </ImageView>
          </graphic></ToggleButton>
-      <Label layoutX="36.0" layoutY="113.0" text="Language: ">
+      <Label fx:id="languageLabel" layoutX="36.0" layoutY="113.0" text="Language: ">
          <font>
             <Font name="System Bold" size="18.0" />
          </font>

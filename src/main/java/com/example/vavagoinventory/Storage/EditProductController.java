@@ -3,12 +3,15 @@ package com.example.vavagoinventory.Storage;
 import com.example.vavagoinventory.ApplicationController;
 import com.example.vavagoinventory.DatabaseContextSingleton;
 import com.example.vavagoinventory.FunctionsController;
+import com.example.vavagoinventory.I18N;
 import javafx.application.Platform;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.scene.control.Button;
 import javafx.scene.control.ComboBox;
+import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
@@ -32,6 +35,21 @@ public class EditProductController extends ApplicationController implements Init
     private AnchorPane confirmEditStoragePane;
 
     @FXML
+    private Button cancelEditButton;
+
+    @FXML
+    private Button confirmEditButton;
+
+    @FXML
+    private Label priceLabel;
+
+    @FXML
+    private Label nameLabel;
+
+    @FXML
+    private Label quantityLabel;
+
+    @FXML
     private TextField priceField;
 
     @FXML
@@ -39,6 +57,9 @@ public class EditProductController extends ApplicationController implements Init
 
     @FXML
     private TextField nameField;
+
+    @FXML
+    private Label editProductLabel;
 
     @FXML
     void onClickCancel() {
@@ -60,7 +81,12 @@ public class EditProductController extends ApplicationController implements Init
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
-
+        nameLabel.textProperty().bind(I18N.createStringBinding("nameLabel"));
+        priceLabel.textProperty().bind(I18N.createStringBinding("priceLabel"));
+        quantityLabel.textProperty().bind(I18N.createStringBinding("quantityLabel"));
+        confirmEditButton.textProperty().bind(I18N.createStringBinding("confirmButtonLabel"));
+        cancelEditButton.textProperty().bind(I18N.createStringBinding("cancelButtonLabel"));
+        editProductLabel.textProperty().bind(I18N.createStringBinding("editProductLabel"));
     }
 
     @FXML

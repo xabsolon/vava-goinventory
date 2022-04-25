@@ -49,6 +49,27 @@ public class OrdersController implements Initializable {
     private Order lastSelectedOrder;
 
     @FXML
+    private Button createButton;
+
+    @FXML
+    private Button editButton;
+
+    @FXML
+    private Button deleteButton;
+
+    @FXML
+    private Button completeButton;
+
+    @FXML
+    private Button importButton;
+
+    @FXML
+    private Button exportButton;
+
+    @FXML
+    private Button refreshButton;
+
+    @FXML
     private CreateOrderController createOrderController;
 
     @FXML
@@ -160,6 +181,16 @@ public class OrdersController implements Initializable {
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
+        createButton.textProperty().bind(I18N.createStringBinding("createOrderButtonLabel"));
+        editButton.textProperty().bind(I18N.createStringBinding("editOrderButtonLabel"));
+        deleteButton.textProperty().bind(I18N.createStringBinding("deleteOrderButtonLabel"));
+        completeButton.textProperty().bind(I18N.createStringBinding("completeOrderButtonLabel"));
+        importButton.textProperty().bind(I18N.createStringBinding("importXMLButtonLabel"));
+        exportButton.textProperty().bind(I18N.createStringBinding("exportXMLButtonLabel"));
+        colID.textProperty().bind(I18N.createStringBinding("idColumnLabel"));
+        colProduct.textProperty().bind(I18N.createStringBinding("nameColumnLabel"));
+        colQuantity.textProperty().bind(I18N.createStringBinding("quantityColumnLabel"));
+        refreshButton.textProperty().bind(I18N.createStringBinding("refreshButtonLabel"));
         OrderQuery.getQuery();
         orders = FXCollections.observableArrayList(OrderQuery.orders);
         colID.setCellValueFactory(orders -> new SimpleIntegerProperty(orders.getValue().getO_id()).asObject());

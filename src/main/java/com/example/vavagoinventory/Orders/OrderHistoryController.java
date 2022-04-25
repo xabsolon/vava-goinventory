@@ -1,6 +1,7 @@
 package com.example.vavagoinventory.Orders;
 
 import com.example.vavagoinventory.DatabaseContextSingleton;
+import com.example.vavagoinventory.I18N;
 import javafx.beans.property.SimpleIntegerProperty;
 import javafx.beans.property.SimpleStringProperty;
 import javafx.collections.FXCollections;
@@ -8,6 +9,7 @@ import javafx.collections.ObservableList;
 import javafx.collections.ObservableListBase;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.scene.control.Button;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import org.jooq.*;
@@ -28,6 +30,9 @@ public class OrderHistoryController implements Initializable {
     private TableView<Order> tableView;
 
     @FXML
+    private Button refreshButton;
+
+    @FXML
     private TableColumn<Order, Integer> colID;
 
     @FXML
@@ -38,6 +43,10 @@ public class OrderHistoryController implements Initializable {
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
+        refreshButton.textProperty().bind(I18N.createStringBinding("refreshButtonLabel"));
+        colID.textProperty().bind(I18N.createStringBinding("idColumnLabel"));
+        colProduct.textProperty().bind(I18N.createStringBinding("nameColumnLabel"));
+        colQuantity.textProperty().bind(I18N.createStringBinding("quantityColumnLabel"));
         query();
         colID.setCellValueFactory(orders -> new SimpleIntegerProperty(orders.getValue().getO_id()).asObject());
         colProduct.setCellValueFactory(orders -> new SimpleStringProperty(orders.getValue().getProductName()));

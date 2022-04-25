@@ -3,6 +3,7 @@ package com.example.vavagoinventory.Storage;
 import com.example.vavagoinventory.ApplicationController;
 import com.example.vavagoinventory.DatabaseContextSingleton;
 import com.example.vavagoinventory.FunctionsController;
+import com.example.vavagoinventory.I18N;
 import javafx.application.Platform;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
@@ -10,6 +11,7 @@ import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 import javafx.scene.control.ComboBox;
+import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
@@ -36,6 +38,15 @@ public class AddProductController extends ApplicationController implements Initi
     private Button cancelButton;
 
     @FXML
+    private Button confirmButton;
+
+    @FXML
+    private Label quantityLabel;
+
+    @FXML
+    private Label addProductLabel;
+
+    @FXML
     private ComboBox<?> choiceBox;
 
     @FXML
@@ -45,7 +56,10 @@ public class AddProductController extends ApplicationController implements Initi
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
-
+        cancelButton.textProperty().bind(I18N.createStringBinding("cancelButtonLabel"));
+        confirmButton.textProperty().bind(I18N.createStringBinding("confirmButtonLabel"));
+        addProductLabel.textProperty().bind(I18N.createStringBinding("addProductLabel"));
+        quantityLabel.textProperty().bind(I18N.createStringBinding("quantityLabel"));
     }
 
     public void injectApplicationController(ApplicationController applicationController) {

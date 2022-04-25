@@ -3,19 +3,24 @@ package com.example.vavagoinventory.Storage;
 import com.example.vavagoinventory.ApplicationController;
 import com.example.vavagoinventory.DatabaseContextSingleton;
 import com.example.vavagoinventory.FunctionsController;
+import com.example.vavagoinventory.I18N;
 import javafx.fxml.FXML;
+import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
+import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 import org.jooq.DSLContext;
 import org.jooq.codegen.maven.goinventory.tables.Products;
 import org.jooq.codegen.maven.goinventory.tables.records.ProductsRecord;
 
+import java.net.URL;
 import java.util.Comparator;
+import java.util.ResourceBundle;
 
 import static com.example.vavagoinventory.ApplicationController.productsObservableList;
 
-public class CreateProductController {
+public class CreateProductController implements Initializable {
 
     private ApplicationController applicationController;
 
@@ -23,7 +28,24 @@ public class CreateProductController {
     private Button cancelCreateButton;
 
     @FXML
+    private Button confirmCreateButton;
+
+    @FXML
+    private Label createLabel;
+
+    @FXML
+    private Label nameLabel;
+
+    @FXML
     private TextField productNameField;
+
+    @Override
+    public void initialize(URL location, ResourceBundle resources) {
+        createLabel.textProperty().bind(I18N.createStringBinding("createProductLabel"));
+        nameLabel.textProperty().bind(I18N.createStringBinding("nameLabel"));
+        cancelCreateButton.textProperty().bind(I18N.createStringBinding("cancelButtonLabel"));
+        confirmCreateButton.textProperty().bind(I18N.createStringBinding("confirmButtonLabel"));
+    }
 
     public void injectApplicationController(ApplicationController applicationController) {
         this.applicationController = applicationController;

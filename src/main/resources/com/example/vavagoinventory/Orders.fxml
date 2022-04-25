@@ -22,7 +22,7 @@
          <font>
             <Font name="System Bold" size="12.0" />
          </font></Button>
-      <Button fx:id="createButton" layoutX="57.0" layoutY="110.0" mnemonicParsing="false" onAction="#onClickCreate" prefHeight="28.0" prefWidth="143.0" text="Create new order">
+      <Button fx:id="createButton" layoutX="57.0" layoutY="110.0" mnemonicParsing="false" onAction="#onClickCreate" prefHeight="28.0" prefWidth="158.0" text="Create new order">
          <graphic>
             <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
                <image>
@@ -34,7 +34,7 @@
             <Font name="System Bold" size="12.0" />
          </font>
       </Button>
-      <Button fx:id="importButton" layoutX="156.0" layoutY="420.0" mnemonicParsing="false" onAction="#onClickImportFromXml" prefHeight="28.0" prefWidth="143.0" text="Import from XML">
+      <Button fx:id="importButton" layoutX="141.0" layoutY="420.0" mnemonicParsing="false" onAction="#onClickImportFromXml" prefHeight="28.0" prefWidth="158.0" text="Import from XML">
          <graphic>
             <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
                <image>
@@ -46,7 +46,7 @@
             <Font name="System Bold" size="12.0" />
          </font>
       </Button>
-      <Button fx:id="exportButton" layoutX="341.0" layoutY="420.0" mnemonicParsing="false" onAction="#onClickExportToXml" prefHeight="28.0" prefWidth="122.0" text="Export to XML">
+      <Button fx:id="exportButton" layoutX="341.0" layoutY="420.0" mnemonicParsing="false" onAction="#onClickExportToXml" prefHeight="28.0" prefWidth="158.0" text="Export to XML">
          <graphic>
             <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
                <image>
@@ -58,7 +58,7 @@
             <Font name="System Bold" size="12.0" />
          </font>
       </Button>
-      <Button fx:id="deleteButton" layoutX="235.0" layoutY="372.0" mnemonicParsing="false" onAction="#onClickDelete" prefHeight="28.0" prefWidth="167.0" text="Delete selected order">
+      <Button fx:id="deleteButton" layoutX="223.0" layoutY="372.0" mnemonicParsing="false" onAction="#onClickDelete" prefHeight="28.0" prefWidth="167.0" text="Delete selected order">
          <graphic>
             <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
                <image>
@@ -70,7 +70,7 @@
             <Font name="System Bold" size="12.0" />
          </font>
       </Button>
-      <Button fx:id="editButton" layoutX="57.0" layoutY="372.0" mnemonicParsing="false" onAction="#onClickEdit" prefHeight="28.0" prefWidth="158.0" text="Edit selected order">
+      <Button fx:id="editButton" layoutX="56.0" layoutY="372.0" mnemonicParsing="false" onAction="#onClickEdit" prefHeight="28.0" prefWidth="158.0" text="Edit selected order">
          <graphic>
             <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
                <image>
@@ -82,7 +82,7 @@
             <Font name="System Bold" size="12.0" />
          </font>
       </Button>
-      <Button fx:id="completeButton" layoutX="424.0" layoutY="372.0" mnemonicParsing="false" onAction="#onClickComplete" prefHeight="28.0" prefWidth="132.0" text="Complete order">
+      <Button fx:id="completeButton" layoutX="399.0" layoutY="372.0" mnemonicParsing="false" onAction="#onClickComplete" prefHeight="28.0" prefWidth="158.0" text="Complete order">
          <graphic>
             <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
                <image>
@@ -94,12 +94,12 @@
             <Font name="System Bold" size="12.0" />
          </font>
       </Button>
-      <TextField fx:id="searchField" layoutX="228.0" layoutY="110.0" prefHeight="28.0" prefWidth="217.0">
+      <TextField fx:id="searchField" layoutX="232.0" layoutY="110.0" prefHeight="28.0" prefWidth="224.0">
          <font>
             <Font name="System Bold" size="12.0" />
          </font>
       </TextField>
-      <ImageView fitHeight="20.0" fitWidth="20.0" layoutX="418.0" layoutY="114.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="20.0" fitWidth="20.0" layoutX="430.0" layoutY="114.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@img/icons8-search-90.png" />
          </image>

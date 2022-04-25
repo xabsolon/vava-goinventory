@@ -1,6 +1,7 @@
 package com.example.vavagoinventory.UserManagement;
 
 import com.example.vavagoinventory.DatabaseContextSingleton;
+import com.example.vavagoinventory.I18N;
 import com.example.vavagoinventory.Orders.Order;
 import com.example.vavagoinventory.Orders.OrdersController;
 import javafx.beans.property.SimpleIntegerProperty;
@@ -9,6 +10,7 @@ import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.scene.control.Button;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import org.jooq.DSLContext;
@@ -30,6 +32,18 @@ public class UserManagementController implements Initializable {
 
     @FXML
     private TableView<User> tableView;
+
+    @FXML
+    private Button createUserButton;
+
+    @FXML
+    private Button editUserButton;
+
+    @FXML
+    private Button deleteUserButton;
+
+    @FXML
+    private Button refreshButton;
 
     @FXML
     private TableColumn<User, String> colLogin;
@@ -66,6 +80,13 @@ public class UserManagementController implements Initializable {
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
+        refreshButton.textProperty().bind(I18N.createStringBinding("refreshButtonLabel"));
+        createUserButton.textProperty().bind(I18N.createStringBinding("createUserButtonLabel"));
+        editUserButton.textProperty().bind(I18N.createStringBinding("editUserButtonLabel"));
+        deleteUserButton.textProperty().bind(I18N.createStringBinding("deleteUserButtonLabel"));
+        colLogin.textProperty().bind(I18N.createStringBinding("colLoginLabel"));
+        colPassword.textProperty().bind(I18N.createStringBinding("colPasswordLabel"));
+        colPosition.textProperty().bind(I18N.createStringBinding("colPositionLabel"));
         UserQuery.getQuery();
         users = FXCollections.observableArrayList(UserQuery.users);
         colLogin.setCellValueFactory(users -> new SimpleStringProperty(users.getValue().getUsername()));
