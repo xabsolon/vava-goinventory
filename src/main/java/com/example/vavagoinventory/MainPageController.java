@@ -7,7 +7,9 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
+import javafx.scene.control.ButtonType;
 import javafx.scene.control.TextField;
 import javafx.scene.input.KeyCode;
 import javafx.scene.input.KeyEvent;
@@ -19,6 +21,7 @@ import org.jooq.codegen.maven.goinventory.tables.records.ProductsRecord;
 
 import java.io.IOException;
 import java.net.URL;
+import java.util.Optional;
 import java.util.ResourceBundle;
 
 public class MainPageController extends ApplicationController implements Initializable { //TODO get user to this stage from login page
@@ -43,19 +46,28 @@ public class MainPageController extends ApplicationController implements Initial
     @FXML
     private void onLogOutButtonClick(ActionEvent actionEvent) {
         FXMLLoader loader = new FXMLLoader(FadingIntroController.class.getResource("Login.fxml"));
-        try {
-            FunctionsController.changeScene(
-                    FunctionsController.getStageFromEvent(actionEvent), loader, "GoInventory");
-        } catch (IOException e) {
-            log.Exceptions("Failed to load login screen", e);
+        Alert alert;
+        alert = new Alert(Alert.AlertType.CONFIRMATION);
+        alert.setTitle("Log Out");
+        alert.setHeaderText(null);
+        alert.setContentText("Are you sure you want to log out ?");
+        Optional<ButtonType> result = alert.showAndWait();
+        if(result.get() == ButtonType.OK) {
+            try {
+                FunctionsController.changeScene(
+                        FunctionsController.getStageFromEvent(actionEvent), loader, "GoInventory");
+            } catch (IOException e) {
+                log.Exceptions("Failed to load login screen", e);
+            }
+            log.userLogout();
+            UserSingleton.getInstance().setUser(null);
         }
-        log.userLogout();
-        UserSingleton.getInstance().setUser(null);
     }
 
     public void exitButtonClicked(MouseEvent mouseEvent) {
-        System.exit(0);
+        FunctionsController.showExitAlert("Are you sure you want to exit ?", "Exit");
     }
+
     public void settingsButtonClicked(ActionEvent actionEvent) {
         FXMLLoader loader = new FXMLLoader(FadingIntroController.class.getResource("Settings.fxml"));
         try {

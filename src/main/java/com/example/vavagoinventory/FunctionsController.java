@@ -6,6 +6,7 @@ import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Alert;
+import javafx.scene.control.ButtonType;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
@@ -13,6 +14,7 @@ import org.jooq.codegen.maven.goinventory.tables.Users;
 import org.jooq.codegen.maven.goinventory.tables.records.UsersRecord;
 
 import java.io.IOException;
+import java.util.Optional;
 
 public class FunctionsController {
 
@@ -23,6 +25,18 @@ public class FunctionsController {
         alert.setHeaderText("Success");
         alert.setContentText(content);
         alert.showAndWait();
+    }
+
+    public static void showExitAlert(String text, String title) {
+        Alert alert;
+        alert = new Alert(Alert.AlertType.CONFIRMATION);
+        alert.setTitle(title);
+        alert.setHeaderText(null);
+        alert.setContentText(text);
+        Optional<ButtonType> result = alert.showAndWait();
+        if(result.get() == ButtonType.OK) {
+            System.exit(0);
+        }
     }
 
     public static void showErrorAlert(String text) {
