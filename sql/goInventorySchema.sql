@@ -35,12 +35,9 @@ foreign key (p_id) references products(p_id),
 quantity INT NOT NULL DEFAULT 0
 );
 
-DROP TABLE IF EXISTS orderHistory;
-
-CREATE TABLE IF NOT EXISTS orderHistory (
+CREATE TABLE IF NOT EXISTS orderhistory (
 o_id INT AUTO_INCREMENT PRIMARY KEY,
-p_id INT NOT NULL,
-foreign key (p_id) references products(p_id),
+product varchar(30) NOT NULL DEFAULT 'UNNAMED PRODUCT',
 quantity INT NOT NULL DEFAULT 0
 );
 

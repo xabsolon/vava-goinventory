@@ -38,8 +38,7 @@ import org.jooq.codegen.maven.goinventory.tables.records.OrdersRecord;
 import org.jooq.codegen.maven.goinventory.tables.records.UsersRecord;
 import org.jooq.exception.DataAccessException;
 
-import static org.jooq.codegen.maven.goinventory.Tables.ORDERS;
-import static org.jooq.codegen.maven.goinventory.Tables.PRODUCTS;
+import static org.jooq.codegen.maven.goinventory.Tables.*;
 import static org.jooq.impl.DSL.inline;
 import static org.jooq.impl.DSL.select;
 
@@ -125,9 +124,9 @@ public class OrdersController implements Initializable {
             String name = order.getProductName();
             Integer quantity = order.getQuantity();
             DSLContext create = DatabaseContextSingleton.getContext();
-            create.insertInto(ORDERS)
-                    .set(ORDERS.P_ID, select(PRODUCTS.P_ID).from(PRODUCTS).where(PRODUCTS.NAME.eq(inline(name))))
-                    .set(ORDERS.QUANTITY, inline(quantity))
+            create.insertInto(ORDERHISTORY)
+                    .set(ORDERHISTORY.PRODUCT, name)
+                    .set(ORDERHISTORY.QUANTITY, inline(quantity))
                     .execute();
         }
 
@@ -223,6 +222,7 @@ public class OrdersController implements Initializable {
         if (lastSelectedOrder.getP_id() == -1) {
             orders.remove(lastSelectedOrder);
             OrderQuery.deleteQuery(lastSelectedOrder.getO_id());
+            OrderQuery.addRecord(lastSelectedOrder);
             FunctionsController.showConfirmationAlert(I18N.get("OrderCompleted"));
         }
         else {

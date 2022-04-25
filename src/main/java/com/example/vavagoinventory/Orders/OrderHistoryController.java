@@ -10,18 +10,15 @@ import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
-import org.jooq.DSLContext;
-import org.jooq.Record;
-import org.jooq.Record4;
-import org.jooq.Result;
+import org.jooq.*;
+import org.jooq.codegen.maven.goinventory.tables.Orderhistory;
 import org.jooq.codegen.maven.goinventory.tables.Orders;
 
 import java.net.URL;
 import java.util.ArrayList;
 import java.util.ResourceBundle;
 
-import static org.jooq.codegen.maven.goinventory.Tables.ORDERS;
-import static org.jooq.codegen.maven.goinventory.Tables.PRODUCTS;
+import static org.jooq.codegen.maven.goinventory.Tables.*;
 
 public class OrderHistoryController implements Initializable {
 
@@ -51,17 +48,15 @@ public class OrderHistoryController implements Initializable {
     private void query() {
         ArrayList<Order> orders = new ArrayList<Order>();
         DSLContext create = DatabaseContextSingleton.getContext();
-        Result<Record4<String, Integer, Integer, Integer>> result = create.select(
-                ORDERS.products().NAME,
-                ORDERS.O_ID,
-                ORDERS.P_ID,
-                ORDERS.QUANTITY).from(Orders.ORDERS).fetch();
+        Result<Record3<Integer, String, Integer>> result = create.select(
+                ORDERHISTORY.O_ID,
+                ORDERHISTORY.PRODUCT,
+                ORDERHISTORY.QUANTITY).from(Orderhistory.ORDERHISTORY).fetch();
         for (Record r:result) {
             Order order = new Order.OrderBuilder()
-                    .o_id(r.get(ORDERS.O_ID))
-                    .p_id(r.get(ORDERS.P_ID))
-                    .productName(r.get(PRODUCTS.NAME))
-                    .quantity(r.get(ORDERS.QUANTITY))
+                    .o_id(r.get(ORDERHISTORY.O_ID))
+                    .productName(r.get(ORDERHISTORY.PRODUCT))
+                    .quantity(r.get(ORDERHISTORY.QUANTITY))
                     .build();
             orders.add(order);
         }
@@ -70,8 +65,7 @@ public class OrderHistoryController implements Initializable {
 
     @FXML
     private void onClickRefresh() {
-        OrdersController.OrderQuery.getQuery();
-        orders = FXCollections.observableArrayList(OrdersController.OrderQuery.orders);
+        query();
         tableView.setItems(orders);
         tableView.refresh();
     }
