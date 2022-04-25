@@ -37,6 +37,7 @@ public class MainPageController extends ApplicationController implements Initial
     public void initialize(URL url, ResourceBundle resourceBundle) {
         logOutButton.setOnAction(this::onLogOutButtonClick);
         System.out.println(UserSingleton.getInstance().getUser().getName());
+        super.init();
     }
 
     @FXML

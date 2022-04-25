@@ -159,12 +159,12 @@
                         <TableView fx:id="productsTable" layoutX="51.0" layoutY="159.0" prefHeight="198.0" prefWidth="498.0">
                            <columns>
                               <TableColumn fx:id="idColumn" prefWidth="75.0" text="ID" />
-                              <TableColumn fx:id="productCulomn" prefWidth="75.0" text="Product" />
-                              <TableColumn fx:id="quantityCulomn" prefWidth="75.0" text="Quantity" />
-                              <TableColumn fx:id="priceCulomn" prefWidth="75.0" text="Price" />
+                              <TableColumn fx:id="nameColumn" prefWidth="75.0" text="Product" />
+                              <TableColumn fx:id="quantityColumn" prefWidth="75.0" text="Quantity" />
+                              <TableColumn fx:id="priceColumn" prefWidth="75.0" text="Price" />
                            </columns>
                         </TableView>
-                        <Button fx:id="refreshButton" layoutX="467.0" layoutY="108.0" mnemonicParsing="false" text="Refresh" textFill="WHITE">
+                        <Button fx:id="refreshButton" layoutX="467.0" layoutY="108.0" mnemonicParsing="false" onAction="#onClickRefresh" text="Refresh" textFill="WHITE">
                            <font>
                               <Font name="System Bold" size="12.0" />
                            </font>

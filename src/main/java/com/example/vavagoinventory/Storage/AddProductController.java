@@ -25,6 +25,10 @@ import java.util.concurrent.atomic.AtomicInteger;
 
 public class AddProductController extends ApplicationController implements Initializable {
 
+    private ApplicationController applicationController;
+
+    private Product selected;
+
     @FXML
     private AnchorPane addProductPane;
 
@@ -41,20 +45,12 @@ public class AddProductController extends ApplicationController implements Initi
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
-        ObservableList data = FXCollections.observableArrayList();
-        Platform.runLater(() -> {
-            DSLContext create = DatabaseContextSingleton.getContext();
-            Result<ProductsRecord> result = create.selectFrom(Products.PRODUCTS).groupBy(Products.PRODUCTS.NAME).fetch();
-            result.forEach(p -> {
-                Product product = new Product.ProductBuilder()
-                        .id(p.getPId())
-                        .name(p.getName())
-                        .build();
-                products.add(product);
-                data.add(product.getName());
-            });
-        });
-        choiceBox.setItems(data);
+
+    }
+
+    public void injectApplicationController(ApplicationController applicationController) {
+        this.applicationController = applicationController;
+        selected = applicationController.getLastSelectedProduct();
     }
 
     @FXML
@@ -65,26 +61,20 @@ public class AddProductController extends ApplicationController implements Initi
 
     @FXML
     void onClickConfirm() {
-        if (choiceBox.getSelectionModel().isEmpty()) {
-            FunctionsController.showErrorAlert("Please select a product");
-        } else if (quantityField.getText().isEmpty()) {
+        if (quantityField.getText().isEmpty()) {
             FunctionsController.showErrorAlert("Please enter a quantity");
         } else if (!FunctionsController.isNumeric(quantityField.getText())) {
             FunctionsController.showErrorAlert("Please enter a valid quantity");
         } else {
             DSLContext create = DatabaseContextSingleton.getContext();
-            Result<ProductsRecord> result = create.selectFrom(Products.PRODUCTS).fetch();
+            create.update(Products.PRODUCTS)
+                    .set(Products.PRODUCTS.QUANTITY, Products.PRODUCTS.QUANTITY.plus(Integer.parseInt(quantityField.getText())))
+                    .where(Products.PRODUCTS.P_ID.eq(selected.getId()))
+                    .execute();
+            FunctionsController.log.ProductAdded((String) selected.getName(), Integer.parseInt(quantityField.getText()));
 
-            AtomicInteger quantityTemp = new AtomicInteger();
-            result.forEach(p -> {
-                if (p.getName().equals(choiceBox.getValue())) {
-                    quantityTemp.set(p.getQuantity());
-                }
-            });
-
-            quantityTemp.addAndGet(Integer.parseInt(quantityField.getText()));
-            create.update(Products.PRODUCTS).set(Products.PRODUCTS.QUANTITY, quantityTemp.get()).where(Products.PRODUCTS.NAME.eq((String) choiceBox.getValue())).execute();
-            FunctionsController.log.ProductAdded((String) choiceBox.getValue(), Integer.parseInt(quantityField.getText()));
+            selected.setQuantity(selected.getQuantity() + Integer.parseInt(quantityField.getText()));
+            applicationController.updateTable();
             Stage stage = (Stage) addProductPane.getScene().getWindow();
             stage.close();
         }
