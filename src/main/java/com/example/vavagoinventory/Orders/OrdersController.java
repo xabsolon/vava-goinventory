@@ -90,7 +90,6 @@ public class OrdersController implements Initializable {
                         .build();
                 orders.add(order);
             }
-            System.out.println(orders);
         }
 
         public static void insertQuery(Order order) {
@@ -120,7 +119,16 @@ public class OrdersController implements Initializable {
             System.out.println(id);
             DSLContext create = DatabaseContextSingleton.getContext();
             create.delete(ORDERS).where(ORDERS.O_ID.eq(id)).execute();
-            //does not work for some reason, id in query gets replaced by a question mark
+        }
+
+        public static void addRecord(Order order) {
+            String name = order.getProductName();
+            Integer quantity = order.getQuantity();
+            DSLContext create = DatabaseContextSingleton.getContext();
+            create.insertInto(ORDERS)
+                    .set(ORDERS.P_ID, select(PRODUCTS.P_ID).from(PRODUCTS).where(PRODUCTS.NAME.eq(inline(name))))
+                    .set(ORDERS.QUANTITY, inline(quantity))
+                    .execute();
         }
 
         public static void editQuery(Order order) {
@@ -159,7 +167,6 @@ public class OrdersController implements Initializable {
         colProduct.setCellValueFactory(orders -> new SimpleStringProperty(orders.getValue().getProductName()));
         colQuantity.setCellValueFactory(orders -> new SimpleIntegerProperty(orders.getValue().getQuantity()).asObject());
         tableView.setItems(orders);
-        System.out.println(orders);
     }
 
     public void addOrder(Order order) {
