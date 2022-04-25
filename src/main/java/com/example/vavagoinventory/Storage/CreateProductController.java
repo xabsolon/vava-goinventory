@@ -1,5 +1,6 @@
 package com.example.vavagoinventory.Storage;
 
+import com.example.vavagoinventory.ApplicationController;
 import com.example.vavagoinventory.DatabaseContextSingleton;
 import com.example.vavagoinventory.FunctionsController;
 import javafx.fxml.FXML;
@@ -16,11 +17,17 @@ import static com.example.vavagoinventory.ApplicationController.productsObservab
 
 public class CreateProductController {
 
+    private ApplicationController applicationController;
+
     @FXML
     private Button cancelCreateButton;
 
     @FXML
     private TextField productNameField;
+
+    public void injectApplicationController(ApplicationController applicationController) {
+        this.applicationController = applicationController;
+    }
 
     @FXML
     void onClickCancel() {
@@ -41,11 +48,13 @@ public class CreateProductController {
             ProductsRecord productRecord = create.newRecord(Products.PRODUCTS);
             productRecord.setName(productNameField.getText());
             productRecord.store();
+            int id = productRecord.getPId();
 
             Product product = new Product.ProductBuilder()
                     .name(productNameField.getText())
                     .quantity(0)
                     .sellingPrice(0)
+                    .id(id)
                     .build();
             productsObservableList.add(product);
 
@@ -53,6 +62,8 @@ public class CreateProductController {
             FunctionsController.log.ProductCreated(product.getName());
             Comparator<Product> productComparator = Comparator.comparing(Product::getQuantity);
             productsObservableList.sort(productComparator);
+
+            applicationController.addProduct(product);
 
             Stage stage = (Stage) cancelCreateButton.getScene().getWindow();
             stage.close();

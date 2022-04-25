@@ -24,6 +24,10 @@ import java.util.ResourceBundle;
 
 public class EditProductController extends ApplicationController implements Initializable {
 
+    private ApplicationController applicationController;
+
+    private Product selected;
+
     @FXML
     private AnchorPane confirmEditStoragePane;
 
@@ -34,12 +38,20 @@ public class EditProductController extends ApplicationController implements Init
     private TextField quantityField;
 
     @FXML
-    private ComboBox<?> nameField;
+    private TextField nameField;
 
     @FXML
     void onClickCancel() {
         Stage stage = (Stage) priceField.getScene().getWindow();
         stage.close();
+    }
+
+    public void injectApplicationController(ApplicationController applicationController) {
+        this.applicationController = applicationController;
+        selected = applicationController.getLastSelectedProduct();
+        priceField.setText(Double.toString(selected.getSellingPrice()));
+        quantityField.setText(Integer.toString(selected.getQuantity()));
+        nameField.setText(selected.getName());
     }
 
     static boolean isProductChanged = false;
@@ -48,27 +60,14 @@ public class EditProductController extends ApplicationController implements Init
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
-        ObservableList data = FXCollections.observableArrayList();
-        Platform.runLater(() -> {
-            DSLContext create = DatabaseContextSingleton.getContext();
-            Result<ProductsRecord> result = create.selectFrom(Products.PRODUCTS).groupBy(Products.PRODUCTS.NAME).fetch();
-            result.forEach(p -> {
-                Product product = new Product.ProductBuilder()
-                        .id(p.getPId())
-                        .name(p.getName())
-                        .build();
-                products.add(product);
-                data.add(product.getName());
-            });
-        });
-        nameField.setItems(data);
+
     }
 
     @FXML
     void onClickEdit() throws SQLException {
         double sellingPrice;
 
-        Object name = nameField.getValue();
+        String name = nameField.getText();
         if (name == null) {
             FunctionsController.showErrorAlert("Name field is empty");
         } else {
@@ -87,18 +86,23 @@ public class EditProductController extends ApplicationController implements Init
                     sellingPrice = Double.parseDouble(price.replace(",", "."));
                     DSLContext create = DatabaseContextSingleton.getContext();
                     int success = create.update(Products.PRODUCTS)
-                            .set(Products.PRODUCTS.NAME, (String) name)
+                            .set(Products.PRODUCTS.NAME, name)
                             .set(Products.PRODUCTS.QUANTITY, Integer.parseInt(quantity))
                             .set(Products.PRODUCTS.SELLINGPRICE, (int) sellingPrice)
+                            .where(Products.PRODUCTS.P_ID.eq(selected.getId()))
                             .execute();
 
                     if(success == 0) {
-                        FunctionsController.showErrorAlert("Failed to update project");
+                        FunctionsController.showErrorAlert("Failed to update product");
                     } else {
+                        selected.setName(name);
+                        selected.setQuantity(Integer.parseInt(quantity));
+                        selected.setSellingPrice(Double.parseDouble(price));
                         FunctionsController.showConfirmationAlert("Product update successfuly");
-                        FunctionsController.log.ProductEdited((String) name);
+                        FunctionsController.log.ProductEdited(name);
                     }
                     isProductChanged = true;
+                    applicationController.updateTable();
                     Stage stage = (Stage) confirmEditStoragePane.getScene().getWindow();
                     stage.close();
                 }
