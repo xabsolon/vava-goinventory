@@ -2,17 +2,33 @@ package com.example.vavagoinventory.Storage;
 
 import com.example.vavagoinventory.DatabaseContextSingleton;
 import com.example.vavagoinventory.FunctionsController;
+import com.example.vavagoinventory.I18N;
 import javafx.fxml.FXML;
+import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
+import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 import org.jooq.DSLContext;
 import org.jooq.codegen.maven.goinventory.tables.Products;
 
-public class DeleteProductController {
+import java.net.URL;
+import java.util.ResourceBundle;
+
+public class DeleteProductController implements Initializable {
 
     @FXML
     private Button cancelDeleteButton;
+
+    @FXML
+    private Button confirmDeleteButton;
+
+    @FXML
+    private Label deleteProductLabel;
+
+    @FXML
+    private Label nameLabel;
+
     @FXML
     private TextField productNameField;
 
@@ -38,5 +54,13 @@ public class DeleteProductController {
     public void onClickCancel() {
         Stage stage = (Stage) cancelDeleteButton.getScene().getWindow();
         stage.close();
+    }
+
+    @Override
+    public void initialize(URL url, ResourceBundle resourceBundle) {
+        nameLabel.textProperty().bind(I18N.createStringBinding("nameLabel"));
+        deleteProductLabel.textProperty().bind(I18N.createStringBinding("deleteProductLabel"));
+        confirmDeleteButton.textProperty().bind(I18N.createStringBinding("confirmDeleteButton"));
+        cancelDeleteButton.textProperty().bind(I18N.createStringBinding("cancelDeleteButton"));
     }
 }

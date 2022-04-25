@@ -7,10 +7,7 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
-import javafx.scene.control.Alert;
-import javafx.scene.control.Button;
-import javafx.scene.control.ButtonType;
-import javafx.scene.control.TextField;
+import javafx.scene.control.*;
 import javafx.scene.input.KeyCode;
 import javafx.scene.input.KeyEvent;
 import javafx.scene.input.MouseEvent;
@@ -34,10 +31,95 @@ public class MainPageController extends ApplicationController implements Initial
     private Button logOutButton;
 
     @FXML
+    private Button settingsButton;
+
+    @FXML
+    private Label homeTabLabel;
+
+    @FXML
+    private Label employeesTabLabel;
+
+    @FXML
+    private Label storageTabLabel;
+
+    @FXML
+    private Label ordersTabLabel;
+
+    @FXML
+    private Label historyTabLabel;
+
+    @FXML
+    private Label homeLabel;
+
+    @FXML
+    private Label employeesLabel;
+
+    @FXML
+    private Label storageLabel;
+
+    @FXML
+    private Label ordersLabel;
+
+    @FXML
+    private Label historyLabel;
+
+    @FXML
+    private Button createProductButton;
+
+    @FXML
+    private Button editProductButton;
+
+    @FXML
+    private Button deleteProductButton;
+
+    @FXML
+    private Button addProductButton;
+
+    @FXML
+    private Button refreshButton;
+
+    @FXML
+    private TableView productsTable;
+
+    @FXML
+    private TableColumn idColumn;
+
+    @FXML
+    private TableColumn nameColumn;
+
+    @FXML
+    private TableColumn quantityColumn;
+
+    @FXML
+    private TableColumn priceColumn;
+
+    @FXML
     private TextField storageSearchField;
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
+        homeTabLabel.textProperty().bind(I18N.createStringBinding("homeTabLabel"));
+        employeesTabLabel.textProperty().bind(I18N.createStringBinding("employeesTabLabel"));
+        storageTabLabel.textProperty().bind(I18N.createStringBinding("storageTabLabel"));
+        ordersTabLabel.textProperty().bind(I18N.createStringBinding("ordersTabLabel"));
+        historyTabLabel.textProperty().bind(I18N.createStringBinding("historyTabLabel"));
+        logOutButton.textProperty().bind(I18N.createStringBinding("logoutButtonLabel"));
+        settingsButton.textProperty().bind(I18N.createStringBinding("settingsButtonLabel"));
+        homeLabel.textProperty().bind(I18N.createStringBinding("homeLabel"));
+        employeesLabel.textProperty().bind(I18N.createStringBinding("employeesLabel"));
+        storageLabel.textProperty().bind(I18N.createStringBinding("storageLabel"));
+        ordersLabel.textProperty().bind(I18N.createStringBinding("ordersLabel"));
+        historyLabel.textProperty().bind(I18N.createStringBinding("historyLabel"));
+        createProductButton.textProperty().bind(I18N.createStringBinding("createProductButtonLabel"));
+        editProductButton.textProperty().bind(I18N.createStringBinding("editProductButtonLabel"));
+        deleteProductButton.textProperty().bind(I18N.createStringBinding("deleteProductButtonLabel"));
+        addProductButton.textProperty().bind(I18N.createStringBinding("addProductButtonLabel"));
+        refreshButton.textProperty().bind(I18N.createStringBinding("refreshButtonLabel"));
+        idColumn.textProperty().bind(I18N.createStringBinding("idColumnLabel"));
+        nameColumn.textProperty().bind(I18N.createStringBinding("nameColumnLabel"));
+        quantityColumn.textProperty().bind(I18N.createStringBinding("quantityColumnLabel"));
+        priceColumn.textProperty().bind(I18N.createStringBinding("priceColumnLabel"));
+
         logOutButton.setOnAction(this::onLogOutButtonClick);
         System.out.println(UserSingleton.getInstance().getUser().getName());
         super.init();
@@ -50,7 +132,7 @@ public class MainPageController extends ApplicationController implements Initial
         alert = new Alert(Alert.AlertType.CONFIRMATION);
         alert.setTitle("Log Out");
         alert.setHeaderText(null);
-        alert.setContentText("Are you sure you want to log out ?");
+        alert.setContentText("Are you sure you want to log out?");
         Optional<ButtonType> result = alert.showAndWait();
         if(result.get() == ButtonType.OK) {
             try {
