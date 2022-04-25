@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="CreateProductPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="480.0" prefWidth="600.0" stylesheets="@css/orders.css" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.vavagoinventory.UserManagement.UserManagementController">
+   <children>
+      <Button fx:id="refreshButton" layoutX="411.0" layoutY="20.0" mnemonicParsing="false" onAction="#onClickRefresh" text="Refresh" translateX="60.0" translateY="90.0">
+         <graphic>
+            <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@img/icons8-refresh-90.png" />
+               </image>
+            </ImageView>
+         </graphic>
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font></Button>
+      <Button fx:id="createButton" layoutX="57.0" layoutY="110.0" mnemonicParsing="false" onAction="#onClickCreate" prefHeight="28.0" prefWidth="143.0" text="Create new user">
+         <graphic>
+            <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@img/icons8-create-100.png" />
+               </image>
+            </ImageView>
+         </graphic>
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Button>
+      <Button fx:id="deleteButton" layoutX="235.0" layoutY="372.0" mnemonicParsing="false" onAction="#onClickDelete" prefHeight="28.0" prefWidth="167.0" text="Delete selected user">
+         <graphic>
+            <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@img/icons8-remove-96.png" />
+               </image>
+            </ImageView>
+         </graphic>
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Button>
+      <Button fx:id="editButton" layoutX="57.0" layoutY="372.0" mnemonicParsing="false" onAction="#onClickEdit" prefHeight="28.0" prefWidth="158.0" text="Edit selected user">
+         <graphic>
+            <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@img/icons8-edit-100.png" />
+               </image>
+            </ImageView>
+         </graphic>
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Button>
+      <TextField fx:id="searchField" layoutX="228.0" layoutY="110.0" prefHeight="28.0" prefWidth="217.0">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </TextField>
+      <ImageView fitHeight="20.0" fitWidth="20.0" layoutX="418.0" layoutY="114.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@img/icons8-search-90.png" />
+         </image>
+      </ImageView>
+      <TableView fx:id="tableView" layoutX="57.0" layoutY="150.0" prefHeight="198.0" prefWidth="498.0">
+        <columns>
+          <TableColumn fx:id="colLogin" prefWidth="79.0" text="Login" />
+          <TableColumn fx:id="colPassword" prefWidth="92.79998779296875" text="Password" />
+            <TableColumn fx:id="colPosition" prefWidth="99.19993591308594" text="Position" />
+        </columns>
+      </TableView>
+   </children>
+</AnchorPane>

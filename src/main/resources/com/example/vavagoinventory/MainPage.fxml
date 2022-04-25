@@ -96,6 +96,9 @@
                            <cursor>
                               <Cursor fx:constant="HAND" />
                            </cursor></Line>
+                        <Line endX="17.0" endY="3.1999969482421875" layoutX="531.0" layoutY="38.0" startX="9.0" startY="-4.8000030517578125" stroke="WHITE" strokeWidth="4.0" />
+                        <Line endX="90.79998779296875" endY="-41.80000305175781" layoutX="457.0" layoutY="75.0" startX="82.60003662109375" startY="-34.0" stroke="WHITE" strokeWidth="4.0" />
+                        <fx:include source="UserManagement.fxml" />
                      </children>
                   </AnchorPane>
                </content>
@@ -300,6 +303,9 @@
                            <cursor>
                               <Cursor fx:constant="HAND" />
                            </cursor></Line>
+                        <Line endX="17.0" endY="3.1999969482421875" layoutX="531.0" layoutY="38.0" startX="9.0" startY="-4.8000030517578125" stroke="WHITE" strokeWidth="4.0" />
+                        <Line endX="90.79998779296875" endY="-41.80000305175781" layoutX="457.0" layoutY="75.0" startX="82.60003662109375" startY="-34.0" stroke="WHITE" strokeWidth="4.0" />
+                        <fx:include source="OrderHistory.fxml" />
                      </children></AnchorPane>
               </content>
                <graphic>

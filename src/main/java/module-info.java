@@ -24,4 +24,6 @@ module com.example.vavagoinventory {
     exports org.jooq.codegen.maven.goinventory.tables.records;
     opens com.example.vavagoinventory.Orders to javafx.fxml;
     exports com.example.vavagoinventory.Orders to com.fasterxml.jackson.databind;
+    opens com.example.vavagoinventory.UserManagement to javafx.fxml;
+    exports com.example.vavagoinventory.UserManagement;
 }

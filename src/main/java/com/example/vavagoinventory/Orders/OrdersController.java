@@ -38,8 +38,7 @@ import org.jooq.codegen.maven.goinventory.tables.records.OrdersRecord;
 import org.jooq.codegen.maven.goinventory.tables.records.UsersRecord;
 import org.jooq.exception.DataAccessException;
 
-import static org.jooq.codegen.maven.goinventory.Tables.ORDERS;
-import static org.jooq.codegen.maven.goinventory.Tables.PRODUCTS;
+import static org.jooq.codegen.maven.goinventory.Tables.*;
 import static org.jooq.impl.DSL.inline;
 import static org.jooq.impl.DSL.select;
 
@@ -90,7 +89,6 @@ public class OrdersController implements Initializable {
                         .build();
                 orders.add(order);
             }
-            System.out.println(orders);
         }
 
         public static void insertQuery(Order order) {
@@ -120,7 +118,16 @@ public class OrdersController implements Initializable {
             System.out.println(id);
             DSLContext create = DatabaseContextSingleton.getContext();
             create.delete(ORDERS).where(ORDERS.O_ID.eq(id)).execute();
-            //does not work for some reason, id in query gets replaced by a question mark
+        }
+
+        public static void addRecord(Order order) {
+            String name = order.getProductName();
+            Integer quantity = order.getQuantity();
+            DSLContext create = DatabaseContextSingleton.getContext();
+            create.insertInto(ORDERHISTORY)
+                    .set(ORDERHISTORY.PRODUCT, name)
+                    .set(ORDERHISTORY.QUANTITY, inline(quantity))
+                    .execute();
         }
 
         public static void editQuery(Order order) {
@@ -159,7 +166,6 @@ public class OrdersController implements Initializable {
         colProduct.setCellValueFactory(orders -> new SimpleStringProperty(orders.getValue().getProductName()));
         colQuantity.setCellValueFactory(orders -> new SimpleIntegerProperty(orders.getValue().getQuantity()).asObject());
         tableView.setItems(orders);
-        System.out.println(orders);
     }
 
     public void addOrder(Order order) {
@@ -216,6 +222,7 @@ public class OrdersController implements Initializable {
         if (lastSelectedOrder.getP_id() == -1) {
             orders.remove(lastSelectedOrder);
             OrderQuery.deleteQuery(lastSelectedOrder.getO_id());
+            OrderQuery.addRecord(lastSelectedOrder);
             FunctionsController.showConfirmationAlert(I18N.get("OrderCompleted"));
         }
         else {
