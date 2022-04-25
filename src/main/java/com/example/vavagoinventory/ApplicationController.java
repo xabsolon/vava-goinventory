@@ -55,7 +55,7 @@ public class ApplicationController {
         ApplicationController.StorageQuery query = new ApplicationController.StorageQuery();
         query.getQuery();
         Stage newstage = new Stage();
-        Parent root = FXMLLoader.load(Objects.requireNonNull(EmployeeMainPageController.class.getResource("CreateProduct.fxml")));
+        Parent root = FXMLLoader.load(Objects.requireNonNull(MainPageController.class.getResource("CreateProduct.fxml")));
         Scene scene = new Scene(root);
         newstage.setScene(scene);
         newstage.setResizable(false);

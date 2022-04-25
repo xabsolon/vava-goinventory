@@ -202,6 +202,7 @@ public class OrdersController implements Initializable {
         }
         orders.remove(lastSelectedOrder);
         OrderQuery.deleteQuery(lastSelectedOrder.getO_id());
+        FunctionsController.log.OrderDeleted(lastSelectedOrder.getProductName(), lastSelectedOrder.getQuantity());
     }
 
     @FXML

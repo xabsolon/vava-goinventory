@@ -71,7 +71,6 @@ public class LoginController implements Initializable {
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
-        setupLogger();
         setupFormValidators();
         setupTranslation();
     }
@@ -86,18 +85,6 @@ public class LoginController implements Initializable {
         langEnButton.setOnAction((evt) -> I18N.setLocale(new Locale("en")));
         langSkButton.setOnAction((evt) -> I18N.setLocale(new Locale("sk")));
     }
-
-    private void setupLogger() {
-        try {
-            FileHandler fh = new FileHandler("src/logs/manage.log", true);
-            Log.LOGGER.addHandler(fh);
-            SimpleFormatter formatter = new SimpleFormatter();
-            fh.setFormatter(formatter);
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-    }
-
     private void setupFormValidators() {
         validator.createCheck()
                 .dependsOn("email", emailField.textProperty())
@@ -146,9 +133,7 @@ public class LoginController implements Initializable {
             FunctionsController.showErrorAlert(I18N.get("wrongCredentials"));
             return;
         }
-
-        String position = user.getPossition();
-        String page = position.equalsIgnoreCase("user") ? "EmployeeMainPage.fxml" : "OwnerMainPage.fxml";
+        String page = "MainPage.fxml";
         Stage stage = FunctionsController.getStageFromEvent(event);
         FXMLLoader loader = new FXMLLoader(FadingIntroController.class.getResource(page));
         log.login(user.getName());

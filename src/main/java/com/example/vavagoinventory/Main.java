@@ -7,7 +7,9 @@ import javafx.stage.Stage;
 import javafx.stage.StageStyle;
 
 import java.io.IOException;
+import java.util.logging.FileHandler;
 import java.util.logging.LogManager;
+import java.util.logging.SimpleFormatter;
 
 public class Main extends Application {
 
@@ -20,8 +22,18 @@ public class Main extends Application {
         stage.initStyle(StageStyle.TRANSPARENT);
         stage.show();
         DatabaseContextSingleton.init();
+        setupLogger();
     }
-
+    private void setupLogger() {
+        try {
+            FileHandler fh = new FileHandler("src/logs/manage.log", true);
+            Log.LOGGER.addHandler(fh);
+            SimpleFormatter formatter = new SimpleFormatter();
+            fh.setFormatter(formatter);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
     public static void main(String[] args) {
         // Disable JOOQ annoying logger
         LogManager.getLogManager().reset();

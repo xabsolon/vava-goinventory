@@ -96,6 +96,7 @@ public class EditProductController extends ApplicationController implements Init
                         FunctionsController.showErrorAlert("Failed to update project");
                     } else {
                         FunctionsController.showConfirmationAlert("Product update successfuly");
+                        FunctionsController.log.ProductEdited((String) name);
                     }
                     isProductChanged = true;
                     Stage stage = (Stage) confirmEditStoragePane.getScene().getWindow();
