@@ -1,4 +1,4 @@
-package com.example.vavagoinventory;
+package com.example.vavagoinventory.Utils;
 
 import org.jooq.codegen.maven.goinventory.tables.records.UsersRecord;
 

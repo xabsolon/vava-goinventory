@@ -1,5 +1,7 @@
-package com.example.vavagoinventory;
+package com.example.vavagoinventory.PageControllers;
 
+import com.example.vavagoinventory.ApplicationController;
+import com.example.vavagoinventory.Utils.FunctionsController;
 import javafx.animation.FadeTransition;
 import javafx.application.Platform;
 import javafx.fxml.FXML;
@@ -33,7 +35,7 @@ public class FadingIntroController implements Initializable {
         fadeTransition.setOnFinished(actionEvent -> {
             try {
                 Stage stage = (Stage) IntroAnchorPane.getScene().getWindow();
-                FXMLLoader loader = new FXMLLoader(FadingIntroController.class.getResource("Login.fxml"));
+                FXMLLoader loader = new FXMLLoader(ApplicationController.class.getResource("Login.fxml"));
                 FunctionsController.changeScene(stage, loader, "Login page");
 
             } catch (IOException e) {

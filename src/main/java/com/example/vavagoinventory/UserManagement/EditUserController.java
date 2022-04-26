@@ -1,7 +1,7 @@
 package com.example.vavagoinventory.UserManagement;
 
-import com.example.vavagoinventory.I18N;
-import com.example.vavagoinventory.FunctionsController;
+import com.example.vavagoinventory.Utils.I18N;
+import com.example.vavagoinventory.Utils.FunctionsController;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
@@ -11,7 +11,6 @@ import javafx.stage.Stage;
 import org.jooq.exception.DataAccessException;
 
 import java.net.URL;
-import java.nio.Buffer;
 import java.util.ResourceBundle;
 
 public class EditUserController implements Initializable {

@@ -1,4 +1,4 @@
-package com.example.vavagoinventory;
+package com.example.vavagoinventory.PageControllers;
 
 import javafx.fxml.Initializable;
 

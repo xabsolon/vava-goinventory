@@ -1,5 +1,6 @@
-package com.example.vavagoinventory;
+package com.example.vavagoinventory.Utils;
 
+import com.example.vavagoinventory.ApplicationController;
 import javafx.event.Event;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
@@ -75,7 +76,7 @@ public class FunctionsController {
     }
     public static void openWindow(String stage) throws Exception {
         Stage newstage = new Stage();
-        Parent root = FXMLLoader.load(FunctionsController.class.getResource(stage));
+        Parent root = FXMLLoader.load(ApplicationController.class.getResource(stage));
         Scene scene = new Scene(root);
         newstage.setScene(scene);
         newstage.setResizable(false);

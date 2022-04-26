@@ -1,8 +1,8 @@
 package com.example.vavagoinventory.Storage;
 
-import com.example.vavagoinventory.DatabaseContextSingleton;
-import com.example.vavagoinventory.FunctionsController;
-import com.example.vavagoinventory.I18N;
+import com.example.vavagoinventory.Utils.DatabaseContextSingleton;
+import com.example.vavagoinventory.Utils.FunctionsController;
+import com.example.vavagoinventory.Utils.I18N;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;

@@ -1,6 +1,10 @@
-package com.example.vavagoinventory;
+package com.example.vavagoinventory.PageControllers;
 
+import com.example.vavagoinventory.ApplicationController;
 import com.example.vavagoinventory.Exceptions.WrongUserNameOrPasswordException;
+import com.example.vavagoinventory.Utils.FunctionsController;
+import com.example.vavagoinventory.Utils.I18N;
+import com.example.vavagoinventory.Utils.UserSingleton;
 import javafx.event.Event;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -24,7 +28,7 @@ import java.util.ResourceBundle;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-import static com.example.vavagoinventory.FunctionsController.log;
+import static com.example.vavagoinventory.Utils.FunctionsController.log;
 
 public class LoginController implements Initializable {
 
@@ -144,7 +148,7 @@ public class LoginController implements Initializable {
         }
         String page = "MainPage.fxml";
         Stage stage = FunctionsController.getStageFromEvent(event);
-        FXMLLoader loader = new FXMLLoader(FadingIntroController.class.getResource(page));
+        FXMLLoader loader = new FXMLLoader(ApplicationController.class.getResource(page));
         log.login(user.getName());
 
         UserSingleton.getInstance().setUser(user);
