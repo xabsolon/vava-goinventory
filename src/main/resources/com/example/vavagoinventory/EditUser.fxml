@@ -6,7 +6,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane fx:id="CreateProductPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="212.0" prefWidth="370.0" styleClass="anchor-pane" stylesheets="@css/popup.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.vavagoinventory.UserManagement.EditUserController">
+<AnchorPane fx:id="CreateProductPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="212.0" prefWidth="370.0" styleClass="anchor-pane" stylesheets="@css/popup.css" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.vavagoinventory.UserManagement.EditUserController">
    <children>
       <Button fx:id="confirmCreateButton" layoutX="225.0" layoutY="170.0" mnemonicParsing="false" onAction="#onClickCreate" prefHeight="27.0" prefWidth="78.0" text="Confirm" />
       <Button fx:id="cancelCreateButton" layoutX="43.0" layoutY="170.0" mnemonicParsing="false" onAction="#onClickCancel" prefHeight="27.0" prefWidth="78.0" text="Cancel" />
@@ -15,12 +15,12 @@
             <Font name="System Bold" size="18.0" />
          </font>
       </Label>
-      <Label layoutX="11.0" layoutY="48.0" prefHeight="18.0" prefWidth="78.0" text="Username:" />
+      <Label fx:id="usernameLabel" layoutX="11.0" layoutY="48.0" prefHeight="18.0" prefWidth="78.0" text="Username:" />
       <TextField fx:id="usernameField" layoutX="105.0" layoutY="44.0" prefHeight="27.0" prefWidth="160.0" />
       <Label fx:id="errorLabel" layoutX="171.0" layoutY="106.0" />
       <TextField fx:id="passwordField" layoutX="105.0" layoutY="79.0" prefHeight="27.0" prefWidth="160.0" />
-      <Label layoutX="11.0" layoutY="84.0" prefHeight="18.0" prefWidth="71.0" text="Password:" />
+      <Label fx:id="passwordLabel" layoutX="11.0" layoutY="84.0" prefHeight="18.0" prefWidth="71.0" text="Password:" />
       <TextField fx:id="positionField" layoutX="105.0" layoutY="115.0" prefHeight="27.0" prefWidth="160.0" />
-      <Label layoutX="11.0" layoutY="119.0" prefHeight="18.0" prefWidth="71.0" text="Position:" />
+      <Label fx:id="positionLabel" layoutX="11.0" layoutY="119.0" prefHeight="18.0" prefWidth="71.0" text="Position:" />
    </children>
 </AnchorPane>

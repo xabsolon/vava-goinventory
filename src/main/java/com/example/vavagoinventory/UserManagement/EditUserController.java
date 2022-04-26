@@ -36,7 +36,7 @@ public class EditUserController implements Initializable {
     private Button cancelCreateButton;
 
     @FXML
-    private Label userNameLabel;
+    private Label usernameLabel;
 
     @FXML
     private Label passwordLabel;
@@ -51,7 +51,7 @@ public class EditUserController implements Initializable {
     public void initialize(URL url, ResourceBundle resourceBundle) {
         confirmCreateButton.textProperty().bind(I18N.createStringBinding("confirmButtonLabel"));
         cancelCreateButton.textProperty().bind(I18N.createStringBinding("cancelButtonLabel"));
-        userNameLabel.textProperty().bind(I18N.createStringBinding("usernameLabel"));
+        usernameLabel.textProperty().bind(I18N.createStringBinding("usernameLabel"));
         passwordLabel.textProperty().bind(I18N.createStringBinding("passwordLabel"));
         positionLabel.textProperty().bind(I18N.createStringBinding("positionLabel"));
         editUserLabel.textProperty().bind(I18N.createStringBinding("editUserLabel"));
