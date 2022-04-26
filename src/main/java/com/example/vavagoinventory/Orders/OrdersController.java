@@ -1,11 +1,6 @@
 package com.example.vavagoinventory.Orders;
 
-import com.example.vavagoinventory.DatabaseContextSingleton;
-import com.example.vavagoinventory.FadingIntroController;
-import com.example.vavagoinventory.FunctionsController;
-import com.example.vavagoinventory.I18N;
-import com.fasterxml.jackson.core.JsonProcessingException;
-import com.fasterxml.jackson.datatype.guava.GuavaModule;
+import com.example.vavagoinventory.*;
 import javafx.beans.property.SimpleIntegerProperty;
 import javafx.beans.property.SimpleStringProperty;
 import javafx.collections.FXCollections;
@@ -19,24 +14,22 @@ import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
-import javafx.stage.FileChooser;
+import javafx.scene.control.TextField;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
-import org.jooq.*;
+import org.jooq.DSLContext;
+import org.jooq.Record;
+import org.jooq.Record4;
+import org.jooq.Result;
 import org.jooq.codegen.maven.goinventory.tables.Orders;
+import org.jooq.codegen.maven.goinventory.tables.records.OrdersRecord;
+import org.jooq.codegen.maven.goinventory.tables.records.UsersRecord;
 
-import java.io.File;
 import java.io.IOException;
 import java.net.URL;
 import java.util.ArrayList;
 import java.util.ResourceBundle;
-
-import com.fasterxml.jackson.dataformat.xml.XmlMapper;
-import org.jooq.codegen.maven.goinventory.tables.Users;
-import org.jooq.codegen.maven.goinventory.tables.records.OrdersRecord;
-import org.jooq.codegen.maven.goinventory.tables.records.UsersRecord;
-import org.jooq.exception.DataAccessException;
 
 import static org.jooq.codegen.maven.goinventory.Tables.*;
 import static org.jooq.impl.DSL.inline;
@@ -47,6 +40,9 @@ public class OrdersController implements Initializable {
     private ObservableList<Order> orders;
 
     private Order lastSelectedOrder;
+
+    @FXML
+    public TextField searchField;
 
     @FXML
     private Button createButton;
@@ -180,6 +176,7 @@ public class OrdersController implements Initializable {
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
+        disableButtonsByRole();
         createButton.textProperty().bind(I18N.createStringBinding("createOrderButtonLabel"));
         editButton.textProperty().bind(I18N.createStringBinding("editOrderButtonLabel"));
         deleteButton.textProperty().bind(I18N.createStringBinding("deleteOrderButtonLabel"));
@@ -196,6 +193,42 @@ public class OrdersController implements Initializable {
         colProduct.setCellValueFactory(orders -> new SimpleStringProperty(orders.getValue().getProductName()));
         colQuantity.setCellValueFactory(orders -> new SimpleIntegerProperty(orders.getValue().getQuantity()).asObject());
         tableView.setItems(orders);
+    }
+
+    private void disableAllButtons() {
+        createButton.setDisable(true);
+        editButton.setDisable(true);
+        deleteButton.setDisable(true);
+        completeButton.setDisable(true);
+        searchField.setDisable(true);
+        exportButton.setDisable(true);
+        importButton.setDisable(true);
+    }
+
+    private void disableButtonsByRole() {
+        UsersRecord user = UserSingleton.getInstance().getUser();
+        String position = user.getPossition();
+
+        disableAllButtons();
+
+        if(position.equals("user")) {
+            createButton.setDisable(false);
+            editButton.setDisable(false);
+            deleteButton.setDisable(false);
+            searchField.setDisable(false);
+            exportButton.setDisable(false);
+        } else if(position.equals("owner")) {
+            createButton.setDisable(false);
+            editButton.setDisable(false);
+            deleteButton.setDisable(false);
+            completeButton.setDisable(false);
+            searchField.setDisable(false);
+            exportButton.setDisable(false);
+            importButton.setDisable(false);
+        } else if(position.equals("logistics")) {
+            completeButton.setDisable(false);
+            exportButton.setDisable(false);
+        }
     }
 
     public void addOrder(Order order) {

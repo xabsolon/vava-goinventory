@@ -74,7 +74,7 @@
                   </Label>
                </graphic>
             </Tab>
-            <Tab style="-fx-translate-x: 0;" text="Employees">
+            <Tab fx:id="employeesTab" style="-fx-translate-x: 0;" text="Employees" disable="true">
                <content>
                   <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
                      <children>
@@ -118,7 +118,7 @@
                   </Label>
                </graphic>
             </Tab>
-          <Tab text="Storage">
+          <Tab fx:id="storageTab" text="Storage" disable="true">
             <content>
               <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="480.0" prefWidth="702.0">
                      <children>
@@ -192,7 +192,7 @@
                               </ImageView>
                            </graphic>
                         </Button>
-                        <TextField fx:id="searchField" layoutX="219.0" layoutY="109.0" maxHeight="1.7976931348623157E308" prefHeight="28.0" prefWidth="214.0">
+                        <TextField fx:id="storageSearchField" layoutX="219.0" layoutY="109.0" maxHeight="1.7976931348623157E308" prefHeight="28.0" prefWidth="214.0">
                            <font>
                               <Font name="System Bold" size="12.0" />
                            </font>
@@ -235,7 +235,7 @@
                   </Label>
                </graphic>
           </Tab>
-          <Tab text="Orders">
+          <Tab fx:id="ordersTab" text="Orders" disable="true">
             <content>
                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
                   <children>
@@ -279,7 +279,7 @@
                   </Label>
                </graphic>
           </Tab>
-            <Tab style="-fx-translate-x: 0;" text="Orders history">
+            <Tab fx:id="ordersHistoryTab" style="-fx-translate-x: 0;" text="Orders history" disable="true">
               <content>
                 <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
                      <children>
