@@ -7,6 +7,7 @@ import com.example.vavagoinventory.UserSingleton;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
+import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 import org.jooq.DSLContext;
@@ -33,8 +34,25 @@ public class CreateOrderController implements Initializable { //work in progress
     @FXML
     private Button cancelCreateButton;
 
+    @FXML
+    private Label nameLabel;
+
+    @FXML
+    private Label quantityLabel;
+
+    @FXML
+    private Label createOrderLabel;
+
+    @FXML
+    private Button confirmCreateButton;
+
     @Override
     public void initialize(URL location, ResourceBundle resources) {
+        cancelCreateButton.textProperty().bind(I18N.createStringBinding("cancelButtonLabel"));
+        confirmCreateButton.textProperty().bind(I18N.createStringBinding("confirmButtonLabel"));
+        createOrderLabel.textProperty().bind(I18N.createStringBinding("createOrderLabel"));
+        nameLabel.textProperty().bind(I18N.createStringBinding("nameLabel"));
+        quantityLabel.textProperty().bind(I18N.createStringBinding("quantityLabel"));
     }
 
     public void injectOrdersController(OrdersController ordersController) {
