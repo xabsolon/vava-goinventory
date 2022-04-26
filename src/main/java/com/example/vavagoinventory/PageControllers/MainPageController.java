@@ -200,16 +200,17 @@ public class MainPageController extends ApplicationController implements Initial
         FXMLLoader loader = new FXMLLoader(ApplicationController.class.getResource("Login.fxml"));
         Alert alert;
         alert = new Alert(Alert.AlertType.CONFIRMATION);
-        alert.setTitle("Log Out");
+        alert.setTitle(I18N.get("logoutLabel"));
         alert.setHeaderText(null);
-        alert.setContentText("Are you sure you want to log out?");
+        alert.setContentText(I18N.get("logoutMessage"));
+        alert.getButtonTypes().set(1, new ButtonType(I18N.get("cancelAlertLabel"), ButtonBar.ButtonData.CANCEL_CLOSE));
         Optional<ButtonType> result = alert.showAndWait();
         if(result.get() == ButtonType.OK) {
             try {
                 FunctionsController.changeScene(
                         FunctionsController.getStageFromEvent(actionEvent), loader, "GoInventory");
             } catch (IOException e) {
-                log.Exceptions("Failed to load login screen", e);
+                log.Exceptions(I18N.get("failedToLoadLoginPage"), e);
             }
             log.userLogout();
             UserSingleton.getInstance().setUser(null);
@@ -217,7 +218,7 @@ public class MainPageController extends ApplicationController implements Initial
     }
 
     public void exitButtonClicked(MouseEvent mouseEvent) {
-        FunctionsController.showExitAlert("Are you sure you want to exit ?", "Exit");
+        FunctionsController.showExitAlert(I18N.get("exitMessage"), I18N.get("exitLabel"), I18N.get("cancelAlertLabel"));
     }
 
     public void settingsButtonClicked(ActionEvent actionEvent) {

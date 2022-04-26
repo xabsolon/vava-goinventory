@@ -87,8 +87,6 @@ public class LoginController implements Initializable {
         passwordField.promptTextProperty().bind(I18N.createStringBinding("passwordPlaceholder"));
         forgotpassButton.textProperty().bind(I18N.createStringBinding("forgotPassword"));
         loginButton.textProperty().bind(I18N.createStringBinding("signInButton"));
-        signupButton.textProperty().bind(I18N.createStringBinding("signUpButton"));
-        signupButton.textProperty().bind(I18N.createStringBinding("signUpButton"));
         langEnButton.setOnAction((evt) -> {
             I18N.setLocale(new Locale("en"));
             Locale.setDefault(new Locale("en"));
@@ -130,7 +128,7 @@ public class LoginController implements Initializable {
 
     @FXML
     private void exitButtonClicked() {
-        FunctionsController.showExitAlert("Are you sure you want to exit?", "Exit");
+        FunctionsController.showExitAlert(I18N.get("exitMessage"), I18N.get("exitLabel"), I18N.get("cancelAlertLabel"));
     }
 
     @FXML

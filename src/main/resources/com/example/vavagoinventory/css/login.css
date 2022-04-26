@@ -16,6 +16,7 @@
     -fx-font-size: 14px;
     -fx-background-radius: 10px;
     -fx-effect:  dropshadow(three-pass-box, rgba(0,0,0,0.8), 7, 0, 0, 0);
+    -fx-cursor: hand;
 }
 
 .button2{
@@ -38,4 +39,5 @@
     -fx-font-size: 14px;
     -fx-background-radius: 10px;
     -fx-effect:  dropshadow(three-pass-box, rgba(0,0,0,0.8), 7, 0, 0, 0);
+    -fx-cursor: hand;
 }

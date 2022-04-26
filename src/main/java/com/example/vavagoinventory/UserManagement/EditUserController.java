@@ -72,7 +72,7 @@ public class EditUserController implements Initializable {
         if (!positionField.getText().equals("owner")
                 && !positionField.getText().equals("user")
                 && !positionField.getText().equals("logistics")) {
-            FunctionsController.showErrorAlert("Invalid position");
+            FunctionsController.showErrorAlert(I18N.get("invalidPosition"));
             return;
         }
 
@@ -87,7 +87,7 @@ public class EditUserController implements Initializable {
             UserManagementController.UserQuery.editQuery(user);
         }
         catch (DataAccessException e) {
-            FunctionsController.showErrorAlert("Cannot edit order, email must be unique");
+            FunctionsController.showErrorAlert(I18N.get("emailUnique"));
             return;
         }
 

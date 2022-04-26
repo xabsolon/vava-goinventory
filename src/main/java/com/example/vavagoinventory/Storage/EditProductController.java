@@ -90,19 +90,19 @@ public class EditProductController extends ApplicationController implements Init
 
         String name = nameField.getText();
         if (name == null) {
-            FunctionsController.showErrorAlert("Name field is empty");
+            FunctionsController.showErrorAlert(I18N.get("emptyNameField"));
         } else {
             String quantity = quantityField.getText();
             if (quantity.isEmpty()) {
-                FunctionsController.showErrorAlert("Quantity field is empty");
+                FunctionsController.showErrorAlert(I18N.get("emptyQuantityField"));
             } else if (!FunctionsController.isNumeric(quantity)) {
-                FunctionsController.showErrorAlert("Quantity field is not a number");
+                FunctionsController.showErrorAlert(I18N.get("invalidQuantityField"));
             } else {
                 String price = priceField.getText();
                 if (price.isEmpty()) {
-                    FunctionsController.showErrorAlert("Price field is empty");
+                    FunctionsController.showErrorAlert(I18N.get("emptyPriceField"));
                 } else if (!FunctionsController.isNumeric(price.replace(",", "."))) {
-                    FunctionsController.showErrorAlert("Price field is not a number");
+                    FunctionsController.showErrorAlert(I18N.get("invalidPriceField"));
                 } else {
                     sellingPrice = Double.parseDouble(price.replace(",", "."));
                     DSLContext create = DatabaseContextSingleton.getContext();
@@ -114,12 +114,12 @@ public class EditProductController extends ApplicationController implements Init
                             .execute();
 
                     if(success == 0) {
-                        FunctionsController.showErrorAlert("Failed to update product");
+                        FunctionsController.showErrorAlert(I18N.get("updateFailed"));
                     } else {
                         selected.setName(name);
                         selected.setQuantity(Integer.parseInt(quantity));
                         selected.setSellingPrice(Double.parseDouble(price));
-                        FunctionsController.showConfirmationAlert("Product update successfuly");
+                        FunctionsController.showConfirmationAlert(I18N.get("updateSuccess"));
                         FunctionsController.log.ProductEdited(name);
                     }
                     isProductChanged = true;

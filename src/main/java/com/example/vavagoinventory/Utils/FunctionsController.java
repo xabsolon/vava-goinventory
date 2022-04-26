@@ -7,6 +7,7 @@ import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Alert;
+import javafx.scene.control.ButtonBar;
 import javafx.scene.control.ButtonType;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
@@ -28,12 +29,13 @@ public class FunctionsController {
         alert.showAndWait();
     }
 
-    public static void showExitAlert(String text, String title) {
+    public static void showExitAlert(String text, String title, String buttonLabel) {
         Alert alert;
         alert = new Alert(Alert.AlertType.CONFIRMATION);
         alert.setTitle(title);
         alert.setHeaderText(null);
         alert.setContentText(text);
+        alert.getButtonTypes().set(1, new ButtonType(buttonLabel, ButtonBar.ButtonData.CANCEL_CLOSE));
         Optional<ButtonType> result = alert.showAndWait();
         if(result.get() == ButtonType.OK) {
             System.exit(0);
