@@ -136,7 +136,6 @@ public class OrdersController implements Initializable {
 
         public static void deleteQuery(int o_id) {
             Integer id = (Integer) o_id;
-            System.out.println(id);
             DSLContext create = DatabaseContextSingleton.getContext();
             create.delete(ORDERS).where(ORDERS.O_ID.eq(id)).execute();
         }
