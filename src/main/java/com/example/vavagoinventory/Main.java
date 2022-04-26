@@ -28,7 +28,7 @@ public class Main extends Application {
     }
     private void setupLogger() {
         try {
-            FileHandler fh = new FileHandler("src/logs/manage.log", true);
+            FileHandler fh = new FileHandler("logs/manage.log", true);
             Log.LOGGER.addHandler(fh);
             SimpleFormatter formatter = new SimpleFormatter();
             fh.setFormatter(formatter);

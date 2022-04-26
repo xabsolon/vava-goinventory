@@ -1,28 +1,17 @@
 # GoInventory 
 
-## Running a development build
+## Launching release build
 
-1. Go to src/main/resources
-2. Duplicate system.properties.example file and rename it to system.properties
-3. Enter database credentials inside system.properties file
-4. Click the run button in the IntelliJ IDEA
+### Prerequisites
+- Make sure you have Java installed
+- You will also need [JavaFX](https://openjfx.io/openjfx-docs/#install-javafx)
+- Install MysSQL database and run it locally as a service
 
-Note: If you get an error saying table.records class could not be found, run `maven install` script
+1. Create a DB user named ```goinventory``` with password ```password```.
 
-## Logging while coding
+2. Create a database by the following the SQL script in the directory ```sql/goInventorySchema.sql```.
 
-Since we have to log most of the business logic and errors/exceptions
-we should be trying to implement meaningful exceptions as well as log some of them.
-Every catch block should be represented like this:
-
-``` 
-catch (IOException e) {
-            log.Exceptions("Failed to load login screen",e);
-```
-With implemented function in log class 
-
-```
-public void Exceptions(String type, Exception e){
-        LOGGER.log(Level.SEVERE, type + ", " + e);
-    }
-```
+3. The following command will launch the application
+    ```
+    java -jar --module-path $PATH_TO_FX --add-modules javafx.controls,javafx.fxml vava_goinventory.jar
+   ```

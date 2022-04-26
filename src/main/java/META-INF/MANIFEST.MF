@@ -1,0 +1,17 @@
+Manifest-Version: 1.0
+Main-Class: com.example.vavagoinventory.Launcher
+Class-Path: ikonli-core-12.2.0.jar jackson-databind-2.13.2.jar ikonli-ja
+ vafx-12.2.0.jar jackson-dataformat-xml-2.13.2.jar jooq-meta-3.16.4.jar 
+ validatorfx-0.2.1.jar javafx-controls-11.0.2.jar jackson-core-2.13.2.ja
+ r javafx-controls-11.0.2-mac.jar javafx-fxml-11.0.2-mac.jar stax2-api-4
+ .2.1.jar tilesfx-11.48.jar guava-21.0.jar protobuf-java-3.11.4.jar mail
+ .jar javafx-fxml-11.0.2.jar formsfx-core-11.3.2.jar jackson-annotations
+ -2.13.2.jar controlsfx-11.1.0.jar woodstox-core-6.2.7.jar jakarta.activ
+ ation-2.0.0.jar mysql-connector-java-8.0.28.jar jooq-3.16.4.jar jakarta
+ .xml.bind-api-3.0.0.jar javafx-graphics-11.0.2-mac.jar jooq-codegen-3.1
+ 6.4.jar javafx-media-11.0.2-mac.jar r2dbc-spi-0.9.0.RELEASE.jar javafx-
+ web-11.0.2-mac.jar javafx-media-11.0.2.jar javafx-graphics-11.0.2.jar b
+ ootstrapfx-core-0.4.0.jar jackson-datatype-guava-2.13.2.jar javafx-base
+ -11.0.2-mac.jar javafx-web-11.0.2.jar reactive-streams-1.0.3.jar javafx
+ -base-11.0.2.jar
+
