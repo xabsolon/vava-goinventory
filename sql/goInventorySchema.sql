@@ -15,6 +15,8 @@ possition varchar(10) NOT NULL
 );
 
 INSERT INTO users(name,surname,email,password,possition) VALUES ('defaultUser','user','usergoinventory@gmail.com','12345','user');
+INSERT INTO users(name,surname,email,password,possition) VALUES ('Joe','Doe','ownergoinventory@gmail.com','12345','owner');
+INSERT INTO users(name,surname,email,password,possition) VALUES ('James','Bay','logisticsgoinventory@gmail.com','12345','logistics');
 SELECT * FROM users;
 
 CREATE TABLE IF NOT EXISTS products (

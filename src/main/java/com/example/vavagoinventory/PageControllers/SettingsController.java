@@ -1,5 +1,6 @@
-package com.example.vavagoinventory;
+package com.example.vavagoinventory.PageControllers;
 
+import com.example.vavagoinventory.Utils.I18N;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;

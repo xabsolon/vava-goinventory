@@ -1,6 +1,8 @@
-package com.example.vavagoinventory;
+package com.example.vavagoinventory.PageControllers;
 
+import com.example.vavagoinventory.ApplicationController;
 import com.example.vavagoinventory.Storage.Product;
+import com.example.vavagoinventory.Utils.*;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
@@ -15,6 +17,7 @@ import org.jooq.DSLContext;
 import org.jooq.Result;
 import org.jooq.codegen.maven.goinventory.tables.Products;
 import org.jooq.codegen.maven.goinventory.tables.records.ProductsRecord;
+import org.jooq.codegen.maven.goinventory.tables.records.UsersRecord;
 
 import java.io.IOException;
 import java.net.URL;
@@ -26,6 +29,18 @@ public class MainPageController extends ApplicationController implements Initial
     public Log log = new Log();
 
     public static ObservableList<Product> productObservableList = FXCollections.observableArrayList();
+
+    @FXML
+    public Tab employeesTab;
+
+    @FXML
+    public Tab storageTab;
+
+    @FXML
+    public Tab ordersTab;
+
+    @FXML
+    public Tab ordersHistoryTab;
 
     @FXML
     private Button logOutButton;
@@ -98,6 +113,8 @@ public class MainPageController extends ApplicationController implements Initial
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
+        this.disableTabsByRole();
+        this.disableButtonsByRole();
         homeTabLabel.textProperty().bind(I18N.createStringBinding("homeTabLabel"));
         employeesTabLabel.textProperty().bind(I18N.createStringBinding("employeesTabLabel"));
         storageTabLabel.textProperty().bind(I18N.createStringBinding("storageTabLabel"));
@@ -125,9 +142,62 @@ public class MainPageController extends ApplicationController implements Initial
         super.init();
     }
 
+    private void disableAllTabs() {
+        employeesTab.setDisable(true);
+        storageTab.setDisable(true);
+        ordersTab.setDisable(true);
+        ordersHistoryTab.setDisable(true);
+    }
+
+    private void disableTabsByRole() {
+        UsersRecord user = UserSingleton.getInstance().getUser();
+        String position = user.getPossition();
+
+        disableAllTabs();
+
+        if(position.equals("owner")) {
+            employeesTab.setDisable(false);
+            storageTab.setDisable(false);
+            ordersTab.setDisable(false);
+            ordersHistoryTab.setDisable(false);
+        } else if(position.equals("user")) {
+            storageTab.setDisable(false);
+            ordersTab.setDisable(false);
+        } else if(position.equals("logistics")) {
+            storageTab.setDisable(false);
+            ordersTab.setDisable(false);
+            ordersHistoryTab.setDisable(false);
+        }
+    }
+
+    private void disableAllButtons() {
+        createProductButton.setDisable(true);
+        storageSearchField.setDisable(true);
+        editProductButton.setDisable(true);
+        deleteProductButton.setDisable(true);
+        addProductButton.setDisable(true);
+    }
+
+    private void disableButtonsByRole() {
+        UsersRecord user = UserSingleton.getInstance().getUser();
+        String position = user.getPossition();
+
+        disableAllButtons();
+
+        if(position.equals("owner") || position.equals("user")) {
+            createProductButton.setDisable(false);
+            storageSearchField.setDisable(false);
+            editProductButton.setDisable(false);
+            deleteProductButton.setDisable(false);
+            addProductButton.setDisable(false);
+        } else if(position.equals("logistics")) {
+            storageSearchField.setDisable(false);
+        }
+    }
+
     @FXML
     private void onLogOutButtonClick(ActionEvent actionEvent) {
-        FXMLLoader loader = new FXMLLoader(FadingIntroController.class.getResource("Login.fxml"));
+        FXMLLoader loader = new FXMLLoader(ApplicationController.class.getResource("Login.fxml"));
         Alert alert;
         alert = new Alert(Alert.AlertType.CONFIRMATION);
         alert.setTitle(I18N.get("logoutLabel"));
@@ -152,7 +222,7 @@ public class MainPageController extends ApplicationController implements Initial
     }
 
     public void settingsButtonClicked(ActionEvent actionEvent) {
-        FXMLLoader loader = new FXMLLoader(FadingIntroController.class.getResource("Settings.fxml"));
+        FXMLLoader loader = new FXMLLoader(ApplicationController.class.getResource("Settings.fxml"));
         try {
             FunctionsController.openWindow("Settings.fxml");
         } catch (Exception e) {

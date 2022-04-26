@@ -1,4 +1,4 @@
-package com.example.vavagoinventory;
+package com.example.vavagoinventory.Utils;
 
 import javax.mail.Message;
 import javax.mail.PasswordAuthentication;

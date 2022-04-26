@@ -1,9 +1,13 @@
 package com.example.vavagoinventory;
 
+import com.example.vavagoinventory.PageControllers.MainPageController;
 import com.example.vavagoinventory.Storage.AddProductController;
 import com.example.vavagoinventory.Storage.CreateProductController;
 import com.example.vavagoinventory.Storage.EditProductController;
 import com.example.vavagoinventory.Storage.Product;
+import com.example.vavagoinventory.Utils.DatabaseContextSingleton;
+import com.example.vavagoinventory.Utils.FunctionsController;
+import com.example.vavagoinventory.Utils.I18N;
 import javafx.beans.property.SimpleDoubleProperty;
 import javafx.beans.property.SimpleIntegerProperty;
 import javafx.beans.property.SimpleStringProperty;
@@ -23,10 +27,7 @@ import org.jooq.Result;
 import org.jooq.codegen.maven.goinventory.tables.Products;
 import org.jooq.codegen.maven.goinventory.tables.records.ProductsRecord;
 
-import java.sql.SQLException;
-import java.sql.SQLIntegrityConstraintViolationException;
 import java.util.ArrayList;
-import java.util.Objects;
 
 public class ApplicationController {
 
@@ -130,7 +131,7 @@ public class ApplicationController {
     public void onClickCreateProduct() throws Exception {
         StorageQuery.getQuery();
         Stage newstage = new Stage();
-        FXMLLoader loader = new FXMLLoader(MainPageController.class.getResource("CreateProduct.fxml"));
+        FXMLLoader loader = new FXMLLoader(ApplicationController.class.getResource("CreateProduct.fxml"));
         Parent root = loader.load();
         CreateProductController createProductController = loader.getController();
         Scene scene = new Scene(root);

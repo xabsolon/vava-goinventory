@@ -1,12 +1,11 @@
 package com.example.vavagoinventory.Orders;
 
-import com.example.vavagoinventory.DatabaseContextSingleton;
-import com.example.vavagoinventory.I18N;
+import com.example.vavagoinventory.Utils.DatabaseContextSingleton;
+import com.example.vavagoinventory.Utils.I18N;
 import javafx.beans.property.SimpleIntegerProperty;
 import javafx.beans.property.SimpleStringProperty;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
-import javafx.collections.ObservableListBase;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;

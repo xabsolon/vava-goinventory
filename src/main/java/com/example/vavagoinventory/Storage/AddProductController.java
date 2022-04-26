@@ -1,12 +1,9 @@
 package com.example.vavagoinventory.Storage;
 
 import com.example.vavagoinventory.ApplicationController;
-import com.example.vavagoinventory.DatabaseContextSingleton;
-import com.example.vavagoinventory.FunctionsController;
-import com.example.vavagoinventory.I18N;
-import javafx.application.Platform;
-import javafx.collections.FXCollections;
-import javafx.collections.ObservableList;
+import com.example.vavagoinventory.Utils.DatabaseContextSingleton;
+import com.example.vavagoinventory.Utils.FunctionsController;
+import com.example.vavagoinventory.Utils.I18N;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
@@ -16,14 +13,12 @@ import javafx.scene.control.TextField;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 import org.jooq.DSLContext;
-import org.jooq.Result;
 import org.jooq.codegen.maven.goinventory.tables.Products;
 import org.jooq.codegen.maven.goinventory.tables.records.ProductsRecord;
 
 import java.net.URL;
 import java.util.ArrayList;
 import java.util.ResourceBundle;
-import java.util.concurrent.atomic.AtomicInteger;
 
 public class AddProductController extends ApplicationController implements Initializable {
 

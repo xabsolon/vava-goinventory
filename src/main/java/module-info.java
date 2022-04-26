@@ -26,4 +26,8 @@ module com.example.vavagoinventory {
     exports com.example.vavagoinventory.Orders to com.fasterxml.jackson.databind;
     opens com.example.vavagoinventory.UserManagement to javafx.fxml;
     exports com.example.vavagoinventory.UserManagement;
+    exports com.example.vavagoinventory.Utils;
+    opens com.example.vavagoinventory.Utils to javafx.fxml;
+    exports com.example.vavagoinventory.PageControllers;
+    opens com.example.vavagoinventory.PageControllers to javafx.fxml;
 }
