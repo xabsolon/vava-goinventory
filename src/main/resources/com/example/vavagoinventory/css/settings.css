@@ -8,6 +8,7 @@
     -fx-background-color:  rgba(36, 59, 85, 0.7);
     -fx-text-fill: white;
     -fx-font-weight: bold;
+    -fx-cursor: hand;
 }
 
 .anchor-pane{
@@ -22,6 +23,7 @@
 
 .toggle-button:hover{
     -fx-background-color:  #141e30;
+    -fx-cursor: hand;
 }
 
 .toggle-button:selected{

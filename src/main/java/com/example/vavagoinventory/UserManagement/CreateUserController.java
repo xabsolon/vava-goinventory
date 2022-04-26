@@ -75,7 +75,7 @@ public class CreateUserController implements Initializable {
         if (!positionField.getText().equals("owner")
                 && !positionField.getText().equals("user")
                 && !positionField.getText().equals("logistics")) {
-            FunctionsController.showErrorAlert("Invalid position");
+            FunctionsController.showErrorAlert(I18N.get("invalidPosition"));
             return;
         }
         user = new User.UserBuilder()
@@ -87,7 +87,7 @@ public class CreateUserController implements Initializable {
             UserManagementController.UserQuery.insertQuery(user);
         }
         catch (DataAccessException e) {
-            FunctionsController.showErrorAlert("Cannot create order, email must be unique");
+            FunctionsController.showErrorAlert(I18N.get("emailUnique"));
             return;
         }
         userManagementController.addUser(user);

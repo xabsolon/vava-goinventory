@@ -76,9 +76,9 @@ public class AddProductController extends ApplicationController implements Initi
     @FXML
     void onClickConfirm() {
         if (quantityField.getText().isEmpty()) {
-            FunctionsController.showErrorAlert("Please enter a quantity");
+            FunctionsController.showErrorAlert(I18N.get("enterQuantity"));
         } else if (!FunctionsController.isNumeric(quantityField.getText())) {
-            FunctionsController.showErrorAlert("Please enter a valid quantity");
+            FunctionsController.showErrorAlert(I18N.get("invalidQuantity"));
         } else {
             DSLContext create = DatabaseContextSingleton.getContext();
             create.update(Products.PRODUCTS)

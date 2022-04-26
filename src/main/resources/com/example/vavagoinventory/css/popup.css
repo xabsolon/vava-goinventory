@@ -6,6 +6,7 @@
 .button:hover{
     -fx-background-color:  rgba(36, 59, 85, 0.7);
     -fx-text-fill: white;
+    -fx-cursor: hand;
 }
 
 .text-field{

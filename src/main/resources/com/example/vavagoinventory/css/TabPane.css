@@ -4,11 +4,12 @@
     -fx-background-radius: 0;
     -fx-padding: 3em 0.1em;
     -fx-pref-width: 70px;
-    -fx-pref-height: 200px;
+    -fx-pref-height: 210px;
 }
 
 .tab:hover {
     -fx-background-color: rgba(36, 59, 85, 0.7);
+    -fx-cursor: hand;
 }
 
 .tab:selected {

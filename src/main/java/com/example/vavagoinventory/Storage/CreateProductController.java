@@ -61,9 +61,9 @@ public class CreateProductController implements Initializable {
     void onClickConfirm() {
 
         if (productNameField.getText().isEmpty()) {
-            FunctionsController.showErrorAlert("Please enter a product name");
+            FunctionsController.showErrorAlert(I18N.get("enterProductName"));
         } else if (productsObservableList.stream().anyMatch(product -> product.getName().equals(productNameField.getText()))) {
-            FunctionsController.showErrorAlert("Product already exists");
+            FunctionsController.showErrorAlert(I18N.get("alreadyExists"));
         } else {
 
             DSLContext create = DatabaseContextSingleton.getContext();
@@ -80,7 +80,7 @@ public class CreateProductController implements Initializable {
                     .build();
             productsObservableList.add(product);
 
-            FunctionsController.showConfirmationAlert("Product created successfully");
+            FunctionsController.showConfirmationAlert(I18N.get("productCreated"));
             FunctionsController.log.ProductCreated(product.getName());
             Comparator<Product> productComparator = Comparator.comparing(Product::getQuantity);
             productsObservableList.sort(productComparator);
