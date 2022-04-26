@@ -1,6 +1,10 @@
 package com.example.vavagoinventory.Orders;
 
-import com.example.vavagoinventory.*;
+import com.example.vavagoinventory.ApplicationController;
+import com.example.vavagoinventory.Utils.DatabaseContextSingleton;
+import com.example.vavagoinventory.Utils.FunctionsController;
+import com.example.vavagoinventory.Utils.I18N;
+import com.example.vavagoinventory.Utils.UserSingleton;
 import javafx.beans.property.SimpleIntegerProperty;
 import javafx.beans.property.SimpleStringProperty;
 import javafx.collections.FXCollections;
@@ -250,7 +254,7 @@ public class OrdersController implements Initializable {
     @FXML
     private void onClickCreate() throws IOException {
         Stage newstage = new Stage();
-        FXMLLoader loader = new FXMLLoader(FadingIntroController.class.getResource("CreateOrder.fxml"));
+        FXMLLoader loader = new FXMLLoader(ApplicationController.class.getResource("CreateOrder.fxml"));
         Parent root = loader.load();
         createOrderController = loader.getController();
         Scene scene = new Scene(root);
@@ -301,7 +305,7 @@ public class OrdersController implements Initializable {
             return;
         }
         Stage newstage = new Stage();
-        FXMLLoader loader = new FXMLLoader(FadingIntroController.class.getResource("EditOrder.fxml"));
+        FXMLLoader loader = new FXMLLoader(ApplicationController.class.getResource("EditOrder.fxml"));
         Parent root = loader.load();
         editOrderController = loader.getController();
         Scene scene = new Scene(root);

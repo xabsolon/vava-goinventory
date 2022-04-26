@@ -1,12 +1,9 @@
 package com.example.vavagoinventory.UserManagement;
 
-import com.example.vavagoinventory.DatabaseContextSingleton;
-import com.example.vavagoinventory.FadingIntroController;
-import com.example.vavagoinventory.FunctionsController;
-import com.example.vavagoinventory.I18N;
-import com.example.vavagoinventory.Orders.Order;
-import com.example.vavagoinventory.Orders.OrdersController;
-import javafx.beans.property.SimpleIntegerProperty;
+import com.example.vavagoinventory.Utils.DatabaseContextSingleton;
+import com.example.vavagoinventory.PageControllers.FadingIntroController;
+import com.example.vavagoinventory.Utils.FunctionsController;
+import com.example.vavagoinventory.Utils.I18N;
 import javafx.beans.property.SimpleStringProperty;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;

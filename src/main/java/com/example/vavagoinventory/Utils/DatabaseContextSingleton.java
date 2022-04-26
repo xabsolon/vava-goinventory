@@ -1,4 +1,4 @@
-package com.example.vavagoinventory;
+package com.example.vavagoinventory.Utils;
 
 import java.sql.Connection;
 import java.sql.DriverManager;

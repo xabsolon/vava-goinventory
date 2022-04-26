@@ -1,4 +1,4 @@
-package com.example.vavagoinventory;
+package com.example.vavagoinventory.Utils;
 
 import javafx.beans.binding.Bindings;
 import javafx.beans.binding.StringBinding;

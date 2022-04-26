@@ -1,6 +1,8 @@
-package com.example.vavagoinventory;
+package com.example.vavagoinventory.PageControllers;
 
+import com.example.vavagoinventory.ApplicationController;
 import com.example.vavagoinventory.Storage.Product;
+import com.example.vavagoinventory.Utils.*;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
@@ -195,7 +197,7 @@ public class MainPageController extends ApplicationController implements Initial
 
     @FXML
     private void onLogOutButtonClick(ActionEvent actionEvent) {
-        FXMLLoader loader = new FXMLLoader(FadingIntroController.class.getResource("Login.fxml"));
+        FXMLLoader loader = new FXMLLoader(ApplicationController.class.getResource("Login.fxml"));
         Alert alert;
         alert = new Alert(Alert.AlertType.CONFIRMATION);
         alert.setTitle("Log Out");
@@ -219,7 +221,7 @@ public class MainPageController extends ApplicationController implements Initial
     }
 
     public void settingsButtonClicked(ActionEvent actionEvent) {
-        FXMLLoader loader = new FXMLLoader(FadingIntroController.class.getResource("Settings.fxml"));
+        FXMLLoader loader = new FXMLLoader(ApplicationController.class.getResource("Settings.fxml"));
         try {
             FunctionsController.openWindow("Settings.fxml");
         } catch (Exception e) {

@@ -1,17 +1,12 @@
 package com.example.vavagoinventory.UserManagement;
 
-import com.example.vavagoinventory.DatabaseContextSingleton;
-import com.example.vavagoinventory.FunctionsController;
-import com.example.vavagoinventory.I18N;
-import com.example.vavagoinventory.Orders.Order;
-import com.example.vavagoinventory.I18N;
+import com.example.vavagoinventory.Utils.FunctionsController;
+import com.example.vavagoinventory.Utils.I18N;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
-import org.jooq.DSLContext;
-import org.jooq.Record;
 import org.jooq.exception.DataAccessException;
 import javafx.scene.control.Label;
 

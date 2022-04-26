@@ -1,6 +1,6 @@
 package com.example.vavagoinventory.Orders;
 
-import com.example.vavagoinventory.FunctionsController;
+import com.example.vavagoinventory.Utils.FunctionsController;
 import com.fasterxml.jackson.dataformat.xml.XmlMapper;
 import com.fasterxml.jackson.datatype.guava.GuavaModule;
 import javafx.stage.FileChooser;
