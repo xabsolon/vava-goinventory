@@ -10,7 +10,7 @@
    <children>
       <Button fx:id="confirmButton" layoutX="220.0" layoutY="153.0" mnemonicParsing="false" onAction="#onClickConfirm" prefHeight="27.0" prefWidth="78.0" text="Confirm" />
       <Button fx:id="cancelButton" layoutX="34.0" layoutY="153.0" mnemonicParsing="false" onAction="#onClickCancel" prefHeight="27.0" prefWidth="78.0" text="Cancel" />
-      <Label fx:id="addProductLabel" layoutX="65.0" layoutY="13.0" prefHeight="27.0" prefWidth="218.0" style="-fx-text-fill: #141e30;" text="Confirm to add product" textFill="#141e30">
+      <Label fx:id="addProductLabel" layoutX="112.0" layoutY="14.0" prefHeight="27.0" prefWidth="176.0" style="-fx-text-fill: #141e30;" text="Add product" textFill="#141e30">
          <font>
             <Font name="System Bold" size="18.0" />
          </font>

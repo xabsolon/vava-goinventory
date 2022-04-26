@@ -6,19 +6,19 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane fx:id="CreateProductPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="166.0" prefWidth="370.0" styleClass="anchor-pane" stylesheets="@css/popup.css" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.vavagoinventory.Orders.CreateOrderController">
+<AnchorPane fx:id="CreateProductPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="166.0" prefWidth="370.0" styleClass="anchor-pane" stylesheets="@css/popup.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.vavagoinventory.Orders.CreateOrderController">
    <children>
       <Button fx:id="confirmCreateButton" layoutX="227.0" layoutY="123.0" mnemonicParsing="false" onAction="#onClickCreate" prefHeight="27.0" prefWidth="78.0" text="Confirm" />
       <Button fx:id="cancelCreateButton" layoutX="46.0" layoutY="123.0" mnemonicParsing="false" onAction="#onClickCancel" prefHeight="27.0" prefWidth="78.0" text="Cancel" />
-      <Label alignment="CENTER" contentDisplay="CENTER" layoutX="119.0" layoutY="5.0" prefHeight="42.0" prefWidth="131.0" text="Create Order" textAlignment="CENTER" textFill="#141e30">
+      <Label fx:id="createOrderLabel" alignment="CENTER" contentDisplay="CENTER" layoutX="87.0" prefHeight="42.0" prefWidth="196.0" text="Create Order" textAlignment="CENTER" textFill="#141e30">
          <font>
             <Font name="System Bold" size="18.0" />
          </font>
       </Label>
-      <Label layoutX="11.0" layoutY="48.0" prefHeight="18.0" prefWidth="78.0" text="Product name:" />
-      <TextField fx:id="productNameField" layoutX="105.0" layoutY="44.0" prefHeight="27.0" prefWidth="160.0" />
+      <Label fx:id="nameLabel" layoutX="62.0" layoutY="48.0" prefHeight="21.0" prefWidth="104.0" text="Name:" />
+      <TextField fx:id="productNameField" layoutX="136.0" layoutY="43.0" prefHeight="27.0" prefWidth="160.0" />
       <Label fx:id="errorLabel" layoutX="171.0" layoutY="106.0" />
-      <TextField fx:id="quantityField" layoutX="105.0" layoutY="79.0" prefHeight="27.0" prefWidth="160.0" />
-      <Label layoutX="11.0" layoutY="84.0" prefHeight="18.0" prefWidth="71.0" text="Quantity:" />
+      <TextField fx:id="quantityField" layoutX="136.0" layoutY="79.0" prefHeight="27.0" prefWidth="160.0" />
+      <Label fx:id="quantityLabel" layoutX="44.0" layoutY="84.0" prefHeight="18.0" prefWidth="71.0" text="Quantity:" />
    </children>
 </AnchorPane>

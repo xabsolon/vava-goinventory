@@ -5,6 +5,7 @@ import com.example.vavagoinventory.I18N;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
+import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 import org.jooq.exception.DataAccessException;
@@ -30,9 +31,22 @@ public class EditOrderController implements Initializable {
     @FXML
     private Button confirmButton;
 
+    @FXML
+    private Label editOrderLabel;
+
+    @FXML
+    private Label quantityLabel;
+
+    @FXML
+    private Label nameLabel;
+
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
-
+        cancelButton.textProperty().bind(I18N.createStringBinding("cancelButtonLabel"));
+        confirmButton.textProperty().bind(I18N.createStringBinding("confirmButtonLabel"));
+        editOrderLabel.textProperty().bind(I18N.createStringBinding("editOrderLabel"));
+        quantityLabel.textProperty().bind(I18N.createStringBinding("quantityLabel"));
+        nameLabel.textProperty().bind(I18N.createStringBinding("nameLabel"));
     }
 
     public void injectOrdersController(OrdersController ordersController) {
