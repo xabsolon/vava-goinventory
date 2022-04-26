@@ -15,6 +15,7 @@ import org.jooq.DSLContext;
 import org.jooq.Result;
 import org.jooq.codegen.maven.goinventory.tables.Products;
 import org.jooq.codegen.maven.goinventory.tables.records.ProductsRecord;
+import org.jooq.codegen.maven.goinventory.tables.records.UsersRecord;
 
 import java.io.IOException;
 import java.net.URL;
@@ -26,6 +27,18 @@ public class MainPageController extends ApplicationController implements Initial
     public Log log = new Log();
 
     public static ObservableList<Product> productObservableList = FXCollections.observableArrayList();
+
+    @FXML
+    public Tab employeesTab;
+
+    @FXML
+    public Tab storageTab;
+
+    @FXML
+    public Tab ordersTab;
+
+    @FXML
+    public Tab ordersHistoryTab;
 
     @FXML
     private Button logOutButton;
@@ -98,6 +111,8 @@ public class MainPageController extends ApplicationController implements Initial
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
+        this.disableTabsByRole();
+        this.disableButtonsByRole();
         homeTabLabel.textProperty().bind(I18N.createStringBinding("homeTabLabel"));
         employeesTabLabel.textProperty().bind(I18N.createStringBinding("employeesTabLabel"));
         storageTabLabel.textProperty().bind(I18N.createStringBinding("storageTabLabel"));
@@ -123,6 +138,59 @@ public class MainPageController extends ApplicationController implements Initial
         logOutButton.setOnAction(this::onLogOutButtonClick);
         System.out.println(UserSingleton.getInstance().getUser().getName());
         super.init();
+    }
+
+    private void disableAllTabs() {
+        employeesTab.setDisable(true);
+        storageTab.setDisable(true);
+        ordersTab.setDisable(true);
+        ordersHistoryTab.setDisable(true);
+    }
+
+    private void disableTabsByRole() {
+        UsersRecord user = UserSingleton.getInstance().getUser();
+        String position = user.getPossition();
+
+        disableAllTabs();
+
+        if(position.equals("owner")) {
+            employeesTab.setDisable(false);
+            storageTab.setDisable(false);
+            ordersTab.setDisable(false);
+            ordersHistoryTab.setDisable(false);
+        } else if(position.equals("user")) {
+            storageTab.setDisable(false);
+            ordersTab.setDisable(false);
+        } else if(position.equals("logistics")) {
+            storageTab.setDisable(false);
+            ordersTab.setDisable(false);
+            ordersHistoryTab.setDisable(false);
+        }
+    }
+
+    private void disableAllButtons() {
+        createProductButton.setDisable(true);
+        storageSearchField.setDisable(true);
+        editProductButton.setDisable(true);
+        deleteProductButton.setDisable(true);
+        addProductButton.setDisable(true);
+    }
+
+    private void disableButtonsByRole() {
+        UsersRecord user = UserSingleton.getInstance().getUser();
+        String position = user.getPossition();
+
+        disableAllButtons();
+
+        if(position.equals("owner") || position.equals("user")) {
+            createProductButton.setDisable(false);
+            storageSearchField.setDisable(false);
+            editProductButton.setDisable(false);
+            deleteProductButton.setDisable(false);
+            addProductButton.setDisable(false);
+        } else if(position.equals("logistics")) {
+            storageSearchField.setDisable(false);
+        }
     }
 
     @FXML

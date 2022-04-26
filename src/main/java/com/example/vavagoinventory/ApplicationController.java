@@ -23,10 +23,7 @@ import org.jooq.Result;
 import org.jooq.codegen.maven.goinventory.tables.Products;
 import org.jooq.codegen.maven.goinventory.tables.records.ProductsRecord;
 
-import java.sql.SQLException;
-import java.sql.SQLIntegrityConstraintViolationException;
 import java.util.ArrayList;
-import java.util.Objects;
 
 public class ApplicationController {
 
