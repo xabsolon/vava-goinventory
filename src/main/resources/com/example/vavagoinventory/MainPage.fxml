@@ -7,12 +7,12 @@
 <?import javafx.scene.shape.*?>
 <?import javafx.scene.text.*?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="480.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.vavagoinventory.PageControllers.MainPageController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="480.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.vavagoinventory.PageControllers.MainPageController">
 
 
    <children>
       <TabPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minWidth="-Infinity" prefHeight="480.0" prefWidth="800.0" side="LEFT" stylesheets="@css/TabPane.css" tabClosingPolicy="UNAVAILABLE">
-        <tabs>
+         <tabs>
             <Tab text="Home">
                <content>
                   <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="480.0" prefWidth="702.0">
@@ -66,7 +66,7 @@
                   </Label>
                </graphic>
             </Tab>
-            <Tab style="-fx-translate-x: 0;" text="Employees">
+            <Tab fx:id="employeesTab" style="-fx-translate-x: 0;" text="Employees" disable="true">
                <content>
                   <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
                      <children>
@@ -110,9 +110,9 @@
                   </Label>
                </graphic>
             </Tab>
-          <Tab text="Storage">
-            <content>
-              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="480.0" prefWidth="702.0">
+            <Tab fx:id="storageTab" text="Storage" disable="true">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="480.0" prefWidth="702.0">
                      <children>
                         <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#dfdfdf" height="80.0" layoutX="-20.0" layoutY="-5.0" stroke="BLACK" strokeType="INSIDE" width="631.0" />
                         <Button fx:id="createProductButton" layoutX="51.0" layoutY="108.0" mnemonicParsing="false" onAction="#onClickCreateProduct" text="Create product" textFill="WHITE">
@@ -184,7 +184,7 @@
                               </ImageView>
                            </graphic>
                         </Button>
-                        <TextField fx:id="searchField" layoutX="219.0" layoutY="109.0" maxHeight="1.7976931348623157E308" prefHeight="28.0" prefWidth="214.0">
+                        <TextField fx:id="storageSearchField" layoutX="219.0" layoutY="109.0" maxHeight="1.7976931348623157E308" prefHeight="28.0" prefWidth="214.0">
                            <font>
                               <Font name="System Bold" size="12.0" />
                            </font>
@@ -208,7 +208,7 @@
                            </cursor></Line>
                      </children>
                   </AnchorPane>
-            </content>
+               </content>
                <graphic>
                   <Label fx:id="storageTabLabel" prefHeight="27.0" prefWidth="116.0" style="-fx-text-fill: white;" text="Storage" translateX="-23.0" translateY="-13.0">
                      <font>
@@ -226,33 +226,33 @@
                      </cursor>
                   </Label>
                </graphic>
-          </Tab>
-          <Tab text="Orders">
-            <content>
-               <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
-                  <children>
-                     <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#dfdfdf" height="81.0" layoutX="-12.0" layoutY="-5.0" stroke="BLACK" strokeType="INSIDE" width="628.0" />
-                     <Label fx:id="ordersLabel" layoutX="240.0" layoutY="14.0" prefHeight="46.0" prefWidth="191.0" text="Orders" textFill="#141e30">
-                        <font>
-                           <Font name="System Bold" size="30.0" />
-                        </font>
-                     </Label>
-                     <fx:include maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" source="Orders.fxml" />
-                     <Rectangle fx:id="exitButton1" arcHeight="5.0" arcWidth="5.0" fill="#141e30" height="21.0" layoutX="531.0" layoutY="27.0" onMouseClicked="#exitButtonClicked" stroke="BLACK" strokeType="INSIDE" width="26.0">
+            </Tab>
+            <Tab fx:id="ordersTab" text="Orders" disable="true">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#dfdfdf" height="81.0" layoutX="-12.0" layoutY="-5.0" stroke="BLACK" strokeType="INSIDE" width="628.0" />
+                        <Label fx:id="ordersLabel" layoutX="240.0" layoutY="14.0" prefHeight="46.0" prefWidth="191.0" text="Orders" textFill="#141e30">
+                           <font>
+                              <Font name="System Bold" size="30.0" />
+                           </font>
+                        </Label>
+                        <fx:include maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" source="Orders.fxml" />
+                        <Rectangle fx:id="exitButton1" arcHeight="5.0" arcWidth="5.0" fill="#141e30" height="21.0" layoutX="531.0" layoutY="27.0" onMouseClicked="#exitButtonClicked" stroke="BLACK" strokeType="INSIDE" width="26.0">
                            <cursor>
                               <Cursor fx:constant="HAND" />
                            </cursor></Rectangle>
-                     <Line endX="17.0" endY="3.1999969482421875" layoutX="531.0" layoutY="38.0" onMouseClicked="#exitButtonClicked" startX="9.0" startY="-4.8000030517578125" stroke="WHITE" strokeWidth="4.0">
+                        <Line endX="17.0" endY="3.1999969482421875" layoutX="531.0" layoutY="38.0" onMouseClicked="#exitButtonClicked" startX="9.0" startY="-4.8000030517578125" stroke="WHITE" strokeWidth="4.0">
                            <cursor>
                               <Cursor fx:constant="HAND" />
                            </cursor></Line>
-                     <Line endX="90.79998779296875" endY="-41.80000305175781" layoutX="457.0" layoutY="75.0" onMouseClicked="#exitButtonClicked" startX="82.60003662109375" startY="-34.0" stroke="WHITE" strokeWidth="4.0">
+                        <Line endX="90.79998779296875" endY="-41.80000305175781" layoutX="457.0" layoutY="75.0" onMouseClicked="#exitButtonClicked" startX="82.60003662109375" startY="-34.0" stroke="WHITE" strokeWidth="4.0">
                            <cursor>
                               <Cursor fx:constant="HAND" />
                            </cursor></Line>
-                  </children>
-               </AnchorPane>
-            </content>
+                     </children>
+                  </AnchorPane>
+               </content>
                <graphic>
                   <Label fx:id="ordersTabLabel" prefHeight="28.0" prefWidth="159.0" style="-fx-text-fill: white;" text="Orders" translateX="-45.0" translateY="10.0">
                      <font>
@@ -270,10 +270,10 @@
                      </cursor>
                   </Label>
                </graphic>
-          </Tab>
-            <Tab style="-fx-translate-x: 0;" text="Orders history">
-              <content>
-                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+            </Tab>
+            <Tab fx:id="ordersHistoryTab" style="-fx-translate-x: 0;" text="Orders history" disable="true">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
                      <children>
                         <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#dfdfdf" height="81.0" layoutX="-13.0" layoutY="-5.0" stroke="BLACK" strokeType="INSIDE" width="625.0" />
                         <Label fx:id="historyLabel" layoutX="174.0" layoutY="14.0" prefHeight="46.0" prefWidth="294.0" text="Orders History" textFill="#141e30">
@@ -295,7 +295,7 @@
                               <Cursor fx:constant="HAND" />
                            </cursor></Line>
                      </children></AnchorPane>
-              </content>
+               </content>
                <graphic>
                   <Label fx:id="historyTabLabel" prefHeight="28.0" prefWidth="198.0" style="-fx-text-fill: white;" text="Orders history" translateX="-65.0" translateY="30.0">
                      <font>
@@ -314,7 +314,7 @@
                   </Label>
                </graphic>
             </Tab>
-        </tabs>
+         </tabs>
       </TabPane>
       <Button fx:id="logOutButton" layoutX="41.0" layoutY="424.4" mnemonicParsing="false" onAction="#onLogOutButtonClick" style="-fx-background-color: #141e30;" text="Log out" textFill="WHITE" AnchorPane.bottomAnchor="22.0" AnchorPane.leftAnchor="41.0">
          <font>
