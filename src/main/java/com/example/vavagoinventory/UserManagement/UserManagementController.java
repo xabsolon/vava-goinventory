@@ -1,7 +1,7 @@
 package com.example.vavagoinventory.UserManagement;
 
+import com.example.vavagoinventory.ApplicationController;
 import com.example.vavagoinventory.Utils.DatabaseContextSingleton;
-import com.example.vavagoinventory.PageControllers.FadingIntroController;
 import com.example.vavagoinventory.Utils.FunctionsController;
 import com.example.vavagoinventory.Utils.I18N;
 import javafx.beans.property.SimpleStringProperty;
@@ -22,7 +22,6 @@ import org.jooq.DSLContext;
 import org.jooq.Record;
 import org.jooq.Record4;
 import org.jooq.Result;
-import org.jooq.codegen.maven.goinventory.tables.Orders;
 import org.jooq.codegen.maven.goinventory.tables.Users;
 
 import java.io.IOException;
@@ -30,9 +29,7 @@ import java.net.URL;
 import java.util.ArrayList;
 import java.util.ResourceBundle;
 
-import static org.jooq.codegen.maven.goinventory.Tables.*;
-import static org.jooq.impl.DSL.inline;
-import static org.jooq.impl.DSL.select;
+import static org.jooq.codegen.maven.goinventory.Tables.USERS;
 
 public class UserManagementController implements Initializable {
 
@@ -164,7 +161,7 @@ public class UserManagementController implements Initializable {
     @FXML
     private void onClickCreate() throws IOException {
         Stage newstage = new Stage();
-        FXMLLoader loader = new FXMLLoader(FadingIntroController.class.getResource("CreateUser.fxml"));
+        FXMLLoader loader = new FXMLLoader(ApplicationController.class.getResource("CreateUser.fxml"));
         Parent root = loader.load();
         CreateUserController createUserController = loader.getController();
         Scene scene = new Scene(root);
@@ -184,7 +181,7 @@ public class UserManagementController implements Initializable {
             return;
         }
         Stage newstage = new Stage();
-        FXMLLoader loader = new FXMLLoader(FadingIntroController.class.getResource("EditUser.fxml"));
+        FXMLLoader loader = new FXMLLoader(ApplicationController.class.getResource("EditUser.fxml"));
         Parent root = loader.load();
         EditUserController createUserController = loader.getController();
         Scene scene = new Scene(root);
