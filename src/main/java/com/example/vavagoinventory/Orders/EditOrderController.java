@@ -38,7 +38,6 @@ public class EditOrderController implements Initializable {
     public void injectOrdersController(OrdersController ordersController) {
         this.ordersController = ordersController;
         selectedOrder = ordersController.getLastSelectedOrder();
-        System.out.println(selectedOrder);
         quantityField.setText(String.valueOf(selectedOrder.getQuantity()));
         productNameField.setText(selectedOrder.getProductName());
     }

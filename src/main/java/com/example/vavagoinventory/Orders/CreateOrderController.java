@@ -20,7 +20,7 @@ import java.util.ResourceBundle;
 import static org.jooq.codegen.maven.goinventory.Tables.ORDERS;
 import static org.jooq.codegen.maven.goinventory.Tables.USERS;
 
-public class CreateOrderController implements Initializable { //work in progress
+public class CreateOrderController implements Initializable {
 
     private OrdersController ordersController;
 
